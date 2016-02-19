@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>{{ page.title }}</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	</head>
+	<body>
+        <header>
+            {% include header.html %}
+        </header>
+        <nav>
+            {% include nav.html %}
+        </nav>
+
+        <div class="container">
+
+        {{ content }}
+
+        </div><!-- /.container -->
+
+        <footer>
+            {% include footer.html %}
+        </footer>
+	</body>
+</html>
