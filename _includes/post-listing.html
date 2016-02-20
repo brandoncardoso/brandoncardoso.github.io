@@ -3,6 +3,7 @@
     <span class="post-info">
         <a class="post-title" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 
+        {% if post.categories.size > 0 %}
         <ul class="post-categories">
             ({% for category in post.categories %}
             <li>
@@ -10,5 +11,6 @@
             </li>
             {% endfor %})
         </ul>
+        {% endif %}
     </span>
 </li>
