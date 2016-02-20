@@ -26,6 +26,10 @@ header {
     font-size: 2em;
 }
 
+header .links {
+    float: right;
+}
+
 header, nav {
     border-bottom: 1px solid #000;
 }
@@ -59,11 +63,11 @@ a {
     color: #000;
 }
 
-nav a {
+header .links a, nav a {
     color: #777;
 }
 
-nav a:hover {
+header .links a:hover, nav a:hover {
     color: #000;
 }
 
