@@ -1,11 +1,14 @@
 <li class="post">
-    {{ post.date | date_to_string }}&nbsp;»&nbsp;<a href="{{ post.url }}">{{ post.title }}</a>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="post-info">
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 
-    <ul class="post-categories">
-        ({% for category in post.categories %}
-        <li>
-        <a href="/categories/{{ category }}">{{ category }}</a>
-        </li>
-        {% endfor %})
-    </ul>
+        <ul class="post-categories">
+            ({% for category in post.categories %}
+            <li>
+                <a href="/categories/{{ category }}">{{ category }}</a>
+            </li>
+            {% endfor %})
+        </ul>
+    </span>
 </li>

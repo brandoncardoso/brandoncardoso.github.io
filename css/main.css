@@ -99,3 +99,26 @@ ul.post-categories li {
 ul.post-categories li:not(:last-child)::after {
     content: ", ";
 }
+
+ul.posts {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.post {
+    margin-bottom: 20px;
+}
+
+li.post .post-date::after {
+    content: " » ";
+}
+
+li.post .post-info {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.post-info .post-categories {
+    margin-top: 5px;
+}
