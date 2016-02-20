@@ -97,7 +97,8 @@ ul.post-categories li {
 }
 
 ul.post-categories li:not(:last-child)::after {
-    content: ", ";
+    content: ",";
+    margin-right: 3px;
 }
 
 ul.posts {
@@ -117,6 +118,10 @@ li.post .post-date::after {
 li.post .post-info {
     display: inline-block;
     vertical-align: top;
+}
+
+.post-info .post-title {
+    font-size: 1.1em;
 }
 
 .post-info .post-categories {

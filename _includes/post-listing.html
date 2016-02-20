@@ -1,7 +1,7 @@
 <li class="post">
     <span class="post-date">{{ post.date | date_to_string }}</span>
     <span class="post-info">
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <a class="post-title" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 
         <ul class="post-categories">
             ({% for category in post.categories %}
