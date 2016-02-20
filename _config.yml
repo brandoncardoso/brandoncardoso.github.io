@@ -1,3 +1,3 @@
 name: bcardo.so
 markdown: kramdown
-permalink: /blog/:title
+permalink: /posts/:title
