@@ -127,3 +127,28 @@ li.post .post-info {
 .post-info .post-categories {
     margin-top: 5px;
 }
+
+.post-nav {
+    border-top: 1px dashed #f0f0f0;
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 0.8em;
+}
+
+.post-nav .prev {
+    float: left;
+}
+
+.post-nav .prev::before {
+    content: "«";
+    margin-right: 3px;
+}
+
+.post-nav .next {
+    float: right;
+}
+
+.post-nav .next::after {
+    content: "»";
+    margin-left: 3px;
+}
