@@ -79,3 +79,23 @@ div.content a:hover {
     background-color: #bbb;
     color: #fff;
 }
+
+h3 {
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+ul.post-categories {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+
+ul.post-categories li {
+    display: inline;
+}
+
+ul.post-categories li:not(:last-child)::after {
+    content: ", ";
+}
