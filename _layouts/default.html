@@ -2,25 +2,23 @@
 <html>
 	<head>
         <title>{{ page.title }}</title>
-		<!-- link to main stylesheet -->
+
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Arvo:700,400' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-        <header>
-            {% include header.html %}
-        </header>
-        <nav>
-            {% include nav.html %}
-        </nav>
-
         <div class="container">
+            <header>
+                {% include header.html %}
+            </header>
 
-        {{ content }}
+            <nav>
+                {% include nav.html %}
+            </nav>
 
-        </div><!-- /.container -->
-
-        <footer>
-            {% include footer.html %}
-        </footer>
+            <div class="content">
+                {{ content }}
+            </div><!-- /.container -->
+        </div>
 	</body>
 </html>
