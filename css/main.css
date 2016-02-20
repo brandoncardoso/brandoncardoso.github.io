@@ -1,5 +1,5 @@
 html, body {
-    font-family: 'Arvo', serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 100%;
 
@@ -24,6 +24,11 @@ header {
     padding: 0 0.2em;
 
     font-size: 2em;
+}
+
+header .name {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
 }
 
 header .links {
@@ -81,6 +86,7 @@ div.content a:hover {
 }
 
 h3 {
+    font-family: 'Roboto Slab', serif;
     font-weight: normal;
     margin: 10px 0;
 }
@@ -121,6 +127,7 @@ li.post .post-info {
 }
 
 .post-info .post-title {
+    font-family: 'Roboto Slab', serif;
     font-size: 1.1em;
 }
 
