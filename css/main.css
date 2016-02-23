@@ -21,7 +21,7 @@ div.container {
 }
 
 header {
-    padding: 0 3px;
+    padding: 0 0.5rem;
     font-size: 2em;
     position: relative;
 }
@@ -33,7 +33,7 @@ header .name {
 
 header .links {
     position: absolute;
-    right: 0;
+    right: 0.5rem;
     bottom: 3px;
 }
 
@@ -42,7 +42,7 @@ header, nav {
 }
 
 nav {
-    padding: 3px 5px;
+    padding: 0.2em 0.5em;
     font-size: 0.9em;
 }
 
@@ -57,12 +57,12 @@ nav li {
 }
 
 nav li:not(:first-child) {
-    margin-left: 10px;
+    margin-left: 1em;
 }
 
-
 div.content {
-    padding: 5px;
+    padding: 0 0.5em;
+    margin: 1rem 0;
 }
 
 a {
@@ -90,7 +90,7 @@ div.content a:hover {
 h3 {
     font-family: 'Roboto Slab', serif;
     font-weight: normal;
-    margin: 10px 0;
+    margin: 1rem 0;
 }
 
 ul.post-categories {
@@ -112,11 +112,11 @@ ul.post-categories li:not(:last-child)::after {
 ul.posts {
     list-style-type: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin: 0;
 }
 
 li.post {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
 li.post .post-date::after {
@@ -139,8 +139,8 @@ li.post .post-info {
 
 .post-nav {
     border-top: 1px dashed #f0f0f0;
-    padding-top: 15px;
-    margin-top: 15px;
+    padding-top: 1rem;
+    margin-top: 1rem;
     font-size: 0.8em;
 }
 
