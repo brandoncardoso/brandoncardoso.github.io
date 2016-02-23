@@ -1,0 +1,163 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+
+    background: #ffffff;
+
+    border: 0;
+    vertical-align: baseline;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+div.container {
+    margin: 0 auto;
+    width: 600px;
+
+    position: relative;
+    top: 10%;
+}
+
+header {
+    padding: 0 0.5rem;
+    font-size: 2em;
+    position: relative;
+}
+
+header .name {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+
+header .links {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 3px;
+}
+
+header, nav {
+    border-bottom: 1px solid #000;
+}
+
+nav {
+    padding: 0.2em 0.5em;
+    font-size: 0.9em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav li {
+    display: inline;
+}
+
+nav li:not(:first-child) {
+    margin-left: 1em;
+}
+
+div.content {
+    padding: 0 0.5em;
+    margin: 1rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+header .links a, nav a {
+    color: #777;
+}
+
+header .links a:hover, nav a:hover {
+    color: #000;
+}
+
+div.content a {
+    background-color: #f0f0f0;
+}
+
+div.content a:hover {
+    background-color: #bbb;
+    color: #fff;
+}
+
+h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    margin: 1rem 0;
+}
+
+ul.post-categories {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+
+ul.post-categories li {
+    display: inline;
+}
+
+ul.post-categories li:not(:last-child)::after {
+    content: ",";
+    margin-right: 3px;
+}
+
+ul.posts {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li.post {
+    margin-bottom: 1rem;
+}
+
+li.post .post-date::after {
+    content: " » ";
+}
+
+li.post .post-info {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.post-info .post-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1em;
+}
+
+.post-info .post-categories {
+    margin-top: 5px;
+}
+
+.pagination, .post-nav {
+    border-top: 1px dashed #f0f0f0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    font-size: 0.8em;
+}
+
+.prev {
+    float: left;
+}
+
+.prev::before {
+    content: "«";
+    margin-right: 3px;
+}
+
+.next {
+    float: right;
+}
+
+.next::after {
+    content: "»";
+    margin-left: 3px;
+}

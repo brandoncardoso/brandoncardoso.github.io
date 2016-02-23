@@ -1,0 +1,16 @@
+<li class="post">
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+    <span class="post-info">
+        <a class="post-title" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+
+        {% if post.categories.size > 0 %}
+        <ul class="post-categories">
+            ({% for category in post.categories %}
+            <li>
+                <a href="/categories/{{ category }}">{{ category }}</a>
+            </li>
+            {% endfor %})
+        </ul>
+        {% endif %}
+    </span>
+</li>
