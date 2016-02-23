@@ -22,8 +22,8 @@ div.container {
 
 header {
     padding: 0 0.2em;
-
     font-size: 2em;
+    position: relative;
 }
 
 header .name {
@@ -32,7 +32,9 @@ header .name {
 }
 
 header .links {
-    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 3px;
 }
 
 header, nav {
