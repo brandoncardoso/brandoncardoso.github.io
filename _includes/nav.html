@@ -1,4 +1,7 @@
 <ul>
-    <li><a href="/">home</a></li>
-    <li><a href="/posts">posts</a></li>
+    {% for item in site.data.nav %}
+    <li>
+        <a href="{{ item.url }}">{{ item.text }}</a>
+    </li>
+    {% endfor %}
 </ul>
