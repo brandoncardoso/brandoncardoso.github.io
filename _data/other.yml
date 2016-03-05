@@ -1,0 +1,24 @@
+- 
+    text: Steam
+    desc: Video games.
+    icon: fa-steam
+    url: //steamcommunity.com/id/Pazuru/ 
+
+-
+    text: Instagram
+    desc: Pictures and videos!
+    icon: fa-instagram
+    url: //instagram.com/bcardo.so
+
+-
+    text: Twitter
+    desc: 140 characters I never use.
+    icon: fa-twitter
+    url: //twitter.com/bcardo_so
+
+-
+    text: Twitch
+    desc: Maybe one day I can play video games for a living.
+    icon: fa-twitch
+    url: //twitch.tv/pazuru
+
