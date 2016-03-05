@@ -1,8 +1,10 @@
-name: bcardo.so
-markdown: kramdown
-permalink: /posts/:title
-
+name: Brandon Cardoso
+url: http://bcardo.so
 
 gems: [jekyll-paginate]
 paginate: 10
 paginate_path: "/posts/:num/"
+
+markdown: kramdown
+permalink: /posts/:title
+timezone: America/Toronto
