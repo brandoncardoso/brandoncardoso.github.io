@@ -1,6 +1,12 @@
 ---
 ---
 
+$gray-light:  #f5f5f5;
+$gray:        #f0f0f0;
+$gray-dark:   #777;
+$gray-darker: #333;
+$accent:      #1874CD;
+
 html, body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -38,10 +44,10 @@ header {
     }
 
     .links a, nav a {
-        color: #777;
+        color: $gray-darker;
 
         &:hover {
-            color: #000;
+            color: $accent;
         }
     }
 }
@@ -72,11 +78,11 @@ div.content {
     margin: 1rem 0;
 
     a {
-        background-color: #f0f0f0;
+        background-color: $gray;
 
         &:hover {
-            background-color: #bbb;
-            color: #fff;
+            background-color: $gray-light;
+            color: $accent;
         }
     }
 }
@@ -141,7 +147,7 @@ li.post {
 }
 
 .pagination, .post-nav {
-    border-top: 1px dashed #f0f0f0;
+    border-top: 1px dashed $gray;
     padding-top: 1rem;
     margin-top: 1rem;
     font-size: 0.8em;
@@ -175,14 +181,14 @@ ul.other {
             margin: 0;
         }
 
-        a { 
+        a.icon-link { 
             float: left;
             clear: both;
             margin-right: 10px;
             background-color: transparent;
 
             &:hover {
-                color: #777;
+                color: $accent;
                 background-color: transparent;
             }
         }
