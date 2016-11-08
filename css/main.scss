@@ -1,85 +1,94 @@
 ---
 ---
 
-$gray-light:  #f5f5f5;
-$gray:        #f0f0f0;
-$gray-dark:   #777;
-$gray-darker: #333;
-$accent:      #1874CD;
+$gray-lighter: #fcfcfc;
+$gray-light:   #f5f5f5;
+$gray:         #f0f0f0;
+$gray-dark:    #777;
+$gray-darker:  #333;
+$accent:       #1874cd;
+
+$gradient1:    #2c3e50;
+$gradient2:    #4ca1af;
 
 html, body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 100%;
-    background: #ffffff;
-    border: 0;
-    vertical-align: baseline;
-    padding: 0;
+    background-color: $gray-light;
     margin: 0;
-    height: 100%;
 }
 
 div.container {
+    font-size: inherit;
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    right: 2rem;
+    max-width: 25rem;
     margin: 0 auto;
-    width: 600px;
-    position: relative;
-    top: 10%;
+    background-color: $gray-lighter;
+    text-align: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    -webkit-box-shadow: inset 0 3px 0 #fff, 0 0 0 1px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.1);
+    -moz-box-shadow:    inset 0 3px 0 #fff, 0 0 0 1px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow:         inset 0 3px 0 #fff, 0 0 0 1px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header {
-    padding: 0 0.5rem;
-    font-size: 2em;
     position: relative;
-    border-bottom: 1px solid #000;
+    font-size: 2rem;
+    margin: 2rem 2rem 1rem;
 
     .name {
         font-family: 'Roboto Slab', serif;
         font-weight: 700;
     }
-
-    .links {
-        position: absolute;
-        right: 0.5rem;
-        bottom: 3px;
-    }
-
-    .links a, nav a {
-        color: $gray-darker;
-
-        &:hover {
-            color: $accent;
-        }
-    }
 }
 
 nav {
-    border-bottom: 1px solid #000;
-    padding: 0.2em 0.5em;
-    font-size: 0.9em;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    color: #fff;
+
+    background: -webkit-linear-gradient(right, $gradient1, $gradient2);
+    background: -o-linear-gradient(right, $gradient1, $gradient2);
+    background: -moz-linear-gradient(right, $gradient1, $gradient2);
+    background: linear-gradient(right, $gradient1, $gradient2);
 
     ul {
-        list-style-type: none;
+        list-style: none;
         margin: 0;
         padding: 0;
-        text-align: center;
-    }
 
-    li {
-        display: inline;
+        li {
+            display: inline-block;
 
-        &:not(:first-child) {
-            margin-left: 1em;
+            a {
+                color: #fff;
+                width: 2.5rem;
+                height: 2.5rem;
+                display: inline-block;
+                border-radius: 0.5rem;
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+
+                i.fa {
+                    line-height: 2.5rem;
+                }
+            }
         }
     }
 }
 
 div.content {
-    padding: 0 0.5em;
-    margin: 1rem 0;
+    margin: 1rem 2rem 2rem;
 
     a {
-        background-color: $gray;
-
         &:hover {
             background-color: $gray-light;
             color: $accent;
@@ -171,31 +180,7 @@ li.post {
     }
 }
 
-ul.other {
-    list-style: none;
-
-    li {
-        margin-bottom: 20px;
-
-        h3 {
-            margin: 0;
-        }
-
-        a.icon-link { 
-            float: left;
-            clear: both;
-            margin-right: 10px;
-            background-color: transparent;
-
-            &:hover {
-                color: $accent;
-                background-color: transparent;
-            }
-        }
-    }
-}
-
-.countdown {
-    text-align: center;
-    font-size: 28px;
+.vertical-center {
+    top: 50%;
+    transform: translateY(-50%);
 }
