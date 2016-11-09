@@ -12,15 +12,15 @@
     </head>
     <body>
         <div class="container vertical-center">
-            <header>
+            <div class="header">
                 {% include header.html %}
-            </header>
+            </div>
 
             <div class="content">
                 {{ content }}
             </div>
 
-            <nav>
+            <div class="social">
                 <ul>
                 {% for item in site.data.nav %}
                     <li>
@@ -30,7 +30,7 @@
                     </li>
                 {% endfor %}
                 </ul>
-            </nav>
+            </div>
         </div>
     </body>
 </html>
