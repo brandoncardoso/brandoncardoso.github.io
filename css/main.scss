@@ -117,51 +117,18 @@ h3 {
     margin: 1rem 0;
 }
 
-ul {
-    &.post-categories {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        font-size: 0.8em;
-
-        li {
-            display: inline;
-
-            &:not(:last-child)::after {
-                content: ",";
-                margin-right: 3px;
-            }
-        }
-    }
-
-    &.posts {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+ul.posts {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 li.post {
-    margin-bottom: 1rem;
-
-    .post-date::after {
-        content: " » ";
+    & + li.post {
+        margin-top: 0.67rem;
     }
-
-    .post-info {
-        display: inline-block;
-        vertical-align: top;
-    }
-}
-
-.post-info {
-    .post-title {
-        font-family: 'Roboto Slab', serif;
-        font-size: 1.1em;
-    }
-
-    .post-categories {
-        margin-top: 5px;
+    .post-date {
+        font-size: 0.8rem;
     }
 }
 
