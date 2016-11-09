@@ -139,21 +139,27 @@ li.post {
     font-size: 0.8em;
 }
 
-.prev {
-    float: left;
+.paginator-prev,
+.paginator-next {
+    position: absolute;
+    padding: 0.5rem;
+}
+.paginator-prev {
+    left: 0;
 
-    &::before {
-        content: "«";
-        margin-right: 3px;
+    &:hover::after {
+        font-size: 0.8rem;
+        content: "older";
     }
 }
 
-.next {
-    float: right;
+.paginator-next {
+    right: 0;
 
-    &::after {
-        content: "»";
-        margin-left: 3px;
+    &:hover::before {
+        font-size: 0.8rem;
+        margin-right: 0.2rem;
+        content: "newer";
     }
 }
 
