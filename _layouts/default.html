@@ -11,26 +11,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="container vertical-center">
-            <div class="header">
-                {% include header.html %}
-            </div>
+        <div class="container">
+            <section class="main">
+                <div class="header">
+                    {% include header.html %}
+                </div>
 
-            <div class="content">
-                {{ content }}
-            </div>
+                <div class="content">
+                    {{ content }}
+                </div>
 
-            <div class="social">
-                <ul>
-                {% for item in site.data.nav %}
-                    <li>
-                        <a href="{{ item.url }}" target="_blank">
-                            <i class="fa {{ item.icon }}"></i>
-                        </a>
-                    </li>
-                {% endfor %}
-                </ul>
-            </div>
+                <div class="social">
+                    <ul>
+                    {% for item in site.data.nav %}
+                        <li>
+                            <a href="{{ item.url }}" target="_blank">
+                                <i class="fa {{ item.icon }}"></i>
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </section>
         </div>
     </body>
 </html>
