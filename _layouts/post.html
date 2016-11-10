@@ -1,34 +1,38 @@
 ---
 layout: default
 ---
-<h3>
-    {{ page.title }}
-    &nbsp;
-    <small class="meta">{{ page.date | date_to_string }}</small>
-</h3>
+<div class="post-date">{{ page.date | date: "%Y/%m/%d" }}</div>
+<div class="post-title"><h3>{{ page.title }}</h3></div>
+
 {% if page.categories.size > 0 %}
 <ul class="post-categories">
-    ({% for category in page.categories %}
-        <li>
+    {% for category in page.categories %}
+    <li>
         <a href="{{ site.category_dir }}/{{ category }}">{{ category }}</a>
-        </li>
-    {% endfor %})
+    </li>
+    {% endfor %}
 </ul>
 {% endif %}
 
-<div class="post">
+<div class="post-body">
     {{ content }}
 </div>
 
 <div class="post-nav">
     {% if page.previous %}
     <span class="prev">
-        <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+        <a href="{{ page.previous.url }}">
+            <i class="fa fa-caret-left"></i>
+            {{ page.previous.title }}
+        </a>
     </span>
     {% endif %}
     {% if page.next %}
     <span class="next">
-        <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+        <a href="{{ page.next.url }}">
+            {{ page.next.title }}
+            <i class="fa fa-caret-right"></i>
+        </a>
     </span>
     {% endif %}
 </div>

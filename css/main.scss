@@ -26,7 +26,6 @@ a {
 }
 
 h3 {
-    font-family: 'Roboto Slab', serif;
     font-weight: normal;
     margin: 1rem 0;
 }
@@ -54,6 +53,10 @@ h3 {
     -webkit-box-shadow: inset 0 3px 0 #fff, 0 0 0 1px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.1);
     -moz-box-shadow:    inset 0 3px 0 #fff, 0 0 0 1px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.1);
     box-shadow:         inset 0 3px 0 #fff, 0 0 0 1px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.1);
+
+    &.post {
+        max-width: 50rem;
+    }
 }
 
 .header {
@@ -126,6 +129,48 @@ h3 {
     }
 }
 
+section.post {
+    .post-date {
+        font-size: 0.8rem;
+    }
+
+    .post-title h3 {
+        margin: 0;
+    }
+
+    .post-categories {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline;
+
+            &:not(:last-child)::after {
+                content: ", ";
+                margin-left: -0.2rem;
+            }
+        }
+    }
+
+    .post-body {
+        text-align: justify;
+
+        p {
+            text-indent: 2rem;
+        }
+    }
+
+    .post-nav {
+        display: flex;
+        justify-content: space-between;
+
+        border-top: 1px dashed $gray;
+        padding-top: 1rem;
+        margin-top: 1rem;
+        font-size: 0.8em;
+    }
+}
 
 .posts {
     list-style-type: none;
@@ -133,8 +178,8 @@ h3 {
     margin: 0;
 }
 
-.post {
-    & + .post {
+li.post {
+    & + li.post {
         margin-top: 0.67rem;
     }
     .post-date {
@@ -142,18 +187,12 @@ h3 {
     }
 }
 
-.pagination, .post-nav {
-    border-top: 1px dashed $gray;
-    padding-top: 1rem;
-    margin-top: 1rem;
-    font-size: 0.8em;
-}
-
 .paginator-prev,
 .paginator-next {
     position: absolute;
     padding: 0.5rem;
 }
+
 .paginator-prev {
     left: 0;
 
