@@ -10,7 +10,7 @@ layout: default
 <ul class="post-categories">
     ({% for category in page.categories %}
         <li>
-            <a href="/categories/{{ category }}">{{ category }}</a>
+        <a href="{{ site.category_dir }}/{{ category }}">{{ category }}</a>
         </li>
     {% endfor %})
 </ul>

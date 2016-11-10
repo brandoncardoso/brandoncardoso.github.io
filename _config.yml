@@ -5,6 +5,21 @@ gems: [jekyll-paginate]
 paginate: 10
 paginate_path: "/posts/:num/"
 
+category_dir: /category
+
 markdown: kramdown
 permalink: /posts/:title
 timezone: America/Toronto
+
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            layout: "default"
+    -
+        scope:
+            path: "posts"
+        values:
+            layout: "post"
+            customClass: "post"
