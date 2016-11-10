@@ -8,7 +8,7 @@ paginate_path: "/posts/:num/"
 category_dir: /category
 
 markdown: kramdown
-permalink: /posts/:title
+permalink: /post/:title
 timezone: America/Toronto
 
 defaults:
@@ -19,7 +19,8 @@ defaults:
             layout: "default"
     -
         scope:
-            path: "posts"
+            path: "post"
         values:
             layout: "post"
             customClass: "post"
+            author: "Brandon Cardoso"
