@@ -27,6 +27,9 @@ layout: default
         </a>
     </span>
     {% endif %}
+    <span class="all {% if page.previous %} has-prev {% endif %}{% if page.next %} has-next {% endif %}">
+        <a href="/posts">all posts</a>
+    </span>
     {% if page.next %}
     <span class="next">
         <a href="{{ page.next.url }}">

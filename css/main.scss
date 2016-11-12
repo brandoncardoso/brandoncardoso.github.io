@@ -43,6 +43,7 @@ h3 {
 }
 
 .main {
+    position: relative;
     margin: auto;
     max-width: 25rem;
     background-color: $gray-lighter;
@@ -70,9 +71,8 @@ h3 {
 }
 
 .content {
-    position: relative;
-    margin: 1rem 0 2rem;
-    padding: 0 2rem;;
+    margin: 1rem 2rem 2rem;
+    padding: 0;
 
     a {
         color: $gradient2;
@@ -164,11 +164,27 @@ section.post {
     .post-nav {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         border-top: 1px dashed $gray;
-        padding-top: 1rem;
-        margin-top: 1rem;
+        margin: 1rem 0;
         font-size: 0.8em;
+
+        .prev,
+        .all,
+        .next {
+            margin-top: 1rem;
+        }
+
+        .all {
+            &.has-prev {
+                margin-left: 2rem;
+            }
+
+            &.has-next {
+                margin-right: 2rem;
+            }
+        }
     }
 }
 
