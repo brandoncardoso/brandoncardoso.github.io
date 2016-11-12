@@ -9,6 +9,8 @@ paginate_path: "/posts/:num/"
 
 category_dir: /category
 
+date_format: "%d %b %Y"
+
 markdown: kramdown
 permalink: /post/:title
 timezone: America/Toronto
