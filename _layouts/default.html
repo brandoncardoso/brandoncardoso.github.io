@@ -2,13 +2,45 @@
 <html>
     <head>
         <title>{% if page.title %}{{ page.title }} - {% endif %}Brandon Cardoso</title>
+        {% if page.description or site.description %}
+        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{site.description }}{% endif %}">
+        {% endif %}
 
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- open graph meta -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}Brandon Cardoso">
+        {% if page.description or site.description %}
+            <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{site.description }}{% endif %}">
+        {% endif %}
+        {% if page.image %}
+        <meta property="og:image" content="/img/{{ page.image }}">
+        {% endif %}
+
+        <!-- twitter meta -->
+        {% if site.twitter_handle and (page.description or site.description) %}
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:site" content="{{ site.twitter_handle }}">
+            <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}Brandon Cardoso">
+            {% if page.description or site.description %}
+                <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{site.description }}{% endif %}">
+            {% endif %}
+            {% if page.image %}
+            <meta name="twitter:image" content="/img/{{ page.image }}">
+                {% if page.image_description %}
+                    <meta name="twitter:image:alt" content="{{ page.image_description }}">
+                {% endif %}
+            {% endif %}
+        {% endif %}
+
+        <!-- style/fonts -->
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- favicon -->
         <link rel="shortcut icon" href="/favicon/bc.ico?v=1">
