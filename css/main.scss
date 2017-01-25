@@ -59,6 +59,10 @@ h3 {
     &.post {
         max-width: 50rem;
     }
+
+    &.extra-large {
+        max-width: 100%;
+    }
 }
 
 .header {
@@ -237,4 +241,17 @@ li.post {
 .vertical-center {
     top: 50%;
     transform: translateY(-50%);
+}
+
+
+.font-size-test-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    > span {
+        flex-basis: 50%;
+        max-width: 50%;
+        border-bottom: 1px dashed #ddd;
+    }
 }

@@ -1,0 +1,17 @@
+---
+layout: default
+title: Mobile Font Size Test
+description: Example font sizes to test on different devices.
+customClass: extra-large 
+---
+<h2>{{ page.title }}</h2>
+<h5>{{ page.description }}</h5>
+
+<div class="font-size-test-container">
+    <span><strong>Pixels</strong></span>
+    <span><strong>Points</strong></span>
+    {% for num in (6...36) %}
+    <span style="font-size: {{ num }}px">This font is {{ num }}px (pixels) in size.</span>
+    <span style="font-size: {{ num }}pt">This font is {{ num }}pt (points) in size.</span>
+    {% endfor %}
+</div>
