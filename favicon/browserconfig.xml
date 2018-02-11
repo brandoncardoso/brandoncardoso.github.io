@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <browserconfig>
-  <msapplication>
-    <tile>
-      <square70x70logo src="/bc-70.png"/>
-      <square150x150logo src="/bc-150.png"/>
-      <square310x310logo src="/bc-310.png"/>
-      <TileColor>#FFFFFF</TileColor>
-    </tile>
-  </msapplication>
+    <msapplication>
+        <tile>
+            <square150x150logo src="/favicon/bc.ico/mstile-150x150.png?v=YAowGBepEE"/>
+            <TileColor>#ffc40d</TileColor>
+        </tile>
+    </msapplication>
 </browserconfig>
