@@ -39,8 +39,7 @@
         <!-- style/fonts -->
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Nixie+One|Raleway" rel="stylesheet">
 
         <!-- rss -->
         <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml">
@@ -79,15 +78,11 @@
                 </div>
 
                 <div class="social">
-                    <ul>
                     {% for item in site.data.nav %}
-                        <li>
-                            <a href="{{ item.url }}" target="_blank">
-                                <i class="fa {{ item.icon }}"></i>
-                            </a>
-                        </li>
+                    <a href="{{ item.url }}" target="_blank">
+                        <i class="fa {{ item.icon }}"></i>
+                    </a>
                     {% endfor %}
-                    </ul>
                 </div>
             </section>
         </div>
