@@ -2,4 +2,4 @@
 permalink: /
 layout: default
 ---
-A place for future things.
+<a href="/rfh2018">Ride for Heart 2018</a>
