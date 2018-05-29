@@ -6,19 +6,40 @@ $gray-light:   #f5f5f5;
 $gray:         #e0e0e0;
 $gray-dark:    #d0d0d0;
 $gray-darker:  #333;
-$accent:       #1874cd;
 
-$gradient1:    #2c3e50;
-$gradient2:    #4ca1af;
+$accent:       #B8E2EF;
+
+$gradient1:    #DBf0f7;
+$gradient2:    #fff;
 
 $gutter: 1rem;
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: calc(100% - #{$gutter} * 2);
+    width: calc(100% - #{$gutter} * 2);
+    padding: $gutter;
+}
 
 html, body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 100%;
-    background-color: $white;
+    font-color: $gray-darker;
     margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow: auto;
+
+    background: linear-gradient($gradient1, $gradient2);
 }
 
 a {
@@ -29,18 +50,6 @@ a {
 h3 {
     font-weight: normal;
     margin: 1rem 0;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    position: fixed;
-    height: calc(100% - #{$gutter} * 2);
-    width: calc(100% - #{$gutter} * 2);
-    padding: $gutter;
-    overflow: auto;
 }
 
 .main {
@@ -55,14 +64,10 @@ h3 {
 
 .header {
     font-size: 2rem;
-    display: flex;
-    height: 3rem;
     margin: 1.5rem 0;
-    border-bottom: 1px solid $gray-darker;
-
-    > * {
-        align-self: center;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .name {
@@ -71,27 +76,24 @@ h3 {
 }
 
 .logo {
-    height: 5rem;
+    height: 8rem;
+    width: auto;
+    margin: 1rem;
 }
 
 .content {
     margin: 1rem 2rem 2rem;
     padding: 0;
+    line-height: 150%;
 
     a {
-        color: $gradient2;
-
-        &:link { 
-            color: $gradient2;
-        }
+        transition: all 0.1s ease-in;
+        color: $gray-darker;
+        border-bottom: 2pt solid $accent;
+        padding: 2pt 2pt 0;
 
         &:hover {
-            background-color: $gradient2;
-            background-color: $gray;
-        }
-
-        &:active {
-            background-color: $gray-dark;
+            background-color: $accent;
         }
     }
 

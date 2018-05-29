@@ -67,24 +67,13 @@
         </script>
     </head>
     <body>
-        <div class="container">
-            <section class="main {{ page.customClass }}">
-                <div class="header">
-                    {% include header.html %}
-                </div>
+        <div class="main {{ page.customClass }}">
+            {% include header.html %}
 
-                <div class="content">
-                    {{ content }}
-                </div>
-
-                <div class="social">
-                    {% for item in site.data.nav %}
-                    <a href="{{ item.url }}" target="_blank">
-                        <i class="fa {{ item.icon }}"></i>
-                    </a>
-                    {% endfor %}
-                </div>
-            </section>
+            <div class="content">
+                {{ content }}
+            </div>
         </div>
+        {% include social.html %}
     </body>
 </html>
