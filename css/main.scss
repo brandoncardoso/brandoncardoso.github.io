@@ -89,8 +89,8 @@ h3 {
     a {
         transition: all 0.1s ease-in;
         color: $gray-darker;
-        border-bottom: 2pt solid $accent;
-        padding: 2pt 2pt 0;
+        border-bottom: 0.2rem solid $accent;
+        padding: 0.2rem 0.2rem 0;
 
         &:hover {
             background-color: $accent;
