@@ -86,7 +86,7 @@ h3 {
     line-height: 150%;
 
     a {
-        transition: all 0.1s ease-in;
+        transition: all 0.2s ease-in-out;
         color: $gray-darker;
         border-bottom: 0.2rem solid $accent;
         padding: 0.2rem 0.2rem 0;
@@ -106,14 +106,21 @@ h3 {
     font-size: 2rem;
     display: flex;
 
+    a + a {
+        margin-left: 0.5rem;
+    }
+
     a {
         color: $gray-dark;
         width: 2.5rem;
         height: 2.5rem;
-        display: inline-block;
+        text-align: center;
+        border-bottom: 0.2rem solid $accent;
+        transition: all 0.2s ease-in-out;
 
         &:hover {
             color: $gray-darker;
+            background-color: $accent;
         }
 
         i.fa {
