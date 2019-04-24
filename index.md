@@ -2,4 +2,4 @@
 permalink: /
 layout: default
 ---
-<a href="/rfh2018">Ride for Heart 2018</a>
+<a href="/rideforheart">Ride for Heart 2019</a>
