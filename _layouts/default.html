@@ -39,6 +39,7 @@
         <!-- style/fonts -->
         <link rel="stylesheet" type="text/css" href="/css/main.css">
         <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
         <link href="https://fonts.googleapis.com/css?family=Nixie+One|Raleway" rel="stylesheet">
 
         <!-- rss -->
@@ -67,13 +68,21 @@
         </script>
     </head>
     <body>
-        <div class="main {{ page.customClass }}">
-            {% include header.html %}
-
-            <div class="content">
-                {{ content }}
+        <section class="section intro">
+            <div class="intro__logo">
+                <img src="/img/bc2.png" />
             </div>
-        </div>
-        {% include social.html %}
+            <div class="intro__name">Brandon Cardoso</div>
+            <div class="intro__subtitle">software engineer</div>
+            <div class="intro__nav">
+            </div>
+            <div class="intro__social">
+                {% for item in site.data.social %}
+                <a href="{{ item.url }}" target="_blank">
+                    <i class="fa {{ item.icon }}"></i>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
     </body>
 </html>
