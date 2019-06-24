@@ -9,3 +9,7 @@
 -
     icon: fab fa-instagram
     url: //instagram.com/bcardo.so
+
+-
+    icon: far fa-envelope
+    url: mailto:brandon@bcardo.so
