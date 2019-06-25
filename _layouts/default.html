@@ -94,7 +94,7 @@
                 </div>
             </div>
         </section>
-        <div class="back-to-top">
+        <div id="back-to-top" style="display:none">
             <a href="#intro">
                 <i data-feather="arrow-up"></i>
             </a>
@@ -102,5 +102,15 @@
     </body>
     <script>
         feather.replace()
+    </script>
+    <script>
+        window.onscroll = function() {
+            let introHeight = document.getElementById('intro').clientHeight
+            if (document.documentElement.scrollTop >= introHeight) {
+                document.getElementById('back-to-top').style.display = ''
+            } else {
+                document.getElementById('back-to-top').style.display = 'none'
+            }
+        }
     </script>
 </html>
