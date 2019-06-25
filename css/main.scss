@@ -53,8 +53,12 @@ html a {
 
 	text-align: center;
 
-	&__logo img {
-		height: 6rem;
+	&__logo {
+		margin-bottom: 1rem;
+
+		img {
+			height: 6rem;
+		}
 	}
 
 	&__name {
@@ -67,6 +71,7 @@ html a {
 	&__subtitle {
 		text-transform: lowercase;
 		color: $gray-dark;
+		margin-top: -0.5rem;
 	}
 
 	&__social {
@@ -98,19 +103,54 @@ html a {
 }
 
 .section {
-	min-height: 100%;
+	min-height: 66%;
+	display: flex;
+	align-items: center;
 
 	&__title {
 		font-family: 'Nixie One', cursive;
 		font-weight: 700;
 		font-size: 1.5rem;
 		color: $gray-darkest;
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
 	}
 
 	&__body {
 		font-size: 1.1rem;
 		line-height: 1.5rem;
+	}
+}
+
+.about {
+	@media (max-width: 768px) {
+	   .columns{
+		   display: flex;
+		   flex-direction: column-reverse;
+	   }
+	}
+
+	&__image {
+		&.column {
+			display: flex;
+			justify-content: center;
+		}
+
+		@media (max-width: 768px) {
+			.image {
+				max-width: 66%;
+			}
+		}
+		@media not all and (max-width: 768px) {
+			.image {
+				max-width: 20rem;
+			}
+		}
+	}
+
+	&__text {
+		p + p {
+			margin-top: 1rem;
+		}
 	}
 }
 
