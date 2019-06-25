@@ -1,15 +1,15 @@
 -
-    icon: fab fa-github
+    icon: github
     url: //github.com/BrandonCardoso
 
 -
-    icon: fab fa-linkedin-in
+    icon: linkedin
     url: //linkedin.com/in/BrandonCardoso
 
 -
-    icon: fab fa-instagram
+    icon: instagram
     url: //instagram.com/bcardo.so
 
 -
-    icon: far fa-envelope
+    icon: mail
     url: mailto:brandon@bcardo.so
