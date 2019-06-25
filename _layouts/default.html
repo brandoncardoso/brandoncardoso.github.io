@@ -68,13 +68,14 @@
         </script>
     </head>
     <body>
-        <section class="section intro">
+        <section class="section intro" id="intro">
             <div class="intro__logo">
                 <img src="/img/bc2.png" />
             </div>
             <div class="intro__name">Brandon Cardoso</div>
             <div class="intro__subtitle">software engineer</div>
             <div class="intro__nav">
+                <a href="#about">Who am I?</a>
             </div>
             <div class="intro__social">
                 {% for item in site.data.social %}
@@ -84,5 +85,19 @@
                 {% endfor %}
             </div>
         </section>
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section__title">
+                    About Me
+                </div>
+                <div class="section__body">
+                </div>
+            </div>
+        </section>
+        <div class="back-to-top">
+            <a href="#intro">
+                <i class="fas fa-angle-up"></i>
+            </a>
+        </div>
     </body>
 </html>

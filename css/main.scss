@@ -30,9 +30,15 @@ html, body {
 	scroll-behavior: smooth;
 }
 
-a {
+html a {
 	text-decoration: none;
 	color: $gray-darkest;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		color: $gray-darker;
+		background-color: $accent;
+	}
 }
 
 .intro {
@@ -54,7 +60,7 @@ a {
 	&__name {
 		font-family: 'Nixie One', cursive;
 		font-weight: 700;
-		font-size: 225%;
+		font-size: 2.25rem;
 		color: $gray-darkest;
 	}
 
@@ -76,7 +82,6 @@ a {
 			align-items: center;
 			width: 2.5rem;
 			height: 2.5rem;
-			transition: all 0.2s ease-in-out;
 
 			text-align: center;
 			color: $gray-dark;
@@ -84,15 +89,44 @@ a {
 			& + a {
 				margin-left: 1rem;
 			}
-
-			&:hover {
-				color: $gray-darker;
-				background-color: $accent;
-			}
 		}
+	}
+
+	&__nav {
+		margin-top: 2rem;
 	}
 }
 
-section {
+.section {
 	min-height: 100%;
+
+	&__title {
+		font-family: 'Nixie One', cursive;
+		font-weight: 700;
+		font-size: 1.5rem;
+		color: $gray-darkest;
+		margin-bottom: 1rem;
+	}
+
+	&__body {
+		font-size: 1.1rem;
+		line-height: 1.5rem;
+	}
+}
+
+.back-to-top {
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	height: 2rem;
+	width: 2rem;
+	font-size: 1.5rem;
+
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	}
 }
