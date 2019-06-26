@@ -147,7 +147,11 @@ html a {
 		}
 	}
 
-	&__text {
+	&__text.column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
 		p + p {
 			margin-top: 1rem;
 		}
