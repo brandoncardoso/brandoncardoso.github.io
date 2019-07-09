@@ -1,0 +1,63 @@
+-
+    title: Nordstrom
+    subtitle: Software Engineer
+    logo_url: /img/nordstrom_logo.png
+    body: >
+        Nordstrom is a leading fashion retailer focused on delivering
+        the best possible shopping experience for their customers.
+        <br /><br />
+        After Nordstrom acquired BevyUp, I was hired by Nordstrom Canada where I
+        continue to develop the application that was started at BevyUp.
+        My main focus has been intigration of BevyUp's resources (databases,
+        pipelines, documentation, repositories, etc.) with Nordstrom's,
+        as well as improving system reliability and monitoring.
+-
+    title: BevyUp (Acquired by Nordstrom)
+    subtitle: Software Development Engineer
+    logo_url: /img/bevyup_logo.png
+    body: >
+        BevyUp empowers sales associates with unique tools and insights
+        that put the focus back on the customer with technology that
+        enables them to create meaningful relationships that drives improved
+        business results.
+        <br /><br />
+        I worked at BevyUp for 3 years. During my time working there, the focus
+        of the company pivoted several times to meet customer demand, and I had
+        to develop a knowledge of the entire system. I worked on everything from
+        UI/UX to database design, and helped with the initial design and
+        implementation of the product that would lead to the acquisition by
+        Nordstrom. I'm deeply grateful for my time at BevyUp; the wonderful
+        people I met and worked with, and the experience I gained.
+        <br /><br />
+        BevyUp was acquired by Nordstrom in March, 2018.
+-
+    title: Bot Bros
+    subtitle: Co-Founder
+    logo_url: /img/botbros_logo.png
+    body: >
+        Bot Bros is a 'family' of automated trading bots for the online game
+        Team Fortress 2.
+        <br /><br />
+        Team Fortress 2 is a game with a special place in my heart. It introduced
+        me to the simple economic concept of supply and demand. After spending
+        lots of free time trading with other players, and seeing the success of
+        automated trading services, my friend and I decided to implement our own.
+        We created a database of thousands of items and their prices which were
+        automatically updated from a community driven pricing API, inventory
+        management logic, and a simple text chat interface for users.
+        <br /><br />
+        To date, we have served over 15,000 users and completed over 1,000,000 trades.
+-
+    title: Real Programming 4 Kids
+    subtitle: Instructor
+    logo_url: /img/rp4k_logo.jpg
+    body: >
+        At RP4K, kids learn the fundamentals of computer programming while
+        creating a video game in an informal classroom setting.
+        <br /><br />
+        I worked as an instructor at Real Programming 4 Kids for over a year,
+        teaching kids that were as young as 8 and up to 16. Courses came in
+        a variety of programming languages like Scratch, Visual Basic, C#,
+        and Java. I taught kids the basic programming principles and math
+        required to create games similar to Frogger, Asteroids, and Mario,
+        and even how to create mods for Minecraft.

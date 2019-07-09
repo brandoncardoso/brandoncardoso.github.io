@@ -2,7 +2,7 @@
 ---
 $white:        #fff;
 $black:        #000;
-$gray-lighter: #fcfcfc;
+$gray-lighter: #fbfbfb;
 $gray-light:   #f5f5f5;
 $gray:         #e0e0e0;
 $gray-dark:    #848484;
@@ -99,11 +99,21 @@ html a {
 
 	&__nav {
 		margin-top: 2rem;
+		display: flex;
+		flex-direction: column;
+
+		a {
+			display: block;
+			padding: 0.2rem 0.3rem;
+
+			 & + a {
+				 margin-top: 0.5rem;
+			 }
+		}
 	}
 }
 
 .section {
-	min-height: 66%;
 	display: flex;
 	align-items: center;
 
@@ -140,6 +150,7 @@ html a {
 				max-width: 66%;
 			}
 		}
+
 		@media not all and (max-width: 768px) {
 			.image {
 				max-width: 20rem;
@@ -155,6 +166,29 @@ html a {
 		p + p {
 			margin-top: 1rem;
 		}
+	}
+}
+
+.work {
+	background: $gray-lighter;
+
+	&__container {
+		height: 100%;
+	}
+
+	&__logo {
+		.image img {
+			width: auto;
+			max-width: 15rem;
+			max-height: 3rem;
+			margin: auto;
+		}
+
+		margin-top: 2rem;
+	}
+
+	&__body {
+		margin-top: 1rem;
 	}
 }
 
