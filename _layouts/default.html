@@ -119,11 +119,12 @@
         <section class="section is-medium work" id="work">
             <div class="container">
                 <div class="section__title">
-                    Work &amp; Projects
+                    Work
                 </div>
-                <div class="section__body columns is-multiline">
-                    {% for item in site.data.work_and_projects %}
-                    <div class="column is-half">
+                <div class="section__body">
+                    <div class="columns is-multiline is-centered">
+                    {% for item in site.data.work %}
+                    <div class="column is-half-tablet is-one-third-widescreen">
                         <div class="work__container box is-radiusless is-shadowless">
                             <div class="work__text">
                                 <div class="work__title">
@@ -136,11 +137,44 @@
                                     {{ item.body }}
                                 </div>
                             </div>
+                            {% if (item.logo_url) %}
                             <div class="work__logo">
                                 <div class="image">
                                     <img src="{{ item.logo_url }}" />
                                 </div>
                             </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div class="section__title">
+                    Personal Projects
+                </div>
+                <div class="section__body">
+                    <div class="columns is-multiline is-centered">
+                    {% for item in site.data.projects %}
+                    <div class="column">
+                        <div class="work__container box is-radiusless is-shadowless">
+                            <div class="work__text">
+                                <div class="work__title">
+                                    <p class="title is-5">{{ item.title }}</p>
+                                    {% if (item.subtitle) %}
+                                    <p class="subtitle is-6">{{ item.subtitle }}</p>
+                                    {% endif %}
+                                </div>
+                                <div class="work__body">
+                                    {{ item.body }}
+                                </div>
+                            </div>
+                            {% if (item.logo_url) %}
+                            <div class="work__logo">
+                                <div class="image">
+                                    <img src="{{ item.logo_url }}" />
+                                </div>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                     {% endfor %}

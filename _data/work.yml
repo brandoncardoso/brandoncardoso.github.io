@@ -31,23 +31,6 @@
         <br /><br />
         BevyUp was acquired by Nordstrom in March, 2018.
 -
-    title: Bot Bros
-    subtitle: Co-Founder
-    logo_url: /img/botbros_logo.png
-    body: >
-        Bot Bros is a 'family' of automated trading bots for the online game
-        Team Fortress 2.
-        <br /><br />
-        Team Fortress 2 is a game with a special place in my heart. It introduced
-        me to the simple economic concept of supply and demand. After spending
-        lots of free time trading with other players, and seeing the success of
-        automated trading services, my friend and I decided to implement our own.
-        We created a database of thousands of items and their prices which were
-        automatically updated from a community driven pricing API, inventory
-        management logic, and a simple text chat interface for users.
-        <br /><br />
-        To date, we have served over 15,000 users and completed over 1,000,000 trades.
--
     title: Real Programming 4 Kids
     subtitle: Instructor
     logo_url: /img/rp4k_logo.jpg

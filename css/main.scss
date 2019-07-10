@@ -123,6 +123,10 @@ html a {
 		font-size: 1.5rem;
 		color: $gray-darkest;
 		margin-bottom: 1.5rem;
+
+		&:not(:first-child) {
+			margin-top: 3rem;
+		}
 	}
 
 	&__body {
@@ -172,7 +176,10 @@ html a {
 .work {
 	background: $gray-lighter;
 
-	&__container {
+	&__container.box {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		height: 100%;
 	}
 
