@@ -106,9 +106,9 @@ html a {
 			display: block;
 			padding: 0.2rem 0.3rem;
 
-			 & + a {
-				 margin-top: 0.5rem;
-			 }
+			& + a {
+				margin-top: 0.5rem;
+			}
 		}
 	}
 }
@@ -137,10 +137,14 @@ html a {
 
 .about {
 	@media (max-width: 768px) {
-	   .columns{
-		   display: flex;
-		   flex-direction: column-reverse;
-	   }
+		.columns{
+			display: flex;
+			flex-direction: column-reverse;
+		}
+
+		.about__image {
+			margin-top: 1rem;
+		}
 	}
 
 	&__image {
@@ -196,6 +200,13 @@ html a {
 
 	&__body {
 		margin-top: 1rem;
+	}
+
+
+	@media (max-width: 768px) {
+		.column + .column {
+			margin-top: 1rem;
+		}
 	}
 }
 
