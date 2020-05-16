@@ -78,23 +78,6 @@ html a {
 		display: flex;
 		position: absolute;
 		bottom: 1.5rem;
-
-		font-size: 200%;
-
-		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 2.5rem;
-			height: 2.5rem;
-
-			text-align: center;
-			color: $gray-dark;
-
-			& + a {
-				margin-left: 1rem;
-			}
-		}
 	}
 
 	&__nav {
@@ -112,6 +95,25 @@ html a {
 		}
 	}
 }
+
+.intro__social,
+.footer__social {
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 2.5rem;
+		height: 2.5rem;
+
+		text-align: center;
+		color: $gray-dark;
+
+		& + a {
+			margin-left: 1rem;
+		}
+	}
+}
+
 
 .section {
 	display: flex;
@@ -224,5 +226,15 @@ html a {
 		height: 100%;
 		width: 100%;
 		color: $gray-dark;
+	}
+}
+
+footer.footer {
+	text-align: center;
+	background-color: $gradient1;
+	color: $gray-dark;
+
+	.footer__social {
+		display: inline-flex;
 	}
 }
