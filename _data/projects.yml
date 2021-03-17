@@ -14,3 +14,16 @@
         management logic, and a simple text chat interface for users.
         <br /><br />
         To date, we have served over 15,000 users and completed over 5,000,000 trades.
+
+-
+    title: Other Amazon
+    logo_url: /img/other-amazon-logo.jpg
+    body: >
+        A small Google Chrome extension to quickly check other Amazon locales to find
+        more reviews and compare prices.
+        <br /><br />
+        Sometimes items on Amazon.ca would not have many reviews, be unavailable, or
+        even be cheaper to order and import from the US. So I created this extention
+        to quickly switch to the Amazon.com product page of whatever product I was looking at.
+        <br /><br />
+        <a href="https://chrome.google.com/webstore/detail/other-amazon/lbpcjhibjdmjcbniceflabnfjhgejamb">Try out Other Amazon on Google Chrome.</a>
