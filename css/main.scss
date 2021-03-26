@@ -34,10 +34,12 @@ html a {
 	text-decoration: none;
 	color: $gray-darkest;
 	transition: all 0.2s ease-in-out;
+    border-bottom: .2rem solid $accent;
 
 	&:hover {
 		color: $gray-darker;
 		background-color: $accent;
+        border-bottom: .2rem solid darken($accent, 10);
 	}
 }
 
