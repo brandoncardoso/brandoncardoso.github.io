@@ -1,5 +1,5 @@
 name: Brandon Cardoso
-url: www.bcardo.so
+url: https://bcardo.so
 title: Brandon Cardoso
 description: "A software engineer from Toronto, Canada."
 
@@ -7,6 +7,9 @@ date_format: "%d %b %Y"
 
 markdown: kramdown
 timezone: America/Toronto
+
+plugins:
+    - jekyll-sitemap
 
 defaults:
     -
