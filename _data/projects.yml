@@ -23,7 +23,19 @@
         more reviews and compare prices.
         <br /><br />
         Sometimes items on Amazon.ca would not have many reviews, be unavailable, or
-        even be cheaper to order and import from the US. So I created this extention
+        even be cheaper to order and import from the US. So I created this extension
         to quickly switch to the Amazon.com product page of whatever product I was looking at.
         <br /><br />
         <a href="https://chrome.google.com/webstore/detail/other-amazon/lbpcjhibjdmjcbniceflabnfjhgejamb">Try out Other Amazon on Google Chrome.</a>
+
+-
+    title: This Website, bcardo.so
+    logo_url: /img/bc2.png
+    body: >
+        It's a simple GitHub Pages website using Jekyll that I designed and implemented
+        myself. <a href="https://github.com/BrandonCardoso/brandoncardoso.github.io">The source code</a>
+        is publicly available on my GitHub.
+        <br /><br />
+        I've tried to make it as accessible as possible by
+        following <a href="https://www.a11yproject.com/checklist/">the A11Y Project checklist</a>
+        and I welcome any comments or suggestions on how I can improve its accessibility.
