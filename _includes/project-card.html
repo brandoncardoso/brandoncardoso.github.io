@@ -1,0 +1,23 @@
+<div class="column {{ include.columnClass }}">
+    <div class="work__container box is-radiusless is-shadowless">
+        <div class="work__text">
+            <div class="work__title">
+                <h3 class="title is-5">{{ item.title }}</h3>
+                {% if (item.subtitle) %}
+                <p class="subtitle is-6">{{ item.subtitle }}</p>
+                {% endif %}
+            </div>
+            <div class="work__body">
+                {{ item.body }}
+            </div>
+        </div>
+        {% if (item.logo_url) %}
+        <div class="work__logo">
+            <div class="image">
+                <img src="{{ item.logo_url }}" alt="{{ item.title }} logo" />
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
