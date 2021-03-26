@@ -73,17 +73,17 @@
                 <img src="/img/bc2.png" alt="Brandon Cardoso personal logo"/>
             </div>
             <h1 class="intro__name">Brandon Cardoso</h1>
-            <div class="intro__nav">
+            <nav aria-label="Primary" class="intro__nav">
                 <a href="#about">Who am I?</a>
                 <a href="#work">What have I done?</a>
-            </div>
-            <div class="intro__social">
+            </nav>
+            <nav aria-label="Social" class="intro__social">
                 {% for item in site.data.social %}
-                <a href="{{ item.url }}" target="_blank">
+                <a href="{{ item.url }}" title="{{ item.name }}" target="_blank">
                     <i data-feather="{{ item.icon }}"></i>
                 </a>
                 {% endfor %}
-            </div>
+            </nav>
         </section>
         <section class="section is-medium about" id="about">
             <div class="container">
@@ -180,39 +180,41 @@
                 </div>
             </div>
         </section>
+
         <footer class="footer">
             <div class="content has-text-centered">
-                <div class="footer__social">
+                <nav aria-label="Social" class="footer__social">
                     {% for item in site.data.social %}
-                    <a href="{{ item.url }}" target="_blank">
+                    <a href="{{ item.url }}" target="_blank" title="{{ item.name }}">
                         <i data-feather="{{ item.icon }}"></i>
                     </a>
                     {% endfor %}
-                </div>
+                </nav>
             </div>
         </footer>
+
         <div id="back-to-top" style="display:none">
-            <a href="#intro">
+            <a href="#intro" title="Back to top">
                 <i data-feather="arrow-up"></i>
             </a>
         </div>
 
-    <script>
-        feather.replace()
-    </script>
+        <script>
+            feather.replace()
+        </script>
 
-    <script>
-        let onScrollHandler = function() {
-            let introHeight = document.getElementById('intro').clientHeight
-            if (document.documentElement.scrollTop >= introHeight) {
-                document.getElementById('back-to-top').style.display = ''
-            } else {
-                document.getElementById('back-to-top').style.display = 'none'
+        <script>
+            let onScrollHandler = function() {
+                let introHeight = document.getElementById('intro').clientHeight
+                if (document.documentElement.scrollTop >= introHeight) {
+                    document.getElementById('back-to-top').style.display = ''
+                } else {
+                    document.getElementById('back-to-top').style.display = 'none'
+                }
             }
-        }
 
-        window.onscroll = onScrollHandler
-        onScrollHandler() // inital check incase of refresh
-    </script>
+            window.onscroll = onScrollHandler
+            onScrollHandler() // inital check incase of refresh
+        </script>
     </body>
 </html>

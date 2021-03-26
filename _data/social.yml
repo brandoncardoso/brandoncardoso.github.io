@@ -1,15 +1,19 @@
 -
+    name: GitHub
     icon: github
     url: //github.com/BrandonCardoso
 
 -
+    name: LinkedIn
     icon: linkedin
     url: //linkedin.com/in/BrandonCardoso
 
 -
+    name: Instagram
     icon: instagram
     url: //instagram.com/bcardo.so
 
 -
+    name: E-mail
     icon: mail
     url: mailto:brandon@bcardo.so
