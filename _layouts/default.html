@@ -78,11 +78,7 @@
                 <a href="#work">What have I done?</a>
             </nav>
             <nav aria-label="Social" class="intro__social">
-                {% for item in site.data.social %}
-                <a href="{{ item.url }}" title="{{ item.name }}" target="_blank">
-                    <i data-feather="{{ item.icon }}"></i>
-                </a>
-                {% endfor %}
+                {% include social.html %}
             </nav>
         </section>
         <section aria-label="About Me" class="section is-medium about" id="about">
@@ -184,11 +180,7 @@
         <footer class="footer">
             <div class="content has-text-centered">
                 <nav aria-label="Social" class="footer__social">
-                    {% for item in site.data.social %}
-                    <a href="{{ item.url }}" target="_blank" title="{{ item.name }}">
-                        <i data-feather="{{ item.icon }}"></i>
-                    </a>
-                    {% endfor %}
+                    {% include social.html %}
                 </nav>
             </div>
         </footer>
