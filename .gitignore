@@ -2,3 +2,5 @@ _site/
 *.swp
 _posts/*test-post*
 .jekyll-metadata
+.bundle
+vendor/
