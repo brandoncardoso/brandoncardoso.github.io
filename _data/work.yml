@@ -1,46 +1,16 @@
 -
+    title: Compass Digital Labs
+    subtitle: Software Engineer
+    logo_url: /img/cdl_logo.png
+-
     title: Nordstrom
     subtitle: Software Engineer
     logo_url: /img/nordstrom_logo.png
-    body: >
-        Nordstrom is a leading fashion retailer focused on delivering
-        the best possible shopping experience for their customers.
-        <br /><br />
-        After Nordstrom acquired BevyUp, I was hired by Nordstrom Canada where I
-        continued to develop the application that was started at BevyUp.
-        My main focus was integration of BevyUp's resources (databases,
-        pipelines, documentation, repositories, etc.) with Nordstrom's,
-        as well as improving system reliability and monitoring.
 -
     title: BevyUp (Acquired by Nordstrom)
     subtitle: Software Development Engineer
     logo_url: /img/bevyup_logo.png
-    body: >
-        BevyUp empowers sales associates with unique tools and insights
-        that put the focus back on the customer with technology that
-        enables them to create meaningful relationships that drives improved
-        business results.
-        <br /><br />
-        I worked at BevyUp for 3 years. During my time working there, the focus
-        of the company pivoted several times to meet customer demand, and I had
-        to develop a knowledge of the entire system. I worked on everything from
-        UI/UX to database design, and helped with the initial design and
-        implementation of the product that would lead to the acquisition by
-        Nordstrom. I'm deeply grateful for my time at BevyUp; the wonderful
-        people I met and worked with, and the experience I gained.
-        <br /><br />
-        BevyUp was acquired by Nordstrom in March, 2018.
 -
     title: Real Programming 4 Kids
     subtitle: Instructor
     logo_url: /img/rp4k_logo.jpg
-    body: >
-        At RP4K, kids learn the fundamentals of computer programming while
-        creating a video game in an informal classroom setting.
-        <br /><br />
-        I worked as an instructor at Real Programming 4 Kids for over a year,
-        teaching kids that were as young as 8 and up to 16. Courses came in
-        a variety of programming languages like Scratch, Visual Basic, C#,
-        and Java. I taught kids the basic programming principles and math
-        required to create games similar to Frogger, Asteroids, and Mario,
-        and even how to create mods for Minecraft.

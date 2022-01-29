@@ -7,9 +7,11 @@
                 <p class="subtitle is-6">{{ item.subtitle }}</p>
                 {% endif %}
             </div>
+            {% if (item.body) %}
             <div class="work__body">
                 {{ item.body }}
             </div>
+            {% endif %}
         </div>
         {% if (item.logo_url) %}
         <div class="work__logo">
@@ -20,4 +22,3 @@
         {% endif %}
     </div>
 </div>
-
