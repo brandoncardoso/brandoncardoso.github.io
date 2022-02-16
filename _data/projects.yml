@@ -37,3 +37,14 @@
         I've tried to make it as accessible as possible by
         following <a href="https://www.a11yproject.com/checklist/">the A11Y Project checklist</a>
         and I welcome any comments or suggestions on how I can improve its accessibility.
+
+-
+    title: Movie Trailer Bot
+    logo_url: /img/movie-trailer-bot.png
+    body: >
+        During covid-19 lockdowns, some friends and I decided to hold monthly online movie nights.
+        I created this bot to connect to our Discord server so we could easily search for movie trailers
+        and automatically post popular new movie trailers to help discover new & upcoming releases.
+        <br /><br />
+        <a href="https://github.com/BrandonCardoso/movie-trailer-bot">Check out the Movie Trailer Bot source code.</a>
+
