@@ -1,26 +1,17 @@
-name: Brandon Cardoso
-url: https://bcardo.so
 title: Brandon Cardoso
-description: "A software engineer from Toronto, Canada."
+author:
+    name: Brandon Cardoso
+    email: brandon@bcardo.so
 
-date_format: "%d %b %Y"
+hima:
+    social:
+        - { platform: github, url: 'https://github.com/brandoncardoso', label: "my github profile" }
+        - { platform: linkedin, url: 'https://linkedin.com/in/brandoncardoso', label: "my linkedin profile" }
+        - { platform: instagram, url: 'https://instagram.com/bcardo.so', label: "my instagram page" }
 
-markdown: kramdown
-timezone: America/Toronto
+google_analytics_measurement_id: G-8FVYBBB8TK
+
+remote_theme: brandoncardoso/hima
 
 plugins:
-    - jekyll-sitemap
-
-defaults:
-    -
-        scope:
-            path: ""
-        values:
-            layout: "default"
-    -
-        scope:
-            path: "post"
-        values:
-            layout: "post"
-            customClass: "post"
-            author: "Brandon Cardoso"
+    - jekyll-remote-plugin

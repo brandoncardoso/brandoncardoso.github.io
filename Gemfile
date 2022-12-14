@@ -4,8 +4,9 @@ gem "jekyll"
 
 group :jekyll_plugins do
   gem 'github-pages'
-  gem 'jekyll-sitemap'
+  gem 'jekyll-remote-theme'
 end
 
 gem 'tzinfo-data'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem 'webrick', '~> 1.7'
