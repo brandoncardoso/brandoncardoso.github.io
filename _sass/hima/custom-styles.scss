@@ -1,0 +1,24 @@
+@import "hima/colourschemes/_gruvbox-colours";
+
+.home {
+  &__profile-img {
+    display: block;
+    margin: 0 auto;
+    width: 12rem;
+    height: auto;
+    margin-bottom: 3rem;
+    border-radius: 10%;
+    border-width: .5rem;
+    border-style: solid;
+
+    @media (prefers-color-scheme: light) {
+      background: $black3;
+      border-color: $black3;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background: $white0h;
+      border-color: $white0h;
+    }
+  }
+}

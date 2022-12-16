@@ -1,6 +1,8 @@
 ---
 layout: home
 ---
+![picture of Brandon Cardoso smiling](/assets/img/brandon.png){:class="home__profile-img"}
+
 Hey, I'm **Brandon Cardoso**, from Toronto, Canada.
 
 I'm passionate about helping people communicate with each other and the world around them,
