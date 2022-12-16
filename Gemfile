@@ -5,6 +5,7 @@ gem "jekyll"
 group :jekyll_plugins do
   gem 'github-pages'
   gem 'jekyll-remote-theme'
+  gem 'jekyll-sitemap'
 end
 
 gem 'tzinfo-data'

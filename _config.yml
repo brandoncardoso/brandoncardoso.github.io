@@ -15,5 +15,8 @@ google_analytics_measurement_id: G-8FVYBBB8TK
 
 remote_theme: brandoncardoso/hima
 
+url: https://www.bcardo.so
+
 plugins:
     - jekyll-remote-plugin
+    - jekyll-sitemap

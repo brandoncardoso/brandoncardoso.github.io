@@ -256,6 +256,7 @@ DEPENDENCIES
   github-pages
   jekyll
   jekyll-remote-theme
+  jekyll-sitemap
   tzinfo-data
   webrick (~> 1.7)
 
