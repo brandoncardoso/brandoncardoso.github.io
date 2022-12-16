@@ -1,7 +1,7 @@
 ---
 layout: home
 ---
-![picture of Brandon Cardoso smiling](/assets/img/brandon.png){:class="home__profile-img"}
+![picture of Brandon Cardoso smiling](/assets/img/brandon.webp){:class="home__profile-img"}{:width="256"}{:height="256"}
 
 Hey, I'm **Brandon Cardoso**, from Toronto. Currently in Tokyo.
 
