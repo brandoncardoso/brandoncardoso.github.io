@@ -20,3 +20,5 @@ url: https://www.bcardo.so
 plugins:
     - jekyll-remote-plugin
     - jekyll-sitemap
+    - jekyll-seo-tag
+    - jekyll-feed
