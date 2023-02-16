@@ -17,6 +17,9 @@ remote_theme: brandoncardoso/hima
 
 url: https://www.bcardo.so
 
+header_pages:
+    - projects.html
+
 plugins:
     - jekyll-remote-plugin
     - jekyll-sitemap

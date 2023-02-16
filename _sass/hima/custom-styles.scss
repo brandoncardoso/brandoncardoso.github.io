@@ -22,3 +22,19 @@
     }
   }
 }
+
+.project {
+  & + .project {
+    margin-top: 4rem;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 4rem;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+---
+title: Projects
+layout: page
+---
+
+{% for project in site.data.projects %}
+<div class="project">
+  <div class="project__name">
+    <h2>{{ project.name }}</h2>
+  </div>
+
+  <div class="project__description">
+    {{ project.description }}
+  </div>
+
+  {% if project.logo %}
+  <div class="project__logo">
+    <img alt="{{ project.name }} logo" src="{{ project.logo }}"></img>
+  </div>
+  {% endif %}
+</div>
+{% endfor %}
