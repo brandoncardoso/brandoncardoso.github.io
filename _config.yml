@@ -21,7 +21,6 @@ header_pages:
     - projects.html
 
 plugins:
-    - jekyll-remote-plugin
     - jekyll-sitemap
     - jekyll-seo-tag
     - jekyll-feed
