@@ -1,7 +1,8 @@
 --- 
 layout: post
-title: "Becoming a Better Software Engineer: Imposter Syndrome"
+title: Imposter Syndrome
 tags: [software engineering, self improvement]
+category: becoming a better software engineer
 ---
 
 I feel like my skills as a software engineer have stagnated recently, and I've sort of lost my way. I want to change

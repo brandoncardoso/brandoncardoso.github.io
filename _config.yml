@@ -5,7 +5,10 @@ author:
     name: Brandon Cardoso
     email: brandon@bcardo.so
 
+permalink: /:slugified_categories/:title:output_ext
+
 hima:
+    date_format: "%b. %-d, %Y"
     social:
         - { platform: github, url: 'https://github.com/brandoncardoso', label: "my github profile" }
         - { platform: linkedin, url: 'https://linkedin.com/in/brandoncardoso', label: "my linkedin profile" }
@@ -19,8 +22,16 @@ url: https://www.bcardo.so
 
 header_pages:
     - projects.html
+    - posts.html
+
+jekyll-archives:
+    enabled:
+        - categories
+        - tags
+    layout: archive
 
 plugins:
     - jekyll-sitemap
     - jekyll-seo-tag
     - jekyll-feed
+    - jekyll-archives

@@ -38,3 +38,39 @@
     }
   }
 }
+
+.archive {
+  &__section {
+    & + & {
+      margin-top: 4rem;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+      display: inline-block;
+      margin: 0 2rem .67rem 0;
+    }
+  }
+
+  &__post-count {
+    color: var(--hima-post-meta-colour);
+    font-size: .8rem;
+  }
+}
+
+.minimal-post-list {
+  list-style-type: none;
+  padding: 0;
+
+  .post__meta {
+    font-family: monospace;
+    margin-right: 1rem;
+  }
+}

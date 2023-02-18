@@ -1,5 +1,7 @@
 ---
 layout: home
+post_list_title: Recent Posts
+post_list_limit: 5
 ---
 ![picture of Brandon Cardoso smiling](/assets/img/brandon.webp){:class="home__profile-img"}{:width="256"}{:height="256"}
 
