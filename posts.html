@@ -1,19 +1,4 @@
 ---
-layout: page
+layout: archive-root
 title: Posts
 ---
-
-<section class="archive__section">
-  <h2>Categories</h2>
-  {% include archive-posts.html set=site.categories path="/category/" %}
-</section>
-
-<section class="archive__section">
-  <h2>Tags</h2>
-  {% include archive-posts.html set=site.tags path="/tag/" %}
-</section>
-
-<section class="archive__section">
-<h2>All</h2>
-{% include minimal-post-list.html posts=site.posts %}
-</section>
