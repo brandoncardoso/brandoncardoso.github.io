@@ -1,6 +1,7 @@
 _site/
 *.swp
 _posts/*test-post*
-.jekyll-metadata
+.jekyll-metadata/
+.jekyll-cache/
 .bundle
 vendor/
