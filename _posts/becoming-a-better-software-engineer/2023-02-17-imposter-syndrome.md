@@ -27,6 +27,7 @@ what you are doing. I haven't put in the time to fully understand what it means 
 So that is what I'm going to do. I am going to research, read, and practice to fill the gaps in my knowledge, and do
 what is necessary to become a better, more professional, software engineer.
 
+## What's Next?
 I think my general code writing skills are pretty good, but I've never put deliberate effort in to learning and
 understanding clean coding practices. So to start, I will be reading [_Clean Code: A Handbook of Agile Software_ by
 Robert Martin](https://amzn.to/3Ef9Ace). It goes over a lot of principles and concepts for writing code that is easy to
