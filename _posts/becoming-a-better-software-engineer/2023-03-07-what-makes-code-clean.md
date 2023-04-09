@@ -1,8 +1,6 @@
 ---
-layout: post
 title: What Makes Code "Clean"?
 tags: [software engineering]
-category: becoming a better software engineer
 ---
 What does it mean for code to be "clean"? You've probably seen code at some point that when you read it, you could _feel_ it was well written, but what about it was special? What about code that made you feel dirty and practically begged you to make changes to it? What qualities does code need to have for it to be considered good?
 

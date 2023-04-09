@@ -7,6 +7,18 @@ author:
 
 permalink: /:slugified_categories/:title:output_ext
 
+defaults:
+    -
+        scope:
+            path: "_posts"
+        values:
+            layout: "post"
+    -
+        scope:
+            path: "_posts/becoming-a-better-software-engineer"
+        values:
+            category: "becoming a better software engineer"
+
 hima:
     date_format: "%b. %-d, %Y"
     social:
