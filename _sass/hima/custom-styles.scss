@@ -42,3 +42,21 @@
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
+
+.text--red {
+  @media (prefers-color-scheme: dark) {
+    color: $red-light;
+  }
+  @media (prefers-color-scheme: light) {
+    color: $red-dark;
+  }
+}
+
+.text--green {
+  @media (prefers-color-scheme: dark) {
+    color: $green-light;
+  }
+  @media (prefers-color-scheme: light) {
+    color: $green-dark;
+  }
+}
