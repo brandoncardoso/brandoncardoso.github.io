@@ -29,5 +29,5 @@ title: Doggie Movie Night History
 | 21   | Sat, Jan 28th, 2023  | Pirate                      | The Count of Monte Cristo          |
 | 22   | Fri, Feb 24th, 2023  | Aliens (Daniel)             | Dark Skies                         |
 | 23   | Fri, Mar 24th, 2023  | Bromance (Brandon)          | The Banshees of Inisherin          |
-| 24   | Fri, Apr 28th, 2023  | Romantic Comedy (Mike)      | Mike | Mr. Right                   |
+| 24   | Fri, Apr 28th, 2023  | Romantic Comedy (Mike)      | Mr. Right                          |
 | 25   | Fri, May 26th, 2023  | "Steve" (Matt)              | My Friend Dahmer                   |
