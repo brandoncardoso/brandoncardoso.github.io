@@ -31,4 +31,4 @@ title: Doggie Movie Night History
 | 23   | Fri, Mar 24th, 2023  | Bromance (Brandon)          | [The Banshees of Inisherin](https://www.imdb.com/title/tt11813216) |
 | 24   | Fri, Apr 28th, 2023  | Romantic Comedy (Mike)      | [Mr. Right](https://www.imdb.com/title/tt2091935) |
 | 25   | Fri, May 26th, 2023  | "Steve" (Matt)              | [My Friend Dahmer](https://www.imdb.com/title/tt2291540) |
-| 26   | Sat, Jun 24th, 2023  | Fantasy (Daniel)            | [Soloman Kane](https://imdb.com/title/tt0970452) |
+| 26   | Sat, Jun 24th, 2023  | Fantasy (Daniel)            | [Solomon Kane](https://imdb.com/title/tt0970452) |
