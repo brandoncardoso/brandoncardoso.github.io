@@ -33,3 +33,4 @@ title: Doggie Movie Night History
 | 25   | Fri, May 26th, 2023  | "Steve" (Matt)              | [My Friend Dahmer](https://www.imdb.com/title/tt2291540) |
 | 26   | Sat, Jun 24th, 2023  | Fantasy (Daniel)            | [Solomon Kane](https://imdb.com/title/tt0970452) |
 | 27   | Fri, Jul 28th, 2023  | Mockumentary (Matt)         | [Tour de Pharmacy](https://www.imdb.com/title/tt5886510/) |
+| 28   | Sat, Sep 30th, 2023  | Italian (Robert)            | [Gomorrah](https://www.imdb.com/title/tt0929425/) |
