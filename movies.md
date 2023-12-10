@@ -35,4 +35,4 @@ title: Doggie Movie Night History
 | 27   | Fri, Jul 28th, 2023  | Mockumentary (Matt)         | [Tour de Pharmacy](https://www.imdb.com/title/tt5886510/) |
 | 28   | Sat, Sep 30th, 2023  | Italian (Robert)            | [Gomorrah](https://www.imdb.com/title/tt0929425/) |
 | 29   | Fri, Oct 27th, 2023  | Zombie (Brandon)            | [Train to Busan (2016)](https://www.imdb.com/title/tt5700672/) |
-| 30   | Sat, Dec 9th, 2023   | Hanukka (Anna & Cezar)      | [The Hebrew Hammer (2003)](https://www.themoviedb.org/movie/19187-the-hebrew-hammer) |
+| 30   | Sat, Dec 9th, 2023   | Hanukkah (Anna & Cezar)      | [The Hebrew Hammer (2003)](https://www.themoviedb.org/movie/19187-the-hebrew-hammer) |
