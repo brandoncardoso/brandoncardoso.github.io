@@ -37,3 +37,4 @@ title: Doggie Movie Night History
 | 29   | Fri, Oct 27th, 2023  | Zombie (Brandon)            | [Train to Busan (2016)](https://www.imdb.com/title/tt5700672/) |
 | 30   | Sat, Dec 9th, 2023   | Hanukkah (Anna & Cezar)     | [The Hebrew Hammer (2003)](https://www.themoviedb.org/movie/19187-the-hebrew-hammer) |
 | 31   | Fri, Feb 2nd, 2024   | Meta (Daniel)               | [Stranger Than Fiction (2006)](https://www.themoviedb.org/movie/1262-stranger-than-fiction) |
+| 32   | Fri, Feb 23rd, 2024  | Fever Dream (Matt)          | [The Holy Mountain (1973)](https://www.themoviedb.org/movie/8327-la-montana-sagrada) |
