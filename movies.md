@@ -39,4 +39,4 @@ title: Doggie Movie Night History
 | 31   | Fri, Feb 2nd, 2024   | Meta (Daniel)               | [Stranger Than Fiction (2006)](https://www.themoviedb.org/movie/1262-stranger-than-fiction) |
 | 32   | Fri, Feb 23rd, 2024  | Fever Dream (Matt)          | [The Holy Mountain (1973)](https://www.themoviedb.org/movie/8327-la-montana-sagrada) |
 | 33   | Fri, Mar 29th, 2024  | Business (Robert)           | [Dark Waters (2019)](https://www.themoviedb.org/movie/552178-dark-waters) |
-| 34   | Fri, Apr 19th, 2024  | Giant Monster (Brandon)     | [The Host (2006))](https://www.themoviedb.org/movie/1255) |
+| 34   | Fri, Apr 19th, 2024  | Giant Monster (Brandon)     | [The Host (2006)](https://www.themoviedb.org/movie/1255) |
