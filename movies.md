@@ -40,3 +40,4 @@ title: Doggie Movie Night History
 | 32   | Fri, Feb 23rd, 2024  | Fever Dream (Matt)          | [The Holy Mountain (1973)](https://www.themoviedb.org/movie/8327-la-montana-sagrada) |
 | 33   | Fri, Mar 29th, 2024  | Business (Robert)           | [Dark Waters (2019)](https://www.themoviedb.org/movie/552178-dark-waters) |
 | 34   | Fri, Apr 19th, 2024  | Giant Monster (Brandon)     | [The Host (2006)](https://www.themoviedb.org/movie/1255) |
+| 35   | Fri, May 24th, 2024  | 2005-2010 R Rated (Daniel)  | [Synecdoche, New York (2008)](https://www.themoviedb.org/movie/4960-synecdoche-new-york) |
