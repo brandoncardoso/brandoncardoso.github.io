@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Projects | Brandon Cardoso</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Projects" />
+<meta name="author" content="Brandon Cardoso" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Software Engineer from Toronto, Canada." />
+<meta property="og:description" content="Software Engineer from Toronto, Canada." />
+<link rel="canonical" href="https://www.bcardo.so/projects.html" />
+<meta property="og:url" content="https://www.bcardo.so/projects.html" />
+<meta property="og:site_name" content="Brandon Cardoso" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Projects" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Brandon Cardoso"},"description":"Software Engineer from Toronto, Canada.","headline":"Projects","url":"https://www.bcardo.so/projects.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preload" as="font" href="/assets/fonts/Oswald.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/assets/fonts/OpenSans.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8FVYBBB8TK"></script>
+<script>
+  window['ga-disable-G-8FVYBBB8TK'] =
+    window.doNotTrack === "1" ||
+    navigator.doNotTrack === "1" ||
+    navigator.doNotTrack === "yes" ||
+    navigator.msDoNotTrack === "1";
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8FVYBBB8TK');
+</script>
+</head>
+<body><header class="header">
+  <div class="header__container">
+    <div class="header__title"><a href="/">Brandon Cardoso</a></div><nav class="header__nav">
+      <input
+        class="header__nav-toggle"
+        id="nav-toggle"
+        type="checkbox"
+        aria-checked="false"
+        tabindex="0"
+        onclick="updateCheckedAria(event)"
+        onkeydown="updateCheckedAria(event)"
+      />
+      <label for="nav-toggle" aria-label="show/hide the navigation menu">
+        <!-- unicode trigram -->
+        &#9776;
+      </label>
+
+      <ul class="header__links"><li class="header__link">
+          <a
+            href="/projects.html"
+            aria-label="Projects"
+            
+            class="active"
+            
+            >
+            Projects
+          </a>
+        </li><li class="header__link">
+          <a
+            href="/posts.html"
+            aria-label="Posts"
+            
+            >
+            Posts
+          </a>
+        </li></ul>
+    </nav></div>
+</header>
+
+<script>
+  const header = document.querySelector('.header')
+  const container = header.querySelector('.header__container')
+  const trigger = header.offsetHeight - container.offsetTop
+
+  window.addEventListener("scroll", (event) => {
+    if (window.scrollY > trigger) {
+      header.classList.add('header--pinned')
+    } else {
+      header.classList.remove('header--pinned')
+    }
+  })
+
+  function updateCheckedAria(event) {
+    const spacebarKeyCode = 32
+    const checkbox = event.target
+
+    if (event.keyCode && event.keyCode !== spacebarKeyCode) {
+      return
+    }
+    checkbox.setAttribute('aria-checked', checkbox.checked)
+  }
+</script>
+<main class="content">
+      <div class="content__container">
+        <div class="post">
+  <div class="post__header">
+    <h1 id="post-title" class="post__title">Projects</h1>
+  </div>
+
+  <section aria-labelledby="post-title" class="post__content">
+  
+<div class="project">
+  <div class="project__name">
+    <h2>Bot Bros Automated Trading Service</h2>
+  </div>
+
+  <div class="project__description">
+    <p> Bot Bros was a 'family' of automated trading bots for the online game Team Fortress 2. </p> <p> After spending lots of free time trading in-game items with other players, and seeing the success of automated trading services, my friend and I decided to implement our own. We created a database with thousands of items, their prices that were automatically updated from a community driven pricing API, inventory management logic, and a simple text chat interface for users. We successfully served over 15,000 users and completed over 5,000,000 trades. </p>
+
+  </div>
+
+  
+  <div class="project__logo">
+    <img alt="Bot Bros Automated Trading Service logo" src="/assets/img/bot-bros-logo.webp" height="64" width="64"></img>
+  </div>
+  
+</div>
+
+<div class="project">
+  <div class="project__name">
+    <h2>Movie Trailer Bot</h2>
+  </div>
+
+  <div class="project__description">
+    <p> During COVID-19 lockdowns, some friends and I decided to hold monthly online movie nights. I created this bot to connect to our Discord server so we could easily search for movie trailers and to automatically post popular new movie trailers to help discover new and upcoming releases. </p> <p> Check out the <a href="https://github.com/BrandonCardoso/movie-trailer-bot">Movie Trailer Bot source code</a> on GitHub. </p>
+
+  </div>
+
+  
+  <div class="project__logo">
+    <img alt="Movie Trailer Bot logo" src="/assets/img/movie-trailer-bot-logo.webp" height="64" width="64"></img>
+  </div>
+  
+</div>
+
+<div class="project">
+  <div class="project__name">
+    <h2>Hima Jekyll Theme</h2>
+  </div>
+
+  <div class="project__description">
+    <p> The Jekyll theme used on this site. </p> <p> Hima is a simple Jekyll theme with a focus on accessibility. The <a href="https://github.com/BrandonCardoso/hima">Hima source code</a> is publicly available on GitHub. I've tried to make it as accessible as possible by following the <a href="https://www.a11yproject.com/checklist/">A11Y Project's accessibility checklist</a>. </p>
+
+  </div>
+
+  
+</div>
+
+
+  </section>
+</div>
+
+      </div>
+    </main><footer class="footer">
+  <div class="footer__container"><ul class="social-list">
+  <li class="social-list__link">
+    <a rel="me" href="/feed.xml" aria-label="rss feed">
+      <svg aria-hidden="true">
+        <use xlink:href="/assets/hima-social-icons.svg#rss"></use>
+      </svg>
+    </a>
+  </li><li class="social-list__link">
+    <a rel="me" href="https://github.com/brandoncardoso" aria-label="my github profile">
+      <svg aria-hidden="true">
+        <use xlink:href="/assets/hima-social-icons.svg#github"></use>
+      </svg>
+    </a>
+  </li><li class="social-list__link">
+    <a rel="me" href="https://linkedin.com/in/brandoncardoso" aria-label="my linkedin profile">
+      <svg aria-hidden="true">
+        <use xlink:href="/assets/hima-social-icons.svg#linkedin"></use>
+      </svg>
+    </a>
+  </li><li class="social-list__link">
+    <a rel="me" href="https://instagram.com/bcardo.so" aria-label="my instagram page">
+      <svg aria-hidden="true">
+        <use xlink:href="/assets/hima-social-icons.svg#instagram"></use>
+      </svg>
+    </a>
+  </li></ul>
+<div class="footer__author">
+      <div class="footer__name">
+        Brandon Cardoso
+      </div>
+      <div class="footer__email">
+        <a href="mailto:brandon@bcardo.so">
+          brandon@bcardo.so
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
