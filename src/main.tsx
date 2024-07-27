@@ -8,14 +8,18 @@ import {
 } from 'react-router-dom'
 import { MantineProvider } from '@mantine/core'
 
-import App from './App.tsx'
+import Root from './root'
+import { Home, Movies } from './pages'
 
 import '@mantine/core/styles.css'
 import './index.css'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<Route path="/" element={<App />} />
+		<Route element={<Root />}>
+			<Route path="/" element={<Home />} />
+			<Route path="/movies" element={<Movies />} />
+		</Route>
 	)
 )
 
