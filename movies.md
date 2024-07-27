@@ -42,4 +42,4 @@ title: Doggie Movie Night History
 | 34   | Fri, Apr 19th, 2024  | Giant Monster (Brandon)     | [The Host (2006)](https://www.themoviedb.org/movie/1255) |
 | 35   | Fri, May 24th, 2024  | 2005-2010 R Rated (Daniel)  | [Synecdoche, New York (2008)](https://www.themoviedb.org/movie/4960-synecdoche-new-york) |
 | 36   | Fri, Jun 28th, 2024  | Crime Mystery (Matt)        | [True Story (2015)](https://www.themoviedb.org/movie/245706-true-story) |
-| 373  | Fri, Jul 26th, 2024  | Korean (Sam)                | [Exhuma (2024)](https://www.themoviedb.org/movie/838209) |
+| 37   | Fri, Jul 26th, 2024  | Korean (Sam)                | [Exhuma (2024)](https://www.themoviedb.org/movie/838209) |
