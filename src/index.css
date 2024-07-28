@@ -1,1 +1,4 @@
-
+.mantine-NavLink-root:hover {
+	background-color: transparent;
+	text-decoration: underline;
+}

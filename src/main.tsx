@@ -6,7 +6,7 @@ import {
 	Route,
 	RouterProvider,
 } from 'react-router-dom'
-import { MantineProvider } from '@mantine/core'
+import { createTheme, MantineProvider } from '@mantine/core'
 
 import Root from './root'
 import { Home, Movies } from './pages'
@@ -23,9 +23,23 @@ const router = createBrowserRouter(
 	)
 )
 
+const theme = createTheme({
+	autoContrast: true,
+	components: {
+		NavLink: {
+			styles: () => ({
+				root: {
+					"--nl-bg": "transparent",
+					"--nl-hover": "transparent",
+				}
+			})
+		}
+	}
+})
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<MantineProvider>
+		<MantineProvider theme={theme}>
 			<RouterProvider router={router} />
 		</MantineProvider>
 	</React.StrictMode>,
