@@ -43,3 +43,4 @@ title: Doggie Movie Night History
 | 35   | Fri, May 24th, 2024  | 2005-2010 R Rated (Daniel)  | [Synecdoche, New York (2008)](https://www.themoviedb.org/movie/4960-synecdoche-new-york) |
 | 36   | Fri, Jun 28th, 2024  | Crime Mystery (Matt)        | [True Story (2015)](https://www.themoviedb.org/movie/245706-true-story) |
 | 37   | Fri, Jul 26th, 2024  | Korean (Sam)                | [Exhuma (2024)](https://www.themoviedb.org/movie/838209) |
+| 38   | Fri, Aug 30th, 2024  | Water (Robert)              | [Greyhound (2020)](https://youtu.be/5Byeq_hyh2U) |
