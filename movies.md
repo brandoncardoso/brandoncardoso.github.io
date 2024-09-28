@@ -44,3 +44,4 @@ title: Doggie Movie Night History
 | 36   | Fri, Jun 28th, 2024  | Crime Mystery (Matt)        | [True Story (2015)](https://www.themoviedb.org/movie/245706-true-story) |
 | 37   | Fri, Jul 26th, 2024  | Korean (Sam)                | [Exhuma (2024)](https://www.themoviedb.org/movie/838209) |
 | 38   | Fri, Aug 30th, 2024  | Water (Robert)              | [Greyhound (2020)](https://youtu.be/5Byeq_hyh2U) |
+| 39   | Fri, Sep 27th, 2024  | Oscar Bait (Mike)           | [The Last Duel (2021)](https://www.youtube.com/watch?v=mgygUwPJvYk) |
