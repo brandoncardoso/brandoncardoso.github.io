@@ -6,34 +6,53 @@ import {
 	Route,
 	RouterProvider,
 } from 'react-router-dom'
-import { createTheme, MantineProvider } from '@mantine/core'
+import { Container, createTheme, MantineProvider, rem } from '@mantine/core'
 
-import Root from './root'
 import { Home, Movies } from './pages'
 
 import '@mantine/core/styles.css'
 import './index.css'
+import Root from './root'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<Route element={<Root />}>
+		<Route path="/" element={<Root />}>
 			<Route path="/" element={<Home />} />
 			<Route path="/movies" element={<Movies />} />
 		</Route>
 	)
 )
 
+const CONTAINER_SIZES: Record<string, string> = {
+	xxs: rem(300),
+	xs: rem(400),
+	sm: rem(500),
+	md: rem(600),
+	lg: rem(700),
+	xl: rem(800),
+	xxl: rem(900),
+};
+
 const theme = createTheme({
-	autoContrast: true,
+	fontFamily: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace",
+	headings: {
+		fontFamily: "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace",
+	},
+	lineHeights: {
+		md: '2'
+	},
 	components: {
-		NavLink: {
-			styles: () => ({
+		Container: Container.extend({
+			vars: (_, { size, fluid }) => ({
 				root: {
-					"--nl-bg": "transparent",
-					"--nl-hover": "transparent",
+					'--container-size': fluid
+						? '100%'
+						: size !== undefined && size in CONTAINER_SIZES
+							? CONTAINER_SIZES[size]
+							: rem(size)
 				}
 			})
-		}
+		})
 	}
 })
 
