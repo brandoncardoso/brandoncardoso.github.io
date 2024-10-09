@@ -6,7 +6,7 @@ import {
 	Title,
 } from "@mantine/core";
 import { Link, Outlet } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 
 type LinkInfo = {
 	link: string
@@ -22,6 +22,8 @@ const links: Array<LinkInfo> = [
 export default function Root() {
 	return (
 		<>
+			<Helmet defaultTitle="Brandon Cardoso" titleTemplate="%s - Brandon Cardoso" />
+
 			<Container my="xl" size="md">
 				<Stack>
 					<Group justify="space-between" align="flex-end">
