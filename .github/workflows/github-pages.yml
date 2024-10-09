@@ -43,6 +43,12 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Create symlink for 404.html
+        # github searches for specific file to match route, eg. /movies looks for movies.html
+        # if not found, returns 404.html. link 404.html to index.html to trick
+        run: |
+          ln -s ./dist/index.html ./dist/404.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
