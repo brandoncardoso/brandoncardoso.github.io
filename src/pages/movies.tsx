@@ -4,8 +4,15 @@ import {
 	Table,
 	Title,
 } from "@mantine/core";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+import localizedFormat from "dayjs/plugin/localizedFormat";
 import { useEffect, useState } from "react";
 
+dayjs.extend(utc)
+dayjs.extend(timezone)
+dayjs.extend(localizedFormat)
 
 type MovieNightInfo = {
 	num: number,
@@ -47,7 +54,9 @@ export default function Movies() {
 					{movies.map((movie, index) => (
 						<Table.Tr key={index}>
 							<Table.Td>{movie.num}</Table.Td>
-							<Table.Td>{movie.date}</Table.Td>
+							<Table.Td>
+								{dayjs.tz(movie.date, "America/Toronto").format("ddd, DD MMM, YYYY")}
+							</Table.Td>
 							<Table.Td>{movie.theme} {movie.themePicker && `(${movie.themePicker})`}</Table.Td>
 							<Table.Td>
 								<Anchor
