@@ -6,7 +6,12 @@ import {
 	Route,
 	RouterProvider,
 } from 'react-router-dom'
-import { Container, createTheme, MantineProvider, rem } from '@mantine/core'
+import {
+	Container,
+	createTheme,
+	MantineProvider,
+	rem,
+} from '@mantine/core'
 
 import { Home, Movies } from './pages'
 
@@ -28,9 +33,9 @@ const CONTAINER_SIZES: Record<string, string> = {
 	xs: rem(400),
 	sm: rem(500),
 	md: rem(600),
-	lg: rem(700),
-	xl: rem(800),
-	xxl: rem(900),
+	lg: rem(750),
+	xl: rem(900),
+	xxl: rem(1050),
 };
 
 const theme = createTheme({
