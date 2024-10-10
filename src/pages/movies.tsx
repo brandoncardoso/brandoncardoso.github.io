@@ -61,7 +61,6 @@ export default function Movies() {
 
 				// Handle number comparison
 				if (typeof valueA === "number" && typeof valueB === "number") {
-					console.log('numbers')
 					if (sortConfig.direction === SortDirection.ASC) {
 						return valueA - valueB
 					}
@@ -72,7 +71,6 @@ export default function Movies() {
 
 				// Handle string comparison
 				if (typeof valueA === "string" && typeof valueB === "string") {
-					console.log('strings')
 					if (sortConfig.direction === SortDirection.ASC) {
 						return valueA.localeCompare(valueB)
 					}
