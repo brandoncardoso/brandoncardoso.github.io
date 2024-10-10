@@ -7,6 +7,7 @@ import {
 } from "@mantine/core";
 import { Link, Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useEffect, useState } from "react";
 
 type LinkInfo = {
 	link: string
@@ -18,11 +19,23 @@ const links: Array<LinkInfo> = [
 	{ link: '/movies', label: 'Movie Night', aria: 'Doggie movie night movie history' },
 ]
 
-
 export default function Root() {
+	const [scrollToTopVisible, setScrollToTopVisible] = useState(false)
+
+	const toggleScrollToTop = () => {
+		setScrollToTopVisible(window.scrollY > 300)
+	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', toggleScrollToTop);
+		return () => window.removeEventListener('scroll', toggleScrollToTop)
+	}, []);
+
 	return (
 		<>
 			<Helmet defaultTitle="Brandon Cardoso" titleTemplate="%s - Brandon Cardoso" />
+
+			<a id="top" />
 
 			<Container my="xl" size="md">
 				<Stack>
@@ -46,24 +59,31 @@ export default function Root() {
 			<Outlet />
 
 			<Container my="xl" size="md">
-				<Group>
-					<Anchor
-						href="https://github.com/brandoncardoso"
-						aria-label="Brandon Cardoso's GitHub profile">
-						GitHub
-					</Anchor>
+				<Group justify="space-between">
+					<Group>
+						<Anchor
+							href="https://github.com/brandoncardoso"
+							aria-label="Brandon Cardoso's GitHub profile">
+							GitHub
+						</Anchor>
 
-					<Anchor
-						href="https://linkedin.com/in/brandoncardoso"
-						aria-label="Brandon Cardoso's LinkedIn profile">
-						LinkedIn
-					</Anchor>
+						<Anchor
+							href="https://linkedin.com/in/brandoncardoso"
+							aria-label="Brandon Cardoso's LinkedIn profile">
+							LinkedIn
+						</Anchor>
 
-					<Anchor
-						href="mailto:brandon@bcardo.so"
-						aria-label="Send an email to Brandon Cardoso">
-						brandon@bcardo.so
-					</Anchor>
+						<Anchor
+							href="mailto:brandon@bcardo.so"
+							aria-label="Send an email to Brandon Cardoso">
+							brandon@bcardo.so
+						</Anchor>
+					</Group>
+
+
+					{scrollToTopVisible &&
+						<Anchor href="#top">Back to top</Anchor>
+					}
 				</Group>
 			</Container>
 		</>

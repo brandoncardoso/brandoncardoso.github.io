@@ -99,7 +99,7 @@ export default function Movies() {
 
 	const getSortButton = (sortKey: keyof MovieNightInfo) => {
 		return (
-			<ActionIcon ml={4} variant="subtle" onClick={() => changeSort(sortKey)}>
+			<ActionIcon variant="subtle" onClick={() => changeSort(sortKey)}>
 				<Text>
 					{sortConfig.key === sortKey
 						? sortConfig.direction === SortDirection.ASC
