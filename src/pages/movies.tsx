@@ -5,6 +5,7 @@ import {
 	Table,
 	Title,
 	Text,
+	rem,
 } from "@mantine/core";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -121,38 +122,40 @@ export default function Movies() {
 			<Container size="xxl">
 				<Title order={2} size="h4" mb="md">Doggie Movie Night History</Title>
 
-				<Table withRowBorders={false} highlightOnHover>
-					<Table.Thead>
-						<Table.Tr>
-							<Table.Th>#</Table.Th>
-							<Table.Th>Date {getSortButton("date")}</Table.Th>
-							<Table.Th>Theme {getSortButton("theme")}</Table.Th>
-							<Table.Th>Movie Title {getSortButton("movieTitle")}</Table.Th>
-							<Table.Th>Movie Year {getSortButton("movieYear")}</Table.Th>
-						</Table.Tr>
-					</Table.Thead>
-					<Table.Tbody>
-						{sortedMovies.map((movie, index) => (
-							<Table.Tr key={index}>
-								<Table.Td>{movie.num}</Table.Td>
-								<Table.Td>
-									{dayjs.tz(movie.date, "America/Toronto").format("ddd, DD MMM, YYYY")}
-								</Table.Td>
-								<Table.Td>{movie.theme} {movie.themePicker && `(${movie.themePicker})`}</Table.Td>
-								<Table.Td>
-									<Anchor
-										href={movie.tmdbUrl}
-										aria-label={`The Movie Database (TMDB) page for ${movie.movieTitle} ${movie.movieYear}`}>
-										{movie.movieTitle}
-									</Anchor>
-								</Table.Td>
-								<Table.Td>
-									{movie.movieYear}
-								</Table.Td>
+				<Table.ScrollContainer minWidth={rem(900)}>
+					<Table withRowBorders={false} highlightOnHover>
+						<Table.Thead>
+							<Table.Tr>
+								<Table.Th>#</Table.Th>
+								<Table.Th>Date {getSortButton("date")}</Table.Th>
+								<Table.Th>Theme {getSortButton("theme")}</Table.Th>
+								<Table.Th>Movie Title {getSortButton("movieTitle")}</Table.Th>
+								<Table.Th>Movie Year {getSortButton("movieYear")}</Table.Th>
 							</Table.Tr>
-						))}
-					</Table.Tbody>
-				</Table>
+						</Table.Thead>
+						<Table.Tbody>
+							{sortedMovies.map((movie, index) => (
+								<Table.Tr key={index}>
+									<Table.Td>{movie.num}</Table.Td>
+									<Table.Td>
+										{dayjs.tz(movie.date, "America/Toronto").format("ddd, DD MMM, YYYY")}
+									</Table.Td>
+									<Table.Td>{movie.theme} {movie.themePicker && `(${movie.themePicker})`}</Table.Td>
+									<Table.Td>
+										<Anchor
+											href={movie.tmdbUrl}
+											aria-label={`The Movie Database (TMDB) page for ${movie.movieTitle} ${movie.movieYear}`}>
+											{movie.movieTitle}
+										</Anchor>
+									</Table.Td>
+									<Table.Td>
+										{movie.movieYear}
+									</Table.Td>
+								</Table.Tr>
+							))}
+						</Table.Tbody>
+					</Table>
+				</Table.ScrollContainer>
 			</Container>
 		</>
 	)
