@@ -9,6 +9,7 @@ import {
 import {
 	Container,
 	createTheme,
+	DEFAULT_THEME,
 	MantineProvider,
 	rem,
 } from '@mantine/core'
@@ -58,6 +59,20 @@ const theme = createTheme({
 				}
 			})
 		})
+	},
+	colors: {
+		dark: [
+			'#f2f2f2', // used for text color on dark colorscheme, but default is too dark/low-contrast
+			DEFAULT_THEME.colors.dark[1],
+			DEFAULT_THEME.colors.dark[2],
+			DEFAULT_THEME.colors.dark[3],
+			DEFAULT_THEME.colors.dark[4],
+			DEFAULT_THEME.colors.dark[5],
+			DEFAULT_THEME.colors.dark[6],
+			DEFAULT_THEME.colors.dark[7],
+			DEFAULT_THEME.colors.dark[8],
+			DEFAULT_THEME.colors.dark[9],
+		]
 	}
 })
 
