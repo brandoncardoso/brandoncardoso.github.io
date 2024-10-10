@@ -35,8 +35,6 @@ export default function Root() {
 		<>
 			<Helmet defaultTitle="Brandon Cardoso" titleTemplate="%s - Brandon Cardoso" />
 
-			<a id="top" />
-
 			<Container my="xl" size="md">
 				<Stack>
 					<Group justify="space-between" align="flex-end">
@@ -82,7 +80,7 @@ export default function Root() {
 
 
 					{scrollToTopVisible &&
-						<Anchor href="#top">Back to top</Anchor>
+						<Anchor onClick={() => window.scrollTo(0, 0)}>Back to top</Anchor>
 					}
 				</Group>
 			</Container>
