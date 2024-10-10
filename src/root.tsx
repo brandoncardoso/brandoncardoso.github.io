@@ -45,8 +45,8 @@ export default function Root() {
 						</Title>
 
 						<Group>
-							{links.map(({ link, label, aria }) => {
-								return <Anchor component={Link} to={link} aria-label={aria}>{label}</Anchor>
+							{links.map(({ link, label, aria }, index) => {
+								return <Anchor key={index} component={Link} to={link} aria-label={aria}>{label}</Anchor>
 							})}
 						</Group>
 					</Group >
