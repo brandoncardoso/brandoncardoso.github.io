@@ -1,11 +1,11 @@
 import {
-	ActionIcon,
 	Anchor,
 	Container,
 	Table,
 	Title,
 	Text,
 	rem,
+	Button,
 } from "@mantine/core";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -96,10 +96,11 @@ export default function Movies() {
 		setSortConfig({ key, direction })
 	}
 
-	const getSortButton = (sortKey: keyof MovieNightInfo) => {
+	const getHeader = (label: string, sortKey: keyof MovieNightInfo) => {
 		return (
-			<ActionIcon variant="subtle" onClick={() => changeSort(sortKey)}>
-				<Text>
+			<Button m={0} p={0} onClick={() => changeSort(sortKey)} variant="transparent" c="unset" tt="uppercase">
+				{label}
+				<Text span c="blue" ml={4}>
 					{sortConfig.key === sortKey
 						? sortConfig.direction === SortDirection.ASC
 							? '↑'
@@ -107,7 +108,7 @@ export default function Movies() {
 						: '⇅'
 					}
 				</Text>
-			</ActionIcon>
+			</Button>
 		)
 	}
 
@@ -120,21 +121,21 @@ export default function Movies() {
 			<Container size="xxl">
 				<Title order={2} size="h4" mb="md">Doggie Movie Night History</Title>
 
-				<Table.ScrollContainer minWidth={rem(900)}>
+				<Table.ScrollContainer minWidth={rem(500)}>
 					<Table withRowBorders={false} highlightOnHover>
-						<Table.Thead>
+						<Table.Thead style={{ "white-space": "nowrap" }}>
 							<Table.Tr>
-								<Table.Th>#</Table.Th>
-								<Table.Th>Date {getSortButton("date")}</Table.Th>
-								<Table.Th>Theme {getSortButton("theme")}</Table.Th>
-								<Table.Th>Movie Title {getSortButton("movieTitle")}</Table.Th>
-								<Table.Th>Movie Year {getSortButton("movieYear")}</Table.Th>
+								<Table.Th ta="right">#</Table.Th>
+								<Table.Th>{getHeader("Date", "date")}</Table.Th>
+								<Table.Th>{getHeader("Theme", "theme")}</Table.Th>
+								<Table.Th>{getHeader("Movie Title", "movieTitle")}</Table.Th>
+								<Table.Th ta="right">{getHeader("Movie Year", "movieYear")}</Table.Th>
 							</Table.Tr>
 						</Table.Thead>
 						<Table.Tbody>
 							{sortedMovies.map((movie, index) => (
 								<Table.Tr key={index}>
-									<Table.Td>{movie.num}</Table.Td>
+									<Table.Td ta="right">{movie.num}</Table.Td>
 									<Table.Td>
 										{dayjs.tz(movie.date, "America/Toronto").format("ddd, DD MMM, YYYY")}
 									</Table.Td>
@@ -146,7 +147,7 @@ export default function Movies() {
 											{movie.movieTitle}
 										</Anchor>
 									</Table.Td>
-									<Table.Td>
+									<Table.Td ta="right">
 										{movie.movieYear}
 									</Table.Td>
 								</Table.Tr>
