@@ -6,6 +6,10 @@ import {
 	Text,
 	rem,
 	Button,
+	TextInput,
+	ActionIcon,
+	Center,
+	Flex,
 } from "@mantine/core";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -13,6 +17,7 @@ import timezone from "dayjs/plugin/timezone";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
+import { useDebouncedCallback } from "@mantine/hooks";
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -42,6 +47,8 @@ type SortConfig = {
 export default function Movies() {
 	const [movies, setMovies] = useState<MovieNightInfo[]>([])
 	const [sortConfig, setSortConfig] = useState<SortConfig>({ key: "date", direction: SortDirection.DESC })
+	const [searchText, setSearchText] = useState("")
+	const [debouncedSearchText, setDebouncedSearchText] = useState("")
 
 	useEffect(() => {
 		const loadMovies = async () => {
@@ -84,9 +91,33 @@ export default function Movies() {
 		}
 	}, [sortConfig])
 
-	const sortedMovies = useMemo(() => {
-		return [...movies].sort(sortFunction)
-	}, [movies, sortFunction])
+	const formatDate = (date: string): string => {
+		return dayjs.tz(date, "America/Toronto").format("ddd, DD MMM, YYYY")
+	}
+
+	const moviesOutput = useMemo(() => {
+		return [...movies].filter((movie) => {
+			if (debouncedSearchText == '') return true;
+
+			return movie.theme.toLowerCase().includes(debouncedSearchText) ||
+				movie.themePicker.toLowerCase().includes(debouncedSearchText) ||
+				movie.movieTitle.toLowerCase().includes(debouncedSearchText) ||
+				movie.movieYear.toString().toLowerCase().includes(debouncedSearchText) ||
+				movie.num.toString().toLowerCase().includes(debouncedSearchText) ||
+				formatDate(movie.date).toLowerCase().includes(debouncedSearchText)
+		})
+			.sort(sortFunction)
+	}, [movies, sortFunction, debouncedSearchText])
+
+	const handleSearchChange = (query: string) => {
+		setSearchText(query.toLowerCase())
+		handleSearch()
+	}
+
+	const handleSearch = useDebouncedCallback(async () => {
+		setDebouncedSearchText(searchText)
+	}, 100);
+
 
 	const changeSort = (key: keyof MovieNightInfo) => {
 		let direction = SortDirection.ASC;
@@ -119,7 +150,26 @@ export default function Movies() {
 			</Helmet>
 
 			<Container size="xxl">
-				<Title order={2} size="h4" mb="md">Doggie Movie Night History</Title>
+				<Title order={2} size="h4">Doggie Movie Night History</Title>
+
+				<Flex justify="flex-end">
+					<TextInput
+						placeholder="Search"
+						size="sm"
+						maw={rem(300)}
+						aria-label="Search"
+						value={searchText}
+						onChange={(e) => handleSearchChange(e.currentTarget.value)}
+						rightSection={
+							<ActionIcon
+								variant="subtle"
+								onClick={() => handleSearchChange("")}
+								aria-label="Clear search">
+								✕
+							</ActionIcon>
+						}
+					/>
+				</Flex>
 
 				<Table.ScrollContainer minWidth={rem(500)}>
 					<Table withRowBorders={false} highlightOnHover>
@@ -133,11 +183,11 @@ export default function Movies() {
 							</Table.Tr>
 						</Table.Thead>
 						<Table.Tbody>
-							{sortedMovies.map((movie, index) => (
+							{moviesOutput.map((movie, index) => (
 								<Table.Tr key={index}>
 									<Table.Td ta="right">{movie.num}</Table.Td>
 									<Table.Td>
-										{dayjs.tz(movie.date, "America/Toronto").format("ddd, DD MMM, YYYY")}
+										{formatDate(movie.date)}
 									</Table.Td>
 									<Table.Td>{movie.theme} {movie.themePicker && `(${movie.themePicker})`}</Table.Td>
 									<Table.Td>
@@ -154,8 +204,11 @@ export default function Movies() {
 							))}
 						</Table.Tbody>
 					</Table>
+					{!moviesOutput.length &&
+						<Center c="gray" my="lg">No movies found.</Center>
+					}
 				</Table.ScrollContainer>
-			</Container>
+			</Container >
 		</>
 	)
 }
