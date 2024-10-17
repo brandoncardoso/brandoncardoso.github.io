@@ -150,7 +150,7 @@ export default function Movies() {
 			</Helmet>
 
 			<Container size="xxl">
-				<Title order={2} size="h4">Doggie Movie Night History</Title>
+				<Title order={2} size="h4" mb="sm">Doggie Movie Night History</Title>
 
 				<Flex justify="flex-end">
 					<TextInput
@@ -172,11 +172,11 @@ export default function Movies() {
 				</Flex>
 
 				<Table.ScrollContainer minWidth={rem(500)}>
-					<Table withRowBorders={false} highlightOnHover>
-						<Table.Thead style={{ "white-space": "nowrap" }}>
+					<Table withRowBorders={false} highlightOnHover >
+						<Table.Thead style={{ whiteSpace: "nowrap" }}>
 							<Table.Tr>
 								<Table.Th ta="right">#</Table.Th>
-								<Table.Th>{getHeader("Date", "date")}</Table.Th>
+								<Table.Th miw={rem(100)}>{getHeader("Date", "date")}</Table.Th>
 								<Table.Th>{getHeader("Theme", "theme")}</Table.Th>
 								<Table.Th>{getHeader("Movie Title", "movieTitle")}</Table.Th>
 								<Table.Th ta="right">{getHeader("Movie Year", "movieYear")}</Table.Th>
@@ -184,7 +184,7 @@ export default function Movies() {
 						</Table.Thead>
 						<Table.Tbody>
 							{moviesOutput.map((movie, index) => (
-								<Table.Tr key={index}>
+								<Table.Tr key={index} style={{ verticalAlign: "top" }}>
 									<Table.Td ta="right">{movie.num}</Table.Td>
 									<Table.Td>
 										{formatDate(movie.date)}
