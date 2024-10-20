@@ -9,7 +9,8 @@ import {
 	TextInput,
 	ActionIcon,
 	Center,
-	Flex,
+	Skeleton,
+	Group,
 } from "@mantine/core";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -46,15 +47,18 @@ type SortConfig = {
 
 export default function Movies() {
 	const [movies, setMovies] = useState<MovieNightInfo[]>([])
+	const [moviesLoading, setMoviesLoading] = useState(true)
 	const [sortConfig, setSortConfig] = useState<SortConfig>({ key: "date", direction: SortDirection.DESC })
 	const [searchText, setSearchText] = useState("")
 	const [debouncedSearchText, setDebouncedSearchText] = useState("")
 
 	useEffect(() => {
 		const loadMovies = async () => {
-			const res = await fetch('/data/movies.json');
+			setMoviesLoading(true)
+			const res = await fetch('/data/movies.json')
 			const data = await res.json()
 			setMovies(data as MovieNightInfo[])
+			setMoviesLoading(false)
 		}
 
 		loadMovies()
@@ -150,9 +154,9 @@ export default function Movies() {
 			</Helmet>
 
 			<Container size="xxl">
-				<Title order={2} size="h4" mb="sm">Doggie Movie Night History</Title>
+				<Group justify="space-between" align="center" mb="sm">
+					<Title order={2} size="h4">Doggie Movie Night History</Title>
 
-				<Flex justify="flex-end">
 					<TextInput
 						placeholder="Search"
 						size="sm"
@@ -169,45 +173,47 @@ export default function Movies() {
 							</ActionIcon>
 						}
 					/>
-				</Flex>
+				</Group>
 
-				<Table.ScrollContainer minWidth={rem(500)}>
-					<Table withRowBorders={false} highlightOnHover >
-						<Table.Thead style={{ whiteSpace: "nowrap" }}>
-							<Table.Tr>
-								<Table.Th ta="right">#</Table.Th>
-								<Table.Th miw={rem(100)}>{getHeader("Date", "date")}</Table.Th>
-								<Table.Th>{getHeader("Theme", "theme")}</Table.Th>
-								<Table.Th>{getHeader("Movie Title", "movieTitle")}</Table.Th>
-								<Table.Th ta="right">{getHeader("Movie Year", "movieYear")}</Table.Th>
-							</Table.Tr>
-						</Table.Thead>
-						<Table.Tbody>
-							{moviesOutput.map((movie, index) => (
-								<Table.Tr key={index} style={{ verticalAlign: "top" }}>
-									<Table.Td ta="right">{movie.num}</Table.Td>
-									<Table.Td>
-										{formatDate(movie.date)}
-									</Table.Td>
-									<Table.Td>{movie.theme} {movie.themePicker && `(${movie.themePicker})`}</Table.Td>
-									<Table.Td>
-										<Anchor
-											href={movie.tmdbUrl}
-											aria-label={`The Movie Database (TMDB) page for ${movie.movieTitle} ${movie.movieYear}`}>
-											{movie.movieTitle}
-										</Anchor>
-									</Table.Td>
-									<Table.Td ta="right">
-										{movie.movieYear}
-									</Table.Td>
+				<Skeleton visible={moviesLoading}>
+					<Table.ScrollContainer minWidth={rem(500)}>
+						<Table withRowBorders={false} highlightOnHover >
+							<Table.Thead style={{ whiteSpace: "nowrap" }}>
+								<Table.Tr>
+									<Table.Th ta="right">#</Table.Th>
+									<Table.Th miw={rem(100)}>{getHeader("Date", "date")}</Table.Th>
+									<Table.Th>{getHeader("Theme", "theme")}</Table.Th>
+									<Table.Th>{getHeader("Movie Title", "movieTitle")}</Table.Th>
+									<Table.Th ta="right">{getHeader("Movie Year", "movieYear")}</Table.Th>
 								</Table.Tr>
-							))}
-						</Table.Tbody>
-					</Table>
-					{!moviesOutput.length &&
-						<Center c="gray" my="lg">No movies found.</Center>
-					}
-				</Table.ScrollContainer>
+							</Table.Thead>
+							<Table.Tbody>
+								{moviesOutput.map((movie, index) => (
+									<Table.Tr key={index} style={{ verticalAlign: "top" }}>
+										<Table.Td ta="right">{movie.num}</Table.Td>
+										<Table.Td>
+											{formatDate(movie.date)}
+										</Table.Td>
+										<Table.Td>{movie.theme} {movie.themePicker && `(${movie.themePicker})`}</Table.Td>
+										<Table.Td>
+											<Anchor
+												href={movie.tmdbUrl}
+												aria-label={`The Movie Database (TMDB) page for ${movie.movieTitle} ${movie.movieYear}`}>
+												{movie.movieTitle}
+											</Anchor>
+										</Table.Td>
+										<Table.Td ta="right">
+											{movie.movieYear}
+										</Table.Td>
+									</Table.Tr>
+								))}
+							</Table.Tbody>
+						</Table>
+						{!moviesOutput.length &&
+							<Center c="gray" my="lg">No movies found.</Center>
+						}
+					</Table.ScrollContainer>
+				</Skeleton>
 			</Container >
 		</>
 	)
