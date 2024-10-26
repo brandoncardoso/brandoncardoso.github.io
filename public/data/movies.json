@@ -367,5 +367,14 @@
     "movieTitle": "The Last Duel",
     "movieYear": 2021,
     "tmdbUrl": "https://www.themoviedb.org/movie/617653-the-last-duel"
+  },
+  {
+    "num": 40,
+    "date": "2024-10-26",
+    "theme": "Vampire",
+    "themePicker": "Brandon",
+    "movieTitle": "30 Days of Night",
+    "movieYear": 2007,
+    "tmdbUrl": "https://www.themoviedb.org/movie/4513-30-days-of-night"
   }
 ]
