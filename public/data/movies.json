@@ -376,5 +376,14 @@
     "movieTitle": "30 Days of Night",
     "movieYear": 2007,
     "tmdbUrl": "https://www.themoviedb.org/movie/4513-30-days-of-night"
+  },
+  {
+    "num": 41,
+    "date": "2024-11-29",
+    "theme": "Nicolas Cage",
+    "themePicker": "Daniel",
+    "movieTitle": "Dream Scenario",
+    "movieYear": 2023,
+    "tmdbUrl": "https://www.themoviedb.org/movie/823482-dream-scenario"
   }
 ]
