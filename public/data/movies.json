@@ -385,5 +385,14 @@
     "movieTitle": "Dream Scenario",
     "movieYear": 2023,
     "tmdbUrl": "https://www.themoviedb.org/movie/823482-dream-scenario"
+  },
+  {
+    "num": 42,
+    "date": "2024-12-20",
+    "theme": "Before 1997",
+    "themePicker": "Matt",
+    "movieTitle": "Psycho",
+    "movieYear": 1960,
+    "tmdbUrl": "https://www.themoviedb.org/movie/539-psycho"
   }
 ]
