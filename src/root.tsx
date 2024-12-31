@@ -72,7 +72,7 @@ export default function Root() {
 						</Anchor>
 
 						<Anchor
-							href="mailto:brandon@bcardo.so"
+							href="mailto:brandon@bcardoso.com"
 							aria-label="Send an email to Brandon Cardoso">
 							brandon@bcardo.so
 						</Anchor>
