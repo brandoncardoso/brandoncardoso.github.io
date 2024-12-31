@@ -74,7 +74,7 @@ export default function Root() {
 						<Anchor
 							href="mailto:brandon@bcardoso.com"
 							aria-label="Send an email to Brandon Cardoso">
-							brandon@bcardo.so
+							brandon@bcardoso.com
 						</Anchor>
 					</Group>
 
