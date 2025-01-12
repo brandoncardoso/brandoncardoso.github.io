@@ -16,14 +16,17 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
 import localizedFormat from "dayjs/plugin/localizedFormat";
+import ja from "dayjs/locale/ja";
 import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useDebouncedCallback } from "@mantine/hooks";
 import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
 dayjs.extend(localizedFormat)
+dayjs.locale(ja)
 
 type MovieNightInfo = {
 	[key: string]: number | string;
@@ -99,7 +102,11 @@ export default function Movies() {
 	}, [sortConfig])
 
 	const formatDate = (date: string): string => {
-		return dayjs.tz(date, "America/Toronto").format("ddd, DD MMM, YYYY")
+		const d = dayjs.tz(date, "America/Toronto").locale(i18next.language)
+		if (i18next.language.startsWith('ja')) {
+			return d.format("ll (dd)")
+		}
+		return d.format("ddd, ll")
 	}
 
 	const moviesOutput = useMemo(() => {
