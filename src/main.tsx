@@ -19,6 +19,7 @@ import { Home, Movies } from './pages'
 import '@mantine/core/styles.css'
 import './index.css'
 import Root from './root'
+import './i18n'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(

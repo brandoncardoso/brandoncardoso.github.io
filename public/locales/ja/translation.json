@@ -1,0 +1,50 @@
+{
+	"name": "カルドーソ・ブランドン",
+	"introduction": "トロント出身のソフトウェアエンジニアです。今は東京に住んでいます。",
+	"backToTop": "トップに戻る",
+	"langSelectAria": "言語",
+	"projects": {
+		"title": "プロジェクト",
+		"botbros": {
+			"description": "Bot Bros ー 仮想アイテム取引ボット（<a>Steam グループ</a>）",
+			"aria": "ボット・ブラザーズのSteamグループ"
+		},
+		"moviebot": {
+			"description": "Movie Bot ー Discordの映画検索ボット（<a>GitHub</a>）",
+			"aria": "ムービーボットのGitHubのリポジトリ"
+		},
+		"hima": {
+			"description": "Hima ー Jekyllのテンプレート（<a>GitHub</a>）",
+			"aria": "ヒマのGitHubのリポジトリ"
+		}
+	},
+	"social": {
+		"github": {
+			"aria": "カルドーソ・ブランドンのGitHubプロフィール"
+		},
+		"linkedin": {
+			"aria": "カルドーソ・ブランドンのLinkedInプロフィール"
+		},
+		"email": {
+			"aria": "カルドーソ・ブランドンにメールを送信"
+		}
+	},
+	"nav": {
+		"movienight": {
+			"label": "ムービーナイト",
+			"aria": "ムービーナイトの歴史"
+		}
+	},
+	"movienight": {
+		"search": "検索",
+		"clearSearch:": "検索ワードを消去",
+		"title": "ムービーナイトの歴史",
+		"noMoviesFound": "映画が見つかりませんでした。",
+		"table": {
+			"date": "日付",
+			"theme": "テーマ",
+			"movieTitle": "映画のタイトル",
+			"movieYear": "映画公開年"
+		}
+	}
+}

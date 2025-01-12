@@ -1,0 +1,50 @@
+{
+	"name": "Brandon Cardoso",
+	"introduction": "Software engineer from Toronto, now in Tokyo.",
+	"backToTop": "Back to top",
+	"langSelectAria": "Language",
+	"projects": {
+		"title": "Projects",
+		"botbros": {
+			"description": "Bot Bros - Virtual item trading bots (<a>Steam Group</a>)",
+			"aria": "Bot Bros Steam group"
+		},
+		"moviebot": {
+			"description": "Movie Bot - Discord movie search bot (<a>GitHub</a>)",
+			"aria": "GitHub repository for Movie Bot"
+		},
+		"hima": {
+			"description": "Hima - Jekyll theme (<a>GitHub</a>)",
+			"aria": "GitHub repository for Hima"
+		}
+	},
+	"social": {
+		"github": {
+			"aria": "Brandon Cardoso's GitHub profile"
+		},
+		"linkedin": {
+			"aria": "Brandon Cardoso's LinkedIn profile"
+		},
+		"email": {
+			"aria": "send an email to Brandon Cardoso"
+		}
+	},
+	"nav": {
+		"movienight": {
+			"label": "Movie Night",
+			"aria": "Movie Night history"
+		}
+	},
+	"movienight": {
+		"title": "Movie Night History",
+		"search": "Search",
+		"clearSearch": "Clear search field",
+		"noMoviesFound": "No movies found.",
+		"table": {
+			"date": "Date",
+			"theme": "Theme",
+			"movieTitle": "Movie Title",
+			"movieYear": "Movie Release Year"
+		}
+	}
+}

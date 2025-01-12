@@ -5,29 +5,43 @@ import {
 	Space,
 	Title,
 } from "@mantine/core";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function Home() {
+	const { t } = useTranslation()
 	return (
 		<Container size="md">
 			<p>
-				Software engineer from Toronto, now in Tokyo.
+				{t('introduction')}
 			</p>
 
 			<Space h="md" />
 
-			<Title tt="uppercase" order={2} size="h6">Projects</Title>
+			<Title tt="uppercase" order={2} size="h6">{t('projects.title')}</Title>
 			<List>
 				<List.Item>
-					Bot Bros - Virtual item trading bots
-					(<Anchor href="https://steamcommunity.com/groups/BotBrothers" aria-label="Bot bros steam group page">Steam Group</Anchor>)
+					<Trans
+						i18nKey='projects.botbros.description'
+						components={{
+							a: <Anchor aria-label={t('projects.botbros.aria')} href="https://steamcommunity.com/groups/BotBrothers" />
+						}}
+					/>
 				</List.Item>
 				<List.Item>
-					Movie Bot - Discord movie search bot
-					(<Anchor href="https://github.com/brandoncardoso/movie-bot" aria-label="github repository for movie bot">GitHub</Anchor>)
+					<Trans
+						i18nKey='projects.moviebot.description'
+						components={{
+							a: <Anchor href="https://github.com/brandoncardoso/movie-bot" aria-label={t('projects.moviebot.aria')} />
+						}}
+					/>
 				</List.Item>
 				<List.Item>
-					Hima - Jekyll theme
-					(<Anchor href="https://github.com/BrandonCardoso/hima" aria-label="github repository for hima">GitHub</Anchor>)
+					<Trans
+						i18nKey='projects.hima.description'
+						components={{
+							a: <Anchor href="https://github.com/brandoncardoso/hima" aria-label={t('projects.hima.aria')} />
+						}}
+					/>
 				</List.Item>
 			</List>
 		</Container>

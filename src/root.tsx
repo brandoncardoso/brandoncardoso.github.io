@@ -1,13 +1,19 @@
 import {
+	ActionIcon,
 	Anchor,
+	Button,
 	Container,
 	Group,
+	Popover,
 	Stack,
 	Title,
-} from "@mantine/core";
-import { Link, Outlet } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import { useEffect, useState } from "react";
+} from "@mantine/core"
+import { Link, Outlet } from "react-router-dom"
+import { Helmet } from "react-helmet"
+import { useEffect, useState } from "react"
+import { useTranslation } from 'react-i18next'
+import i18next, { changeLanguage } from "i18next"
+import { IconWorld } from "@tabler/icons-react"
 
 type LinkInfo = {
 	link: string
@@ -15,11 +21,19 @@ type LinkInfo = {
 	aria: string
 }
 
-const links: Array<LinkInfo> = [
-	{ link: '/movies', label: 'Movie Night', aria: 'Doggie movie night movie history' },
-]
-
 export default function Root() {
+	const { t } = useTranslation()
+
+	const [currentLanguage, setCurrentLanguage] = useState<string>("en")
+	const languages = [
+		{ locale: "en", label: "English" },
+		{ locale: "ja", label: "日本語" },
+	]
+
+	const links: Array<LinkInfo> = [
+		{ link: '/movies', label: t("nav.movienight.label"), aria: t("nav.movienight.aria") },
+	]
+
 	const [scrollToTopVisible, setScrollToTopVisible] = useState(false)
 
 	const toggleScrollToTop = () => {
@@ -31,23 +45,57 @@ export default function Root() {
 		return () => window.removeEventListener('scroll', toggleScrollToTop)
 	}, []);
 
+	useEffect(() => {
+		setCurrentLanguage(i18next.language)
+	}, [i18next.language])
+
 	return (
 		<>
-			<Helmet defaultTitle="Brandon Cardoso" titleTemplate="%s - Brandon Cardoso" />
+			<Helmet defaultTitle={t('name')} titleTemplate={`%s - ${t('name')}`} />
+
+			<Container mt="xs" h={0} size="xxl">
+				<Group justify="flex-end">
+					<Popover position="bottom-end">
+						<Popover.Target>
+							<ActionIcon variant="subtle" color="gray" aria-label={t("langSelectAria")} size="sm">
+								<IconWorld stroke={1} />
+							</ActionIcon>
+						</Popover.Target>
+						<Popover.Dropdown p={0}>
+							<Stack gap={0}>
+								{languages.map(({ locale, label }) => (
+									<Button
+										size="xs"
+										key={locale}
+										radius={0}
+										variant={currentLanguage == locale ? "filled" : "subtle"}
+										onClick={() => changeLanguage(locale)}
+									>
+										{label}
+									</Button>
+								))}
+							</Stack>
+						</Popover.Dropdown>
+					</Popover>
+				</Group>
+			</Container>
 
 			<Container my="xl" size="md">
 				<Stack>
 					<Group justify="space-between" align="flex-end">
 						<Title order={1} size="h3">
 							<Anchor component={Link} to="/" inherit style={{ color: "inherit" }}>
-								Brandon Cardoso
+								{t('name')}
 							</Anchor>
 						</Title>
 
 						<Group>
-							{links.map(({ link, label, aria }, index) => {
-								return <Anchor key={index} component={Link} to={link} aria-label={aria}>{label}</Anchor>
-							})}
+							{links.map(({ link, label, aria }, index) => (
+								<Anchor key={index} component={Link} to={link} aria-label={aria}>
+									{label}
+								</Anchor>
+							))}
+
 						</Group>
 					</Group >
 
@@ -61,26 +109,28 @@ export default function Root() {
 					<Group>
 						<Anchor
 							href="https://github.com/brandoncardoso"
-							aria-label="Brandon Cardoso's GitHub profile">
+							aria-label={t('social.github.aria')}>
 							GitHub
 						</Anchor>
 
 						<Anchor
 							href="https://linkedin.com/in/brandoncardoso"
-							aria-label="Brandon Cardoso's LinkedIn profile">
+							aria-label={t('social.linkedin.aria')}>
 							LinkedIn
 						</Anchor>
 
 						<Anchor
 							href="mailto:brandon@bcardoso.com"
-							aria-label="Send an email to Brandon Cardoso">
+							aria-label={t('social.email.aria')}>
 							brandon@bcardoso.com
 						</Anchor>
 					</Group>
 
 
 					{scrollToTopVisible &&
-						<Anchor onClick={() => window.scrollTo(0, 0)}>Back to top</Anchor>
+						<Anchor onClick={() => window.scrollTo(0, 0)}>
+							{t("backToTop")}
+						</Anchor>
 					}
 				</Group>
 			</Container>

@@ -19,6 +19,7 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useDebouncedCallback } from "@mantine/hooks";
+import { useTranslation } from "react-i18next";
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
@@ -46,6 +47,8 @@ type SortConfig = {
 }
 
 export default function Movies() {
+	const { t } = useTranslation()
+
 	const [movies, setMovies] = useState<MovieNightInfo[]>([])
 	const [moviesLoading, setMoviesLoading] = useState(true)
 	const [sortConfig, setSortConfig] = useState<SortConfig>({ key: "date", direction: SortDirection.DESC })
@@ -155,20 +158,22 @@ export default function Movies() {
 
 			<Container size="xxl">
 				<Group justify="space-between" align="center" mb="sm">
-					<Title order={2} size="h4">Doggie Movie Night History</Title>
+					<Title order={2} size="h4">
+						{t("movienight.title")}
+					</Title>
 
 					<TextInput
-						placeholder="Search"
+						placeholder={t('movienight.search')}
 						size="sm"
 						maw={rem(300)}
-						aria-label="Search"
+						aria-label={t('movienight.search')}
 						value={searchText}
 						onChange={(e) => handleSearchChange(e.currentTarget.value)}
 						rightSection={
 							<ActionIcon
 								variant="subtle"
 								onClick={() => handleSearchChange("")}
-								aria-label="Clear search">
+								aria-label={t("movienight.clearSearch")}>
 								✕
 							</ActionIcon>
 						}
@@ -181,10 +186,10 @@ export default function Movies() {
 							<Table.Thead style={{ whiteSpace: "nowrap" }}>
 								<Table.Tr>
 									<Table.Th ta="right">#</Table.Th>
-									<Table.Th miw={rem(100)}>{getHeader("Date", "date")}</Table.Th>
-									<Table.Th>{getHeader("Theme", "theme")}</Table.Th>
-									<Table.Th>{getHeader("Movie Title", "movieTitle")}</Table.Th>
-									<Table.Th ta="right">{getHeader("Movie Year", "movieYear")}</Table.Th>
+									<Table.Th miw={rem(100)}>{getHeader(t("movienight.table.date"), "date")}</Table.Th>
+									<Table.Th>{getHeader(t("movienight.table.theme"), "theme")}</Table.Th>
+									<Table.Th>{getHeader(t("movienight.table.movieTitle"), "movieTitle")}</Table.Th>
+									<Table.Th ta="right">{getHeader(t("movienight.table.movieYear"), "movieYear")}</Table.Th>
 								</Table.Tr>
 							</Table.Thead>
 							<Table.Tbody>
@@ -210,7 +215,7 @@ export default function Movies() {
 							</Table.Tbody>
 						</Table>
 						{!moviesOutput.length &&
-							<Center c="gray" my="lg">No movies found.</Center>
+							<Center c="gray" my="lg">{t("movienight.noMoviesFound")}</Center>
 						}
 					</Table.ScrollContainer>
 				</Skeleton>
