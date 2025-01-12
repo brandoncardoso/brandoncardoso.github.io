@@ -153,7 +153,7 @@ export default function Movies() {
 	return (
 		<>
 			<Helmet>
-				<title>Doggie Movie Night History</title>
+				<title>{t("movienight.title")}</title>
 			</Helmet>
 
 			<Container size="xxl">
