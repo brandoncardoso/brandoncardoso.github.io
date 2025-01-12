@@ -82,7 +82,7 @@ export default function Root() {
 										size="xs"
 										key={locale}
 										radius={0}
-										variant={currentLanguage == locale ? "filled" : "subtle"}
+										variant={currentLanguage.startsWith(locale) ? "filled" : "subtle"}
 										onClick={() => changeLanguage(locale)}
 									>
 										{label}
