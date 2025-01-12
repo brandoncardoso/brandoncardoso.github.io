@@ -7,13 +7,15 @@ import {
 	Popover,
 	Stack,
 	Title,
+	useComputedColorScheme,
+	useMantineColorScheme,
 } from "@mantine/core"
 import { Link, Outlet } from "react-router-dom"
 import { Helmet } from "react-helmet"
 import { useEffect, useState } from "react"
 import { useTranslation } from 'react-i18next'
 import i18next, { changeLanguage } from "i18next"
-import { IconWorld } from "@tabler/icons-react"
+import { IconMoon, IconSunHigh, IconWorld } from "@tabler/icons-react"
 
 type LinkInfo = {
 	link: string
@@ -23,6 +25,9 @@ type LinkInfo = {
 
 export default function Root() {
 	const { t } = useTranslation()
+
+	const { setColorScheme } = useMantineColorScheme()
+	const computedColorScheme = useComputedColorScheme()
 
 	const [currentLanguage, setCurrentLanguage] = useState<string>("en")
 	const languages = [
@@ -40,6 +45,10 @@ export default function Root() {
 		setScrollToTopVisible(window.scrollY > 300)
 	}
 
+	const toggleColorScheme = () => {
+		setColorScheme(computedColorScheme === 'dark' ? 'light' : 'dark');
+	}
+
 	useEffect(() => {
 		window.addEventListener('scroll', toggleScrollToTop);
 		return () => window.removeEventListener('scroll', toggleScrollToTop)
@@ -55,6 +64,11 @@ export default function Root() {
 
 			<Container mt="xs" h={0} size="xxl">
 				<Group justify="flex-end">
+					<ActionIcon onClick={() => toggleColorScheme()} variant="subtle" color="gray" size="sm">
+						{computedColorScheme === 'dark' && <IconSunHigh stroke={1.5} />}
+						{computedColorScheme === 'light' && <IconMoon stroke={1.5} />}
+					</ActionIcon>
+
 					<Popover position="bottom-end">
 						<Popover.Target>
 							<ActionIcon variant="subtle" color="gray" aria-label={t("langSelectAria")} size="sm">
