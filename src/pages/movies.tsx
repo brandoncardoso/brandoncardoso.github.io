@@ -209,6 +209,7 @@ export default function Movies() {
 										<Table.Td>{movie.theme} {movie.themePicker && `(${movie.themePicker})`}</Table.Td>
 										<Table.Td>
 											<Anchor
+												fz="sm"
 												href={movie.tmdbUrl}
 												aria-label={`The Movie Database (TMDB) page for ${movie.movieTitle} ${movie.movieYear}`}>
 												{movie.movieTitle}
@@ -226,7 +227,7 @@ export default function Movies() {
 						}
 					</Table.ScrollContainer>
 				</Skeleton>
-			</Container >
+			</Container>
 		</>
 	)
 }

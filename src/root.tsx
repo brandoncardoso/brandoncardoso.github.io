@@ -109,7 +109,6 @@ export default function Root() {
 									{label}
 								</Anchor>
 							))}
-
 						</Group>
 					</Group >
 
