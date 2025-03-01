@@ -403,5 +403,14 @@
     "movieTitle": "Europa Report",
     "movieYear": 2013,
     "tmdbUrl": "https://www.themoviedb.org/movie/174772-europa-report"
+  },
+  {
+    "num": 44,
+    "date": "2025-02-28",
+    "theme": "Eastern Europe",
+    "themePicker": "Anastasia",
+    "movieTitle": "Sexmission",
+    "movieYear": 1984,
+    "tmdbUrl": "https://www.themoviedb.org/movie/19673-seksmisja"
   }
 ]
