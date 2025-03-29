@@ -412,5 +412,14 @@
     "movieTitle": "Sexmission",
     "movieYear": 1984,
     "tmdbUrl": "https://www.themoviedb.org/movie/19673-seksmisja"
+  },
+  {
+    "num": 45,
+    "date": "2025-03-28",
+    "theme": "Canada",
+    "themePicker": "Daniel",
+    "movieTitle": "Bon Cop, Bad Cop",
+    "movieYear": 2006,
+    "tmdbUrl": "https://www.themoviedb.org/movie/15049-bon-cop-bad-cop"
   }
 ]
