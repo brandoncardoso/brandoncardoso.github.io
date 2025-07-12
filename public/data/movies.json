@@ -439,5 +439,14 @@
     "movieTitle": "Airplane!",
     "movieYear": 1980,
     "tmdbUrl": "https://www.themoviedb.org/movie/813-airplane"
+  },
+  {
+    "num": 48,
+    "date": "2025-07-11",
+    "theme": "Lovecraftian",
+    "themePicker": "Robert",
+    "movieTitle": "Frailty",
+    "movieYear": 2001,
+    "tmdbUrl": "https://www.themoviedb.org/movie/12149-frailty"
   }
 ]
