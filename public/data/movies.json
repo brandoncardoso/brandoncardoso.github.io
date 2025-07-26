@@ -448,5 +448,14 @@
     "movieTitle": "Frailty",
     "movieYear": 2001,
     "tmdbUrl": "https://www.themoviedb.org/movie/12149-frailty"
-  }
+  },
+  {
+    "num": 49,
+    "date": "2025-07-25",
+    "theme": "Desert",
+    "themePicker": "Daniel",
+    "movieTitle": "Stargate",
+    "movieYear": "1994",
+    "tmdbUrl": "https://www.themoviedb.org/movie/2164-stargate"
+  },
 ]
