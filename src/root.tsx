@@ -135,7 +135,7 @@ export default function Root() {
 						<Anchor
 							href="mailto:bran@brancardoso.com"
 							aria-label={t('social.email.aria')}>
-							brandon@bcardoso.com
+							Email
 						</Anchor>
 					</Group>
 
