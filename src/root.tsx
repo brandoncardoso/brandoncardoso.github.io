@@ -121,7 +121,7 @@ export default function Root() {
 				<Group justify="space-between">
 					<Group>
 						<Anchor
-							href="https://github.com/brandoncardoso"
+							href="https://github.com/brancardoso"
 							aria-label={t('social.github.aria')}>
 							GitHub
 						</Anchor>
@@ -133,7 +133,7 @@ export default function Root() {
 						</Anchor>
 
 						<Anchor
-							href="mailto:brandon@bcardoso.com"
+							href="mailto:bran@brancardoso.com"
 							aria-label={t('social.email.aria')}>
 							brandon@bcardoso.com
 						</Anchor>
