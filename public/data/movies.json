@@ -457,5 +457,14 @@
     "movieTitle": "Stargate",
     "movieYear": "1994",
     "tmdbUrl": "https://www.themoviedb.org/movie/2164-stargate"
+  },
+  {
+    "num": 50,
+    "date": "2025-08-29",
+    "theme": "Tournament",
+    "themePicker": "Bran",
+    "movieTitle": "The Quick and the Dead",
+    "movieYear": "1995",
+    "tmdbUrl": "https://www.themoviedb.org/movie/12106-the-quick-and-the-dead"
   }
 ]
