@@ -1,4 +1,17 @@
+body {
+	margin: 0;
+}
+
 .mantine-NavLink-root:hover {
 	background-color: transparent;
 	text-decoration: underline;
+}
+
+.radix-themes {
+  --default-font-family: 'IBM Plex Mono', monospace;
+  --heading-font-family: 'IBM Plex Mono', monospace;
+  --code-font-family: 'IBM Plex Mono', monospace;
+  --strong-font-family: 'IBM Plex Mono', monospace;
+  --em-font-family: 'IBM Plex Mono', monospace;
+  --quote-font-family: 'IBM Plex Mono', monospace;
 }

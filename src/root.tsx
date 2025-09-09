@@ -1,21 +1,21 @@
-import {
-	ActionIcon,
-	Anchor,
-	Button,
-	Container,
-	Group,
-	Popover,
-	Stack,
-	Title,
-	useComputedColorScheme,
-	useMantineColorScheme,
-} from "@mantine/core"
 import { Link, Outlet } from "react-router-dom"
 import { Helmet } from "react-helmet"
 import { useEffect, useState } from "react"
 import { useTranslation } from 'react-i18next'
 import i18next, { changeLanguage } from "i18next"
-import { IconMoon, IconSunHigh, IconWorld } from "@tabler/icons-react"
+import { SunIcon, MoonIcon, GlobeIcon } from '@radix-ui/react-icons'
+import { useTheme } from 'next-themes'
+import {
+	Button,
+	Container,
+	Flex,
+	Heading,
+	IconButton,
+	Link as RadixLink,
+	Popover,
+	Box,
+	Text,
+} from "@radix-ui/themes"
 
 type LinkInfo = {
 	link: string
@@ -25,9 +25,8 @@ type LinkInfo = {
 
 export default function Root() {
 	const { t } = useTranslation()
-
-	const { setColorScheme } = useMantineColorScheme()
-	const computedColorScheme = useComputedColorScheme()
+	const { theme, setTheme } = useTheme()
+	const [mounted, setMounted] = useState(false)
 
 	const [currentLanguage, setCurrentLanguage] = useState<string>("en")
 	const languages = [
@@ -46,7 +45,11 @@ export default function Root() {
 	}
 
 	const toggleColorScheme = () => {
-		setColorScheme(computedColorScheme === 'dark' ? 'light' : 'dark');
+		if (theme === 'light') {
+			setTheme('dark')
+		} else {
+			setTheme('light')
+		}
 	}
 
 	useEffect(() => {
@@ -58,95 +61,111 @@ export default function Root() {
 		setCurrentLanguage(i18next.language)
 	}, [i18next.language])
 
+	useEffect(() => {
+		setMounted(true)
+	}, [])
+
+	if (!mounted) {
+		return null
+	}
+
 	return (
 		<>
 			<Helmet defaultTitle={t('name')} titleTemplate={`%s - ${t('name')}`} />
 
-			<Container mt="xs" h={0} size="xxl">
-				<Group justify="flex-end">
-					<ActionIcon onClick={() => toggleColorScheme()} variant="subtle" color="gray" size="sm">
-						{computedColorScheme === 'dark' && <IconSunHigh stroke={1.5} />}
-						{computedColorScheme === 'light' && <IconMoon stroke={1.5} />}
-					</ActionIcon>
+			<Container align="left" p="8" size="3">
+				<Flex align="baseline" gap="6" mb="8">
+					<Heading as="h1" size="4">
+						<RadixLink asChild>
+							<Link to="/" style={{ color: "inherit" }}>
+								{t('name')}
+							</Link>
+						</RadixLink>
+					</Heading>
 
-					<Popover position="bottom-end">
-						<Popover.Target>
-							<ActionIcon variant="subtle" color="gray" aria-label={t("langSelectAria")} size="sm">
-								<IconWorld stroke={1} />
-							</ActionIcon>
-						</Popover.Target>
-						<Popover.Dropdown p={0}>
-							<Stack gap={0}>
+					{links.map(({ link, label, aria }, index) => (
+						<RadixLink key={index} asChild>
+							<Link to={link} aria-label={aria}>{label}</Link>
+						</RadixLink>
+					))}
+				</Flex>
+
+				<Outlet />
+
+				<Flex direction="column" gap="4" mt="8">
+					<Flex justify="between" gap="4">
+						<Flex direction="row">
+							<RadixLink asChild>
+								<Link
+									to="https://github.com/brancardoso"
+									aria-label={t('social.github.aria')}>
+									GitHub
+								</Link>
+							</RadixLink>,&nbsp;
+
+							<RadixLink asChild>
+								<Link
+									to="https://linkedin.com/in/brandoncardoso"
+									aria-label={t('social.linkedin.aria')}>
+									LinkedIn
+								</Link>
+							</RadixLink>,&nbsp;
+
+							<RadixLink asChild>
+								<Link
+									to="mailto:bran@brancardoso.com"
+									aria-label={t('social.email.aria')}>
+									Email
+								</Link>
+							</RadixLink>
+						</Flex>
+
+						{scrollToTopVisible &&
+							<RadixLink asChild>
+								<Link to="#" onClick={() => window.scrollTo(0, 0)}>
+									{t("backToTop")} ↑
+								</Link>
+							</RadixLink>
+						}
+					</Flex>
+				</Flex>
+			</Container>
+
+			<Box position="absolute" top="2" right="2">
+				<Flex gap="2" align="center">
+					<IconButton variant="soft" onClick={() => toggleColorScheme()}>
+						{theme === 'dark' && <SunIcon />}
+						{theme === 'light' && <MoonIcon />}
+					</IconButton>
+
+					<Popover.Root>
+						<Popover.Trigger>
+							<IconButton variant="soft" aria-label={t("langSelectAria")}>
+								<GlobeIcon />
+							</IconButton>
+						</Popover.Trigger>
+						<Popover.Content size="1">
+							<Flex direction="column" gap="2" align="end">
 								{languages.map(({ locale, label }) => (
 									<Button
-										size="xs"
 										key={locale}
-										radius={0}
-										variant={currentLanguage.startsWith(locale) ? "filled" : "subtle"}
+										variant="ghost"
 										onClick={() => changeLanguage(locale)}
 									>
-										{label}
+										<Text weight={
+											currentLanguage === locale
+												? "bold"
+												: "regular"
+										}>
+											{label}
+										</Text>
 									</Button>
 								))}
-							</Stack>
-						</Popover.Dropdown>
-					</Popover>
-				</Group>
-			</Container>
-
-			<Container my="xl" size="md">
-				<Stack>
-					<Group justify="space-between" align="flex-end">
-						<Title order={1} size="h3">
-							<Anchor component={Link} to="/" inherit style={{ color: "inherit" }}>
-								{t('name')}
-							</Anchor>
-						</Title>
-
-						<Group>
-							{links.map(({ link, label, aria }, index) => (
-								<Anchor key={index} component={Link} to={link} aria-label={aria}>
-									{label}
-								</Anchor>
-							))}
-						</Group>
-					</Group >
-
-				</Stack>
-			</Container >
-
-			<Outlet />
-
-			<Container my="xl" size="md">
-				<Group justify="space-between">
-					<Group>
-						<Anchor
-							href="https://github.com/brancardoso"
-							aria-label={t('social.github.aria')}>
-							GitHub
-						</Anchor>
-
-						<Anchor
-							href="https://linkedin.com/in/brandoncardoso"
-							aria-label={t('social.linkedin.aria')}>
-							LinkedIn
-						</Anchor>
-
-						<Anchor
-							href="mailto:bran@brancardoso.com"
-							aria-label={t('social.email.aria')}>
-							Email
-						</Anchor>
-					</Group>
-
-
-					{scrollToTopVisible &&
-						<Anchor onClick={() => window.scrollTo(0, 0)}>
-							{t("backToTop")}
-						</Anchor>
-					}
-				</Group>
-			</Container>
+							</Flex>
+						</Popover.Content>
+					</Popover.Root>
+				</Flex>
+			</Box>
 		</>
 	)
 }

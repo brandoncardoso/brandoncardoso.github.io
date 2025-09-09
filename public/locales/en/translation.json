@@ -44,7 +44,7 @@
 			"date": "Date",
 			"theme": "Theme",
 			"movieTitle": "Movie Title",
-			"movieYear": "Movie Release Year"
+			"movieYear": "Release Year"
 		}
 	}
 }

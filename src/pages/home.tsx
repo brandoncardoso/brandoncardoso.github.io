@@ -1,49 +1,44 @@
-import {
-	Anchor,
-	Container,
-	List,
-	Space,
-	Title,
-} from "@mantine/core";
+import { Box, Heading, Link, Text } from "@radix-ui/themes";
 import { Trans, useTranslation } from "react-i18next";
 
 export default function Home() {
 	const { t } = useTranslation()
 	return (
-		<Container size="md">
-			<p>
+		<Box>
+			<Text as="p" mb="6">
 				{t('introduction')}
-			</p>
+			</Text>
 
-			<Space h="md" />
+			<Heading as="h2" size="3">
+				{t('projects.title')}:
+			</Heading>
 
-			<Title tt="uppercase" order={2} size="h6">{t('projects.title')}</Title>
-			<List>
-				<List.Item>
+			<ul>
+				<li>
 					<Trans
 						i18nKey='projects.botbros.description'
 						components={{
-							a: <Anchor aria-label={t('projects.botbros.aria')} href="https://steamcommunity.com/groups/BotBrothers" />
+							a: <Link aria-label={t('projects.botbros.aria')} href="https://steamcommunity.com/groups/BotBrothers" />
 						}}
 					/>
-				</List.Item>
-				<List.Item>
+				</li>
+				<li>
 					<Trans
 						i18nKey='projects.moviebot.description'
 						components={{
-							a: <Anchor href="https://github.com/brancardoso/movie-bot" aria-label={t('projects.moviebot.aria')} />
+							a: <Link href="https://github.com/brancardoso/movie-bot" aria-label={t('projects.moviebot.aria')} />
 						}}
 					/>
-				</List.Item>
-				<List.Item>
+				</li>
+				<li>
 					<Trans
 						i18nKey='projects.hima.description'
 						components={{
-							a: <Anchor href="https://github.com/brancardoso/hima" aria-label={t('projects.hima.aria')} />
+							a: <Link href="https://github.com/brancardoso/hima" aria-label={t('projects.hima.aria')} />
 						}}
 					/>
-				</List.Item>
-			</List>
-		</Container>
+				</li>
+			</ul>
+		</Box>
 	)
 }
