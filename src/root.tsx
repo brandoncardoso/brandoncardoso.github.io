@@ -72,7 +72,7 @@ export default function Root() {
 		<>
 			<Helmet defaultTitle={t('name')} titleTemplate={`%s - ${t('name')}`} />
 
-			<Container align="left" p="8" size="3">
+			<Container align="left" p="8" px={{ "initial": "4", "sm": "8" }} size="3">
 				<Flex align="baseline" gap="6" mb="8">
 					<Heading as="h1" size="4">
 						<RadixLink asChild>
