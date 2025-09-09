@@ -6,6 +6,7 @@ on:
 
 jobs:
   redeploy:
+    permissions: {}
     runs-on: ubuntu-latest
     steps:
       - name: Trigger GitHub pages rebuild
