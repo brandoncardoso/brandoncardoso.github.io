@@ -149,16 +149,14 @@ export default function Root() {
 								{languages.map(({ locale, label }) => (
 									<Button
 										key={locale}
-										variant="ghost"
+										variant={
+											currentLanguage === locale
+												? "solid"
+												: "surface"
+										}
 										onClick={() => changeLanguage(locale)}
 									>
-										<Text weight={
-											currentLanguage === locale
-												? "bold"
-												: "regular"
-										}>
-											{label}
-										</Text>
+										{label}
 									</Button>
 								))}
 							</Flex>
