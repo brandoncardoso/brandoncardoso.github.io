@@ -16,6 +16,10 @@
 		"hima": {
 			"description": "Hima - Jekyll theme (<a>GitHub</a>)",
 			"aria": "GitHub repository for Hima"
+		},
+		"sentinowl": {
+			"description": "Sentinowl - Modern, cross-platform tool for monitoring drive health (<a>Website</a>)",
+			"aria": "Sentinowl website"
 		}
 	},
 	"social": {

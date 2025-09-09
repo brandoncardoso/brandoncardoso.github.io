@@ -16,6 +16,10 @@
 		"hima": {
 			"description": "Hima ー Jekyllのテンプレート（<a>GitHub</a>）",
 			"aria": "ヒマのGitHubのリポジトリ"
+		},
+		"sentinowl": {
+			"description": "Sentinowl - モダンな, クロスプラットフォームのドライブ健康監視ツール（<a>サイト</a>)",
+			"aria": "Sentinowlのサイト"
 		}
 	},
 	"social": {

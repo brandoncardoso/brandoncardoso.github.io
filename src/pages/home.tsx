@@ -16,6 +16,14 @@ export default function Home() {
 			<ul>
 				<li>
 					<Trans
+						i18nKey='projects.sentinowl.description'
+						components={{
+							a: <Link aria-label={t('projects.sentiowl.aria')} href="https://sentinowl.com" />
+						}}
+					/>
+				</li>
+				<li>
+					<Trans
 						i18nKey='projects.botbros.description'
 						components={{
 							a: <Link aria-label={t('projects.botbros.aria')} href="https://steamcommunity.com/groups/BotBrothers" />
