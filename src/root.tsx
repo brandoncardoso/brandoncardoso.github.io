@@ -14,7 +14,6 @@ import {
 	Link as RadixLink,
 	Popover,
 	Box,
-	Text,
 } from "@radix-ui/themes"
 
 type LinkInfo = {
