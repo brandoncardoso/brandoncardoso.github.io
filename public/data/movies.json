@@ -466,5 +466,14 @@
     "movieTitle": "The Quick and the Dead",
     "movieYear": "1995",
     "tmdbUrl": "https://www.themoviedb.org/movie/12106-the-quick-and-the-dead"
+  },
+  {
+    "num": 51,
+    "date": "2025-09-27",
+    "theme": "Sports",
+    "themePicker": "Matt",
+    "movieTitle": "Kingpin",
+    "movieYear": "1996",
+    "tmdbUrl": "https://www.themoviedb.org/movie/11543-kingpin"
   }
 ]
