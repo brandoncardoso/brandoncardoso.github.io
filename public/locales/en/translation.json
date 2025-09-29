@@ -6,19 +6,19 @@
 	"projects": {
 		"title": "Projects",
 		"botbros": {
-			"description": "Bot Bros - Virtual item trading bots (<a>Steam Group</a>)",
+			"description": "<a>Bot Bros</a> - Virtual item trading bots",
 			"aria": "Bot Bros Steam group"
 		},
 		"moviebot": {
-			"description": "Movie Bot - Discord movie search bot (<a>GitHub</a>)",
+			"description": "<a>Movie Bot</a> - Discord movie search bot",
 			"aria": "GitHub repository for Movie Bot"
 		},
 		"hima": {
-			"description": "Hima - Jekyll theme (<a>GitHub</a>)",
+			"description": "<a>Hima</a> - Jekyll theme",
 			"aria": "GitHub repository for Hima"
 		},
 		"sentinowl": {
-			"description": "Sentinowl - Modern, cross-platform tool for monitoring drive health (<a>Website</a>)",
+			"description": "<a>Sentinowl</a> - Modern, cross-platform tool for monitoring drive health",
 			"aria": "Sentinowl website"
 		}
 	},

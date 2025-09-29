@@ -6,19 +6,19 @@
 	"projects": {
 		"title": "プロジェクト",
 		"botbros": {
-			"description": "Bot Bros ー 仮想アイテム取引ボット（<a>Steam グループ</a>）",
+			"description": "<a>Bot Bros</a> ー 仮想アイテム取引ボット",
 			"aria": "ボット・ブラザーズのSteamグループ"
 		},
 		"moviebot": {
-			"description": "Movie Bot ー Discordの映画検索ボット（<a>GitHub</a>）",
+			"description": "<a>Movie Bot</a> ー Discordの映画検索ボット",
 			"aria": "ムービーボットのGitHubのリポジトリ"
 		},
 		"hima": {
-			"description": "Hima ー Jekyllのテンプレート（<a>GitHub</a>）",
+			"description": "<a>Hima</a> ー Jekyllのテンプレート",
 			"aria": "ヒマのGitHubのリポジトリ"
 		},
 		"sentinowl": {
-			"description": "Sentinowl - モダンな, クロスプラットフォームのドライブ健康監視ツール（<a>サイト</a>)",
+			"description": "<a>Sentinowl</a> ー モダンな, クロスプラットフォームのドライブ健康監視ツール",
 			"aria": "Sentinowlのサイト"
 		}
 	},

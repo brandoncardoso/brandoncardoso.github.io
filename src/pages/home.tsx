@@ -10,7 +10,7 @@ export default function Home() {
 			</Text>
 
 			<Heading as="h2" size="3">
-				{t('projects.title')}:
+				{t('projects.title')}
 			</Heading>
 
 			<ul>
