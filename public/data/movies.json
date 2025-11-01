@@ -475,5 +475,14 @@
     "movieTitle": "Kingpin",
     "movieYear": "1996",
     "tmdbUrl": "https://www.themoviedb.org/movie/11543-kingpin"
+  },
+    {
+    "num": 52,
+    "date": "2025-10-31",
+    "theme": "Found Footage",
+    "themePicker": "Robert",
+    "movieTitle": "V/H/S",
+    "movieYear": "2012",
+    "tmdbUrl": "https://www.themoviedb.org/movie/84348-v-h-s"
   }
 ]
