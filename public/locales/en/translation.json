@@ -1,5 +1,5 @@
 {
-	"name": "Bran Cardoso",
+	"name": "Brandon Cardoso",
 	"introduction": "Software engineer from Toronto, now in Tokyo.",
 	"backToTop": "Back to top",
 	"langSelectAria": "Language",
@@ -24,13 +24,13 @@
 	},
 	"social": {
 		"github": {
-			"aria": "Bran Cardoso's GitHub profile"
+			"aria": "Brandon Cardoso's GitHub profile"
 		},
 		"linkedin": {
-			"aria": "Bran Cardoso's LinkedIn profile"
+			"aria": "Brandon Cardoso's LinkedIn profile"
 		},
 		"email": {
-			"aria": "send an email to Bran Cardoso"
+			"aria": "send an email to Brandon Cardoso"
 		}
 	},
 	"nav": {

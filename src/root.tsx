@@ -72,7 +72,7 @@ export default function Root() {
 		<>
 			<Helmet defaultTitle={t('name')} titleTemplate={`%s - ${t('name')}`} />
 
-			<Container align="left" p="8" px={{ "initial": "4", "sm": "8" }} size="3">
+			<Container align="left" p="8" px={{ "initial": "4", "sm": "8" }} size="4">
 				<Flex align="baseline" gap="6" mb="8">
 					<Heading as="h1" size="4">
 						<RadixLink asChild>
@@ -96,7 +96,7 @@ export default function Root() {
 						<Flex direction="row">
 							<RadixLink asChild>
 								<Link
-									to="https://github.com/brancardoso"
+									to="https://github.com/brandoncardoso"
 									aria-label={t('social.github.aria')}>
 									GitHub
 								</Link>
@@ -112,7 +112,7 @@ export default function Root() {
 
 							<RadixLink asChild>
 								<Link
-									to="mailto:bran@brancardoso.com"
+									to="mailto:brandon@bcardoso.com"
 									aria-label={t('social.email.aria')}>
 									Email
 								</Link>

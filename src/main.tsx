@@ -29,7 +29,7 @@ const router = createBrowserRouter(
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
 		<ThemeProvider attribute="class" defaultTheme='dark'>
-			<Theme accentColor='grass' radius='small' scaling='90%'>
+			<Theme accentColor='teal' radius='small'>
 				<RouterProvider router={router} />
 			</Theme>
 		</ThemeProvider>

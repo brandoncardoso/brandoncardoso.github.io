@@ -180,11 +180,11 @@ export default function Movies() {
 				<Table.Root>
 					<Table.Header style={{ whiteSpace: "nowrap" }}>
 						<Table.Row>
-							<Table.ColumnHeaderCell width="4em">
+							<Table.ColumnHeaderCell width="5em">
 								#
 							</Table.ColumnHeaderCell>
 
-							<Table.ColumnHeaderCell width="10em" minWidth="6em">
+							<Table.ColumnHeaderCell width="12em" minWidth="6em">
 								{getHeader(t("movienight.table.date"), "date")}
 							</Table.ColumnHeaderCell>
 
@@ -196,7 +196,7 @@ export default function Movies() {
 								{getHeader(t("movienight.table.movieTitle"), "movieTitle")}
 							</Table.ColumnHeaderCell>
 
-							<Table.ColumnHeaderCell align="right" width="8em">
+							<Table.ColumnHeaderCell align="right" width="10em">
 								{getHeader(t("movienight.table.movieYear"), "movieYear")}
 							</Table.ColumnHeaderCell>
 						</Table.Row>

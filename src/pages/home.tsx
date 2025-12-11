@@ -34,7 +34,7 @@ export default function Home() {
 					<Trans
 						i18nKey='projects.moviebot.description'
 						components={{
-							a: <Link href="https://github.com/brancardoso/movie-bot" aria-label={t('projects.moviebot.aria')} />
+							a: <Link href="https://github.com/brandoncardoso/movie-bot" aria-label={t('projects.moviebot.aria')} />
 						}}
 					/>
 				</li>
@@ -42,7 +42,7 @@ export default function Home() {
 					<Trans
 						i18nKey='projects.hima.description'
 						components={{
-							a: <Link href="https://github.com/brancardoso/hima" aria-label={t('projects.hima.aria')} />
+							a: <Link href="https://github.com/brandoncardoso/hima" aria-label={t('projects.hima.aria')} />
 						}}
 					/>
 				</li>
