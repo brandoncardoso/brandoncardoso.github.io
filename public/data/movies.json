@@ -493,5 +493,14 @@
     "movieTitle": "Resident Evil",
     "movieYear": "2002",
     "tmdbUrl": "https://www.themoviedb.org/movie/1576-resident-evil"
+  },
+    {
+    "num": 54,
+    "date": "2025-12-19",
+    "theme": "Documentary",
+    "themePicker": "Brandon",
+    "movieTitle": "2000 Meters to Andriivka",
+    "movieYear": "2025",
+    "tmdbUrl": "https://www.themoviedb.org/movie/1400789-2000-meters-to-andriivka"
   }
 ]
