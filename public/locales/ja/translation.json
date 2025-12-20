@@ -41,7 +41,7 @@
 	},
 	"movienight": {
 		"search": "検索",
-		"clearSearch:": "検索ワードを消去",
+		"clearSearch": "検索ワードを消去",
 		"title": "ムービーナイトの歴史",
 		"noMoviesFound": "映画が見つかりませんでした。",
 		"table": {
