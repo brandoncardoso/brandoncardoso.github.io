@@ -455,7 +455,7 @@
     "theme": "Desert",
     "themePicker": "Daniel",
     "movieTitle": "Stargate",
-    "movieYear": "1994",
+    "movieYear": 1994,
     "tmdbUrl": "https://www.themoviedb.org/movie/2164-stargate"
   },
   {
@@ -464,7 +464,7 @@
     "theme": "Tournament",
     "themePicker": "Brandon",
     "movieTitle": "The Quick and the Dead",
-    "movieYear": "1995",
+    "movieYear": 1995,
     "tmdbUrl": "https://www.themoviedb.org/movie/12106-the-quick-and-the-dead"
   },
   {
@@ -473,7 +473,7 @@
     "theme": "Sports",
     "themePicker": "Matt",
     "movieTitle": "Kingpin",
-    "movieYear": "1996",
+    "movieYear": 1996,
     "tmdbUrl": "https://www.themoviedb.org/movie/11543-kingpin"
   },
     {
@@ -482,7 +482,7 @@
     "theme": "Found Footage",
     "themePicker": "Robert",
     "movieTitle": "V/H/S",
-    "movieYear": "2012",
+    "movieYear": 2012,
     "tmdbUrl": "https://www.themoviedb.org/movie/84348-v-h-s"
   },
   {
@@ -491,7 +491,7 @@
     "theme": "Video Game",
     "themePicker": "Daniel",
     "movieTitle": "Resident Evil",
-    "movieYear": "2002",
+    "movieYear": 2002,
     "tmdbUrl": "https://www.themoviedb.org/movie/1576-resident-evil"
   },
     {
@@ -500,7 +500,7 @@
     "theme": "Documentary",
     "themePicker": "Brandon",
     "movieTitle": "2000 Meters to Andriivka",
-    "movieYear": "2025",
+    "movieYear": 2025,
     "tmdbUrl": "https://www.themoviedb.org/movie/1400789-2000-meters-to-andriivka"
   }
 ]
