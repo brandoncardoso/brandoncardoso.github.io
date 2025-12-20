@@ -18,7 +18,7 @@ export default function Home() {
 					<Trans
 						i18nKey='projects.sentinowl.description'
 						components={{
-							a: <Link aria-label={t('projects.sentiowl.aria')} href="https://sentinowl.com" />
+							a: <Link aria-label={t('projects.sentinowl.aria')} href="https://sentinowl.com" />
 						}}
 					/>
 				</li>
