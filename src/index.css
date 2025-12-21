@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "CommitMono";
+  src: url("../fonts/commit-mono/CommitMono-400-Regular.woff2") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CommitMono";
+  src: url("../fonts/commit-mono/CommitMono-400-Italic.woff2") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "CommitMono";
+  src: url("../fonts/commit-mono/CommitMono-700-Regular.woff2") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CommitMono";
+  src: url("../fonts/commit-mono/CommitMono-700-Italic.woff2") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
 body {
 	margin: 0;
 }
@@ -8,10 +36,10 @@ body {
 }
 
 .radix-themes {
-  --default-font-family: 'IBM Plex Mono', monospace;
-  --heading-font-family: 'IBM Plex Mono', monospace;
-  --code-font-family: 'IBM Plex Mono', monospace;
-  --strong-font-family: 'IBM Plex Mono', monospace;
-  --em-font-family: 'IBM Plex Mono', monospace;
-  --quote-font-family: 'IBM Plex Mono', monospace;
+  --default-font-family: 'CommitMono', monospace;
+  --heading-font-family: 'CommitMono', monospace;
+  --code-font-family: 'CommitMono', monospace;
+  --strong-font-family: 'CommitMono', monospace;
+  --em-font-family: 'CommitMono', monospace;
+  --quote-font-family: 'CommitMono', monospace;
 }
