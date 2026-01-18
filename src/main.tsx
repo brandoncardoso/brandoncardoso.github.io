@@ -9,7 +9,7 @@ import {
 import { Theme } from '@radix-ui/themes'
 import { ThemeProvider } from 'next-themes'
 
-import { Home, Movies } from './pages'
+import { Home, Movies, NotFound } from './pages'
 import Root from './root'
 
 import './i18n'
@@ -19,10 +19,14 @@ import './index.css'
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
-		<Route path="/" element={<Root />}>
+		<Route
+			path="/"
+			element={<Root />}
+			errorElement={<NotFound />}
+		>
 			<Route path="/" element={<Home />} />
 			<Route path="/movies" element={<Movies />} />
-		</Route>
+		</Route >
 	)
 )
 

@@ -50,5 +50,10 @@
 			"movieTitle": "Movie Title",
 			"movieYear": "Release Year"
 		}
+	},
+	"notfound": {
+		"title": "404 Not Found",
+		"subtitle": "Think you're lost.",
+		"link": "Back to home"
 	}
 }

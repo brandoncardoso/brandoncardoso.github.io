@@ -27,7 +27,8 @@ export default function Root() {
 	const { theme, setTheme } = useTheme()
 	const [mounted, setMounted] = useState(false)
 
-	const [currentLanguage, setCurrentLanguage] = useState<string>("en")
+	const [currentLanguage, setCurrentLanguage] = useState<string>(i18next.language)
+
 	const languages = [
 		{ locale: "en", label: "English" },
 		{ locale: "ja", label: "日本語" },
@@ -56,9 +57,10 @@ export default function Root() {
 		return () => window.removeEventListener('scroll', toggleScrollToTop)
 	}, []);
 
-	useEffect(() => {
-		setCurrentLanguage(i18next.language)
-	}, [i18next.language])
+	const setLocale = (locale: string) => {
+		setCurrentLanguage(locale)
+		changeLanguage(locale)
+	}
 
 	useEffect(() => {
 		setMounted(true)
@@ -153,7 +155,7 @@ export default function Root() {
 												? "solid"
 												: "surface"
 										}
-										onClick={() => changeLanguage(locale)}
+										onClick={() => setLocale(locale)}
 									>
 										{label}
 									</Button>
