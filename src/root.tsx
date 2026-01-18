@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link, Outlet } from "react-router-dom"
 import { Helmet } from "react-helmet"
 import { useEffect, useState } from "react"
@@ -16,7 +17,7 @@ import {
 	Box,
 } from "@radix-ui/themes"
 
-type LinkInfo = {
+interface LinkInfo {
 	link: string
 	label: string
 	aria: string
@@ -34,7 +35,7 @@ export default function Root() {
 		{ locale: "ja", label: "日本語" },
 	]
 
-	const links: Array<LinkInfo> = [
+	const links: LinkInfo[] = [
 		{ link: '/movies', label: t("nav.movienight.label"), aria: t("nav.movienight.aria") },
 	]
 

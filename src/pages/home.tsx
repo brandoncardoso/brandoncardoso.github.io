@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Heading, Link, Text } from "@radix-ui/themes";
 import { Trans, useTranslation } from "react-i18next";
 

@@ -1,3 +1,4 @@
+import React from 'react'
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
@@ -25,7 +26,7 @@ dayjs.extend(timezone)
 dayjs.extend(localizedFormat)
 dayjs.locale(ja)
 
-type MovieNightInfo = {
+interface MovieNightInfo {
 	[key: string]: number | string;
 	num: number,
 	date: string,
@@ -41,7 +42,7 @@ enum SortDirection {
 	DESC = "desc",
 }
 
-type SortConfig = {
+interface SortConfig {
 	key: keyof MovieNightInfo,
 	direction: SortDirection
 }
