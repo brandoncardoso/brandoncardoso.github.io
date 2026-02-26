@@ -1,0 +1,41 @@
+{
+  "home.introduction": "Software engineer from Toronto, now in Tokyo.",
+
+  "ui.backToTop": "Back to top",
+  "ui.language.ariaLabel": "Language",
+
+  "projects.sectionTitle": "Projects",
+
+  "projects.botbros.description": "Virtual item trading bots",
+  "projects.botbros.linkAriaLabel": "Bot Bros Steam group",
+
+  "projects.moviebot.description": "Discord movie search bot",
+  "projects.moviebot.linkAriaLabel": "GitHub repository for Movie Bot",
+
+  "projects.hima.description": "Jekyll theme",
+  "projects.hima.linkAriaLabel": "GitHub repository for Hima",
+
+  "projects.sentinowl.description": "Modern, cross-platform tool for monitoring drive health",
+  "projects.sentinowl.linkAriaLabel": "Sentinowl website",
+
+  "social.github.ariaLabel": "Brandon Cardoso's GitHub profile",
+  "social.linkedin.ariaLabel": "Brandon Cardoso's LinkedIn profile",
+  "social.email.ariaLabel": "Send an email to Brandon Cardoso",
+
+  "nav.movienight.label": "Movie Night",
+  "nav.movienight.ariaLabel": "Movie Night history",
+
+  "movienight.title": "Movie Night History",
+  "movienight.search.label": "Search",
+  "movienight.search.clearAriaLabel": "Clear search field",
+  "movienight.emptyState": "No movies found.",
+
+  "movienight.table.date": "Date",
+  "movienight.table.theme": "Theme",
+  "movienight.table.title": "Movie Title",
+  "movienight.table.year": "Release Year",
+
+  "notfound.title": "404 Not Found",
+  "notfound.subtitle": "I think you're lost.",
+  "notfound.homeLink": "Back to home"
+}

@@ -1,0 +1,5 @@
+[tools]
+go = "1.26"
+hugo = "0.155"
+node = "25.6"
+pnpm = "latest"

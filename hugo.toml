@@ -1,0 +1,70 @@
+baseURL = "https://bcardoso.com/"
+defaultContentLanguage = "en"
+title = "Brandon Cardoso"
+timeZone = "Asia/Tokyo"
+enableRobotsTXT = true
+enableEmoji = true
+
+[params]
+repo = "https://github.com/brandoncardoso/brandoncardoso.github.io"
+enableBacklinks = true
+authorName = "Brandon Cardoso"
+authorEmail = "mailto:brandon@bcardoso.com"
+authorLinkedIn = "https://www.linkedin.com/in/brandoncardoso/"
+authorGitHub = "https://github.com/brandoncardoso"
+
+[languages]
+[languages.en]
+languageName = "English"
+languageCode = "en"
+weight = 1
+
+[permalinks]
+[permalinks.page]
+notes = "/:slug"
+
+[permalinks.section]
+notes = "/:slug"
+
+
+[taxonomies]
+tag = "tags"
+status = "status"
+
+[frontmatter]
+lastmod = ["lastmod", "date"]
+
+[markup]
+[markup.highlight]
+noClasses = false
+
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.parser]
+[markup.goldmark.parser.attribute]
+title = true
+block = true
+
+[build]
+[build.buildStats]
+enable = true
+
+[[build.cachebusters]]
+source = 'assets/notwatching/hugo_stats\.json'
+target = "css"
+
+[[build.cachebusters]]
+source = '(postcss|tailwind)\.config\.js'
+target = "css"
+
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+disableWatch = true
+source = "hugo_stats.json"
+target = "assets/notwatching/hugo_stats.json"

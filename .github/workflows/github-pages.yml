@@ -1,27 +1,20 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ['main']
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: 'pages'
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -29,16 +22,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4.2.0
+      - name: Install mise
+        uses: jdx/mise-action@v3
 
-      - name: Set up Node
-        uses: actions/setup-node@v6
+      - name: Cache pnpm store
+        uses: actions/cache@v5
         with:
-          node-version: 25
-          cache: 'pnpm'
+          path: ~/.local/share/pnpm/store
+          key: pnpm-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: pnpm-${{ runner.os }}-
 
       - name: Install dependencies
         run: pnpm i
@@ -46,20 +40,13 @@ jobs:
       - name: Build
         run: pnpm run build
 
-      - name: Copy index.html to 404.html
-        # github searches for specific file to match route, eg. /movies looks for movies.html
-        # if not found, returns 404.html. copy ndex.html to trick github
-        run: |
-          cp ./dist/index.html ./dist/404.html
-
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          # Upload dist folder
-          path: './dist'
+          path: './public'
 
       - name: Deploy to GitHub Pages
         id: deployment

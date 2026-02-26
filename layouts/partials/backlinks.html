@@ -1,0 +1,110 @@
+{{ $current := . }}
+
+{{ $identifier := $current.Title | lower }}
+
+{{/* grouped: map of permalink → slice of occurrence dicts */}}
+{{ $grouped := dict }}
+{{/* pageOrder: permalinks in first-seen order for stable rendering */}}
+{{ $pageOrder := slice }}
+{{/* pageByPermalink: built in same pass for rendering */}}
+{{ $pageByPermalink := dict }}
+
+{{ range site.RegularPages }}
+  {{ $pageByPermalink = merge $pageByPermalink (dict .Permalink .) }}
+  {{ if ne .Permalink $current.Permalink }}
+    {{ $page := . }}
+    {{ $ordinal := 0 }}
+    {{ range split $page.RawContent "\n" }}
+      {{ $line := . }}
+      {{ $wikilinksOnLine := findRE `\[\[[^\]]+\]\]` $line }}
+
+      {{ range $wikilinksOnLine }}
+        {{ $wl := . }}
+        {{ $inner := $wl | replaceRE `^\[\[` "" | replaceRE `\]\]$` "" }}
+        {{ $wlName := lower (index (split $inner "|") 0) }}
+
+        {{ if eq $wlName $identifier }}
+          {{ $anchor := printf "#wikilink-%d" $ordinal }}
+
+          {{ $ctx := $line }}
+          {{ $displayText := index (split $inner "|") 0 }}
+          {{ if gt (len (split $inner "|")) 1 }}
+            {{ $displayText = index (split $inner "|") 1 }}
+          {{ end }}
+          {{ $ctx = replaceRE `\[\[([^\]|]+)\|([^\]]+)\]\]` "$2" $ctx }}
+          {{ $ctx = replaceRE `\[\[([^\]]+)\]\]` "$1" $ctx }}
+          {{ $ctx = replaceRE `\*\*([^*]+)\*\*` "$1" $ctx }}
+          {{ $ctx = replaceRE `\*([^*]+)\*` "$1" $ctx }}
+          {{ $ctx = replaceRE "`([^`]+)`" "$1" $ctx }}
+          {{ $ctx = replaceRE `^#+\s+` "" $ctx }}
+          {{ $ctx = $ctx | strings.TrimSpace }}
+          {{ if in $ctx $displayText }}
+            {{ $parts := split $ctx $displayText }}
+            {{ $matchPos := len (index $parts 0) }}
+            {{ $radius := 60 }}
+            {{ $start := sub $matchPos $radius }}
+            {{ if lt $start 0 }}{{ $start = 0 }}{{ end }}
+            {{ $ellipsisPrefix := "" }}
+            {{ if gt $start 0 }}{{ $ellipsisPrefix = "…" }}{{ end }}
+            {{ $excerpt := substr $ctx $start 160 }}
+            {{ if gt (add $start 160) (len $ctx) }}
+              {{ $ctx = printf "%s%s" $ellipsisPrefix $excerpt }}
+            {{ else }}
+              {{ $ctx = printf "%s%s…" $ellipsisPrefix $excerpt }}
+            {{ end }}
+          {{ else }}
+            {{ $ctx = $ctx | truncate 160 "…" }}
+          {{ end }}
+          {{ $ctx = replace $ctx $displayText (printf "<strong>%s</strong>" $displayText) 1 }}
+
+          {{ $occurrence := dict "anchor" $anchor "context" $ctx }}
+          {{ $key := $page.Permalink }}
+          {{ $existing := index $grouped $key | default slice }}
+          {{ $grouped = merge $grouped (dict $key ($existing | append $occurrence)) }}
+          {{ if not (in $pageOrder $key) }}
+            {{ $pageOrder = $pageOrder | append $key }}
+          {{ end }}
+        {{ end }}
+
+        {{ $ordinal = add $ordinal 1 }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{- if gt (len $pageOrder) 0 -}}
+{{- $totalOccurrences := 0 -}}
+{{- range $pageOrder -}}{{- $totalOccurrences = add $totalOccurrences (len (index $grouped .)) -}}{{- end -}}
+<hr class="border-t border-(--ef-bg-4) mt-8 mb-8">
+<section class="backlinks" aria-labelledby="backlinks-heading">
+  <p id="backlinks-heading" class="mb-4 text-sm text-(--ef-fg-dim)">
+    {{- $totalOccurrences }} {{ cond (eq $totalOccurrences 1) "reference" "references" -}}
+  </p>
+  <ul class="space-y-3 list-none p-0 m-0">
+    {{- range $pageOrder -}}
+    {{- $permalink := . -}}
+    {{- $page := index $pageByPermalink $permalink -}}
+    {{- $occurrences := index $grouped $permalink -}}
+    {{- $statusEmoji := dict "seedling" "🌱" "budding" "🌿" "evergreen" "🌳" -}}
+    {{- $emoji := index $statusEmoji ($page.Params.status | default "") -}}
+    <li class="flex flex-col gap-1 px-4 py-3 rounded-md bg-(--ef-bg-1)">
+      <a href="{{ $page.RelPermalink }}" class="no-underline font-medium text-sm hover:text-(--ef-accent)">
+        {{- $page.Title -}}{{- with $emoji -}}&nbsp;<span aria-hidden="true">{{ . }}</span>{{- end -}}
+      </a>
+      {{- if gt (len $occurrences) 0 -}}
+      <ol class="m-0 p-0 list-none flex flex-col">
+        {{- range $i, $occ := $occurrences -}}
+        <li class="m-0">
+          <a href="{{ $page.RelPermalink }}{{ $occ.anchor }}" class="group no-underline flex gap-3 py-1">
+            <span aria-hidden="true" class="shrink-0 text-xs leading-5 text-(--ef-fg-dim) tabular-nums">{{ add $i 1 }}.</span>
+            <span class="line-clamp-2 min-w-0 text-xs leading-relaxed text-(--ef-fg) group-hover:text-(--ef-accent)">{{ $occ.context | safeHTML }}</span>
+          </a>
+        </li>
+        {{- end -}}
+      </ol>
+      {{- end -}}
+    </li>
+    {{- end -}}
+  </ul>
+</section>
+{{- end -}}

@@ -1,0 +1,114 @@
+{{ define "main" }}
+{{- $statusEmoji := dict "seedling" "🌱" "budding" "🌿" "evergreen" "🌳" -}}
+{{- $emoji := index $statusEmoji (.Params.status | default "") -}}
+
+{{/* Note header — full center width, always above columns */}}
+<div class="w-2xl max-w-full px-(--main-px) sm:px-8 mb-8">
+  <h1 class="font-headings font-bold leading-snug text-2xl sm:text-4xl mb-3" data-pagefind-body>{{ .Title }}</h1>
+
+  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-3 text-xs text-(--ef-fg-dim)">
+    {{- with .CurrentSection -}}
+    {{- if ne .Kind "home" -}}
+    <a href="{{ .RelPermalink }}" class="no-underline hover:no-underline font-medium text-(--ef-accent) hover:text-(--ef-fg)">{{ .LinkTitle }}</a>
+    <span aria-hidden="true">·</span>
+    {{- end -}}
+    {{- end -}}
+    {{- with .Params.status -}}
+    <span class="flex items-center gap-1">
+      {{- with $emoji -}}<span aria-hidden="true">{{ . }}</span>{{- end -}}
+      {{- . -}}
+    </span>
+    <span aria-hidden="true">·</span>
+    {{- end -}}
+    <span>created <time class="tabular-nums" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span>
+    {{- with .Params.lastmod -}}
+    {{- if ne . $.Params.Date -}}
+    <span aria-hidden="true">·</span>
+    <span>updated <time class="tabular-nums" datetime="{{ .Format "2006-01-02" }}">{{ .Format "Jan 2, 2006" }}</time></span>
+    {{- end -}}
+    {{- end -}}
+    <span aria-hidden="true">·</span>
+    <a class="no-underline hover:no-underline" href="{{ .Site.Params.repo }}/edit/main/content/{{ .File.Path }}">edit</a>
+  </div>
+
+  {{- with .GetTerms "tags" -}}
+  <div class="flex flex-wrap gap-2">
+    {{- range . -}}
+      <a href="{{ .RelPermalink }}" class="no-underline text-xs px-2 py-0.5 rounded-full bg-(--ef-bg-2) text-(--ef-fg) hover:bg-(--ef-bg-3)">{{ .LinkTitle }}</a>
+    {{- end -}}
+  </div>
+  {{- end -}}
+</div>
+
+{{/* 3-column body */}}
+{{- $toc := "" -}}
+{{- if strings.Contains .TableOfContents "<li>" -}}{{- $toc = .TableOfContents -}}{{- end -}}
+<div class="w-2xl max-w-full flex flex-col lg:px-0 lg:w-fit lg:flex-row lg:items-start">
+  {{- if $toc -}}
+  <div class="px-(--main-px) sm:px-8 lg:px-0 lg:pl-(--main-px) lg:w-64 lg:sticky lg:top-8 lg:self-start">
+    <details class="lg:hidden" id="toc-details">
+      <summary class="font-headings font-bold text-base text-(--ef-fg) cursor-pointer list-none inline-flex items-baseline gap-2 hover:text-(--ef-accent)">
+        On this page
+        <span class="toc-chevron text-(--ef-fg-subtle) text-xs">▼</span>
+      </summary>
+      <nav aria-label="Table of contents" class="my-1">
+        <div class="toc">{{ $toc }}</div>
+      </nav>
+    </details>
+    <hr class="border-t border-(--ef-bg-4) lg:hidden">
+    <nav aria-label="Table of contents" class="hidden lg:block max-h-[calc(100vh-2rem)] overflow-y-auto">
+      <p class="font-headings font-bold text-base text-(--ef-fg) mb-3">On this page</p>
+      <div class="toc">{{ $toc }}</div>
+    </nav>
+    <a href="#" class="hidden lg:flex mt-4 text-sm text-(--ef-fg-dim) hover:text-(--ef-accent) no-underline hover:no-underline">back to top</a>
+  </div>
+  {{- else -}}
+  <div class="hidden lg:block lg:w-64 lg:pl-(--main-px)"></div>
+  {{- end -}}
+
+  <article class="w-2xl max-w-full shrink-0 px-(--main-px) sm:px-8" data-pagefind-body>
+    {{ $content := .Content | replaceRE `\[\[(.*?)\]\]` `{{< wikilink "$1" >}}` | markdownify }}
+    {{- $content | safeHTML -}}
+  </article>
+
+  <div class="hidden lg:block lg:w-64 lg:pr-(--main-px)"></div>
+</div>
+
+<div id="back-to-top-mobile" class="w-2xl max-w-full px-(--main-px) sm:px-8 mt-8 hidden justify-end">
+  <a href="#" class="text-sm text-(--ef-fg-dim) hover:text-(--ef-accent) no-underline hover:no-underline">back to top</a>
+</div>
+
+{{/* Backlinks — full center width, below columns */}}
+<div class="w-2xl max-w-full px-(--main-px) sm:px-8">
+  {{ partialCached "backlinks.html" . .Permalink }}
+</div>
+
+<script>
+  // TOC active link tracking
+  (() => {
+    const headings = Array.from(document.querySelectorAll("article h1, article h2, article h3, article h4"));
+    const tocLinks = Array.from(document.querySelectorAll(".toc a"));
+    if (!headings.length || !tocLinks.length) return;
+
+    const linkMap = new Map(tocLinks.map(a => [a.getAttribute("href"), a]));
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const id = "#" + entry.target.id;
+        const link = linkMap.get(id);
+        if (link) link.classList.toggle("toc-active", entry.isIntersecting);
+      });
+    }, { rootMargin: "0px 0px -80% 0px" });
+
+    headings.forEach(h => { if (h.id) observer.observe(h); });
+  })();
+
+  // Mobile back to top
+  (() => {
+    const el = document.getElementById("back-to-top-mobile");
+    if (!el || window.innerWidth >= 1024) return;
+    if (document.body.scrollHeight > window.innerHeight * 2) { el.classList.remove("hidden"); el.classList.add("flex"); }
+  })();
+</script>
+{{ partialCached "relative-dates.html" . "global" }}
+{{ end }}

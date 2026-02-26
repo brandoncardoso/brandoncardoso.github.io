@@ -1,0 +1,50 @@
+<meta charset="UTF-8" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ if .Page.Title }}{{ .Page.Title }} - {{ end }}{{ .Site.Title }}</title>
+
+{{- $description := "" }}
+{{- if .Page.Description }}
+  {{- $description = .Page.Description }}
+{{- else if .Page.Summary }}
+  {{- $description = .Page.Summary | plainify | truncate 160 }}
+{{- end }}
+
+{{- $title := .Site.Title }}
+{{- if .Page.Title }}
+  {{- $title = printf "%s - %s" .Page.Title .Site.Title }}
+{{- end }}
+
+<!-- SEO -->
+{{ with $description }}<meta name="description" content="{{ . }}" />{{ end }}
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- OpenGraph -->
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+{{ with $description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+{{ with .Page.Params.image }}<meta property="og:image" content="{{ . | absURL }}" />{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ $title }}" />
+{{ with $description }}<meta name="twitter:description" content="{{ . }}" />{{ end }}
+{{ with .Page.Params.image }}<meta name="twitter:image" content="{{ . | absURL }}" />{{ end }}
+
+
+{{ partialCached "json-ld.html" . .Permalink }}
+
+<!-- Umami Analytics -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="a1e3186c-dd7e-46b9-acd7-8bb1457f1971"></script>
+
+{{ partialCached "fonts.html" . }}
+
+<script>
+  (function() {
+    var s = localStorage.getItem('theme');
+    var p = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', s || (p ? 'dark' : 'light'));
+  })();
+</script>

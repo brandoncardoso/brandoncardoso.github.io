@@ -1,0 +1,18 @@
+<script>
+  document.querySelectorAll("time[datetime]").forEach(el => {
+    const date = new Date(el.getAttribute("datetime"));
+    const now = new Date();
+    const diff = now - date;
+    const mins = Math.floor(diff / 60000);
+    const hours = Math.floor(mins / 60);
+    const days = Math.floor(hours / 24);
+    const months = Math.floor(days / 30.4);
+    const years = Math.floor(days / 365);
+    el.textContent =
+      years  >= 1 ? `${years}y ago`   :
+      months >= 1 ? `${months}mo ago` :
+      days   >= 1 ? `${days}d ago`    :
+      hours  >= 1 ? `${hours}h ago`   :
+                    `${mins}m ago`;
+  });
+</script>

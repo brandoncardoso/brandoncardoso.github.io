@@ -1,0 +1,15 @@
+{{- $cite := .Attributes.cite -}}
+{{- $caption := .Attributes.caption -}}
+<blockquote>
+{{- .Text -}}
+{{- if or $cite $caption -}}
+<footer>
+{{- with $caption -}}
+{{- if $cite -}}<cite>{{ $cite }}</cite>, {{ . }}
+{{- else -}}{{ . }}
+{{- end -}}
+{{- else -}}<cite>{{ $cite }}</cite>
+{{- end -}}
+</footer>
+{{- end -}}
+</blockquote>

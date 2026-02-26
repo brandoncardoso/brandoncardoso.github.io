@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" class="min-h-full">
+	<head>
+		{{- partialCached "head.html" . .Permalink -}}
+
+		{{ with (templates.Defer (dict "key" "global")) }}
+			{{ partialCached "css.html" . }}
+		{{ end }}
+	</head>
+
+	<body class="w-full min-h-svh font-body text-sm/6">
+		<header data-pagefind-ignore class="
+			w-2xl
+			max-w-full
+			mx-auto
+			flex
+			items-center
+			h-(--header-height)
+			px-(--main-px)
+			sm:px-8
+			"
+		>
+			<a href="/" class="font-black font-headings text-xl sm:text-2xl hover:underline decoration-2">
+				Brandon Cardoso
+			</a>
+			<div class="ml-auto flex items-center gap-3">
+				{{ partialCached "search.html" . }}
+				{{ partialCached "theme-toggle.html" . }}
+			</div>
+		</header>
+
+		<main class="mt-8 mb-12 sm:mt-12 sm:mb-16 flex flex-col items-center">
+			{{- block "main" . -}}{{- end -}}
+		</main>
+
+		<footer data-pagefind-ignore class="w-2xl max-w-full mx-auto my-4 px-(--main-px) sm:px-8 text-(--ef-fg-subtle) flex gap-4">
+			{{ with site.Params.authorGitHub }}
+			<a href="{{ . }}" rel="noopener noreferrer" class="hover:underline">GitHub</a>
+			{{ end }}
+			{{ with site.Params.authorLinkedIn }}
+			<a href="{{ . }}" rel="noopener noreferrer" class="hover:underline">LinkedIn</a>
+			{{ end }}
+			{{ with site.Params.authorEmail }}
+			<a href="{{ . }}" class="hover:underline">{{ . | strings.TrimPrefix "mailto:" }}</a>
+			{{ end }}
+			<span class="ml-auto">&copy; {{ now.Year }} Brandon Cardoso</span>
+		</footer>
+	<div id="lightbox" aria-modal="true" role="dialog" aria-label="Image viewer">
+		<button id="lightbox-close" aria-label="Close">&times;</button>
+		<img id="lightbox-img" src="" alt="" />
+	</div>
+
+	<script>
+		(function () {
+			const lightbox = document.getElementById('lightbox');
+			const lightboxImg = document.getElementById('lightbox-img');
+			const closeBtn = document.getElementById('lightbox-close');
+
+			function open(img) {
+				lightboxImg.src = img.src;
+				lightboxImg.alt = img.alt;
+				lightbox.classList.add('lightbox--open');
+				document.body.style.overflow = 'hidden';
+			}
+
+			function close() {
+				lightbox.classList.remove('lightbox--open');
+				document.body.style.overflow = '';
+			}
+
+			document.addEventListener('click', function (e) {
+				if (e.target.matches('article img, article figure img')) open(e.target);
+			});
+
+			lightbox.addEventListener('click', close);
+			document.addEventListener('keydown', function (e) {
+				if (e.key === 'Escape') close();
+			});
+		})();
+	</script>
+
+	<script>
+		(function () {
+			document.addEventListener('click', function (e) {
+				const btn = e.target.closest('.codeblock-copy');
+				if (!btn) return;
+
+				const codeblock = btn.closest('.codeblock-body');
+				// Prefer the code element inside the block; exclude line-number cells
+				const codeEl = codeblock.querySelector('td.lntd:last-child code, pre > code, pre');
+				const text = (codeEl || codeblock).innerText;
+
+				navigator.clipboard.writeText(text).then(function () {
+					btn.classList.add('codeblock-copy--copied');
+					btn.setAttribute('aria-label', 'Copied!');
+					setTimeout(function () {
+						btn.classList.remove('codeblock-copy--copied');
+						btn.setAttribute('aria-label', 'Copy code');
+					}, 2000);
+				});
+			});
+		})();
+	</script>
+	</body>
+</html>

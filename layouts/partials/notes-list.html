@@ -1,0 +1,21 @@
+{{- $statusEmoji := dict "seedling" "🌱" "budding" "🌿" "evergreen" "🌳" -}}
+<ul class="space-y-3">
+  {{- range . -}}
+  {{- $emoji := index $statusEmoji (.Params.status | default "") -}}
+  <li>
+    <a href="{{ .RelPermalink }}" class="text-wrap sm:text-balance">
+      {{- .Title -}}
+    </a>
+
+  <div class="post-meta inline-flex flex-nowrap items-baseline gap-x-1 text-(--ef-fg-dim) text-xs">
+    {{- with .Params.status -}}
+    <span class="inline-block flex items-center gap-1">
+      {{- with $emoji -}}<span aria-hidden="true" class="text-sm">{{- . -}}</span>{{- end -}}
+    </span><span aria-hidden="true">·</span>
+    {{- end -}}
+    <span><time class="tabular-nums" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span>
+  </div>
+  </li>
+  {{- end -}}
+</ul>
+{{ partialCached "relative-dates.html" . "global" }}

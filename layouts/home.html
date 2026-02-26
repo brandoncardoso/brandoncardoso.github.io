@@ -1,0 +1,19 @@
+{{- define "main" -}}
+<div class="w-2xl max-w-full px-(--main-px) sm:px-8" data-pagefind-body>
+  <article class="mb-8">
+    {{- .Content -}}
+  </article>
+
+  {{- $notes := where site.RegularPages "Section" "notes" -}}
+  {{- $notes = (sort $notes ".Date" "desc") | first 5 -}}
+  {{- with $notes -}}
+  <section class="mt-12">
+    <h2 class="font-headings font-bold text-base sm:text-lg leading-tight mb-4">Recent Notes</h2>
+
+    {{ partial "notes-list.html" $notes }}
+
+    <a href="/notes/" class="inline-block">all notes</a>
+  </section>
+  {{- end -}}
+</div>
+{{- end -}}

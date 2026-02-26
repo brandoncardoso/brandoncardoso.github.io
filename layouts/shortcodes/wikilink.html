@@ -1,0 +1,28 @@
+{{- $raw := .Get 0 | default "" -}}
+{{- $parts := split $raw "|" -}}
+{{- $targetName := lower (index $parts 0 | default "") -}}
+{{- $linkText := "" -}}
+{{- if gt (len $parts) 1 -}}
+	{{- $linkText = index $parts 1 | default "" -}}
+{{- else -}}
+	{{- $linkText = index $parts 0 | default "" -}}
+{{- end -}}
+
+{{- $index := site.Store.Get "wikilink-index" -}}
+{{- if not $index -}}
+	{{- $index = dict -}}
+	{{- range site.RegularPages -}}
+		{{- $title := .Title | default "" -}}
+		{{- if ne $title "" -}}
+			{{- $index = merge $index (dict (lower $title) .) -}}
+		{{- end -}}
+	{{- end -}}
+	{{- site.Store.Set "wikilink-index" $index -}}
+{{- end -}}
+{{- $found := index $index $targetName | default "" -}}
+
+{{- if ne $found "" -}}
+	<a href="{{ $found.RelPermalink }}" id="wikilink-{{ .Ordinal }}">{{ $linkText }}</a>
+{{- else -}}
+	<span>{{ $raw }}</span>
+{{- end -}}

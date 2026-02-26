@@ -1,0 +1,41 @@
+{
+  "home.introduction": "トロント出身のソフトウェアエンジニアです。今は東京に住んでいます。",
+
+  "ui.backToTop": "トップに戻る",
+  "ui.language.ariaLabel": "言語",
+
+  "projects.sectionTitle": "プロジェクト",
+
+  "projects.botbros.description": "仮想アイテム取引ボット",
+  "projects.botbros.linkAriaLabel": "ボット・ブラザーズのSteamグループ",
+
+  "projects.moviebot.description": "Discordの映画検索ボット",
+  "projects.moviebot.linkAriaLabel": "ムービーボットのGitHubのリポジトリ",
+
+  "projects.hima.description": "Jekyllのテンプレート",
+  "projects.hima.linkAriaLabel": "ヒマのGitHubのリポジトリ",
+
+  "projects.sentinowl.description": "モダンな、クロスプラットフォームのドライブ健康監視ツール",
+  "projects.sentinowl.linkAriaLabel": "Sentinowlのサイト",
+
+  "social.github.ariaLabel": "カルドーソ・ブランのGitHubプロフィール",
+  "social.linkedin.ariaLabel": "カルドーソ・ブランのLinkedInプロフィール",
+  "social.email.ariaLabel": "カルドーソ・ブランドンにメールを送信",
+
+  "nav.movienight.label": "ムービーナイト",
+  "nav.movienight.ariaLabel": "ムービーナイトの歴史",
+
+  "movienight.title": "ムービーナイトの歴史",
+  "movienight.search.label": "検索",
+  "movienight.search.clearAriaLabel": "検索ワードを消去",
+  "movienight.emptyState": "映画が見つかりませんでした。",
+
+  "movienight.table.date": "日付",
+  "movienight.table.theme": "テーマ",
+  "movienight.table.title": "映画のタイトル",
+  "movienight.table.year": "映画公開年",
+
+  "notfound.title": "404 ページは見つかりません",
+  "notfound.subtitle": "迷っていると思います。",
+  "notfound.homeLink": "ホームページに戻る"
+}

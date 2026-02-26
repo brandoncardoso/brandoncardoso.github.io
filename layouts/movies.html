@@ -1,0 +1,171 @@
+{{ define "main" }}
+<div class="w-5xl max-w-full px-(--main-px) sm:px-8" data-pagefind-ignore="all">
+  <h1 class="font-headings font-bold text-xl sm:text-2xl mb-6">
+    {{ .Title }}
+  </h1>
+
+  {{- with .Content -}}
+  <article class="mb-8">{{ . }}</article>
+  {{- end -}}
+
+  <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+    <h2 class="font-headings font-bold text-lg sm:text-xl">History</h2>
+    <div class="movies-search flex items-center gap-2 border rounded-full border-(--ef-bg-4) px-3 py-2 focus-within:border-(--ef-accent)">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0 text-(--ef-fg-subtle)">
+        <circle cx="11" cy="11" r="8"/>
+        <path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input
+        id="movies-search-input"
+        type="search"
+        placeholder="Filter movies…"
+        aria-label="Filter movies"
+        autocomplete="off"
+        class="font-body text-xs bg-transparent outline-none w-48 placeholder-color-(--ef-fg-dim)"
+      >
+      <button id="movies-search-clear" aria-label="Clear filter" class="text-xs text-(--ef-fg-dim) hover:text-(--ef-fg) leading-none invisible">✕</button>
+    </div>
+  </div>
+
+  <div class="overflow-x-auto">
+    <div>
+      <table id="movies-table" class="whitespace-nowrap">
+        <thead>
+          <tr>
+            <th class="w-12">
+              <button class="flex items-center gap-1 whitespace-nowrap bg-none border-none cursor-pointer font-inherit color-inherit p-0 hover:text-(--ef-fg)" data-sort="num"># <span class="movies-sort-icon text-(--ef-fg-subtle)" data-sort="num">⇅</span></button>
+            </th>
+            <th class="w-32">
+              <button class="flex items-center gap-1 whitespace-nowrap bg-none border-none cursor-pointer font-inherit color-inherit p-0 hover:text-(--ef-fg)" data-sort="date">Date <span class="movies-sort-icon text-(--ef-fg-subtle)" data-sort="date">↓</span></button>
+            </th>
+            <th class="w-3/10">
+              <button class="flex items-center gap-1 whitespace-nowrap bg-none border-none cursor-pointer font-inherit color-inherit p-0 hover:text-(--ef-fg)" data-sort="theme">Theme <span class="movies-sort-icon text-(--ef-fg-subtle)" data-sort="theme">⇅</span></button>
+            </th>
+            <th>
+              <button class="flex items-center gap-1 whitespace-nowrap bg-none border-none cursor-pointer font-inherit color-inherit p-0 hover:text-(--ef-fg)" data-sort="movieTitle">Movie <span class="movies-sort-icon text-(--ef-fg-subtle)" data-sort="movieTitle">⇅</span></button>
+            </th>
+            <th class="text-right w-16">
+              <button class="flex items-center gap-1 whitespace-nowrap bg-none border-none cursor-pointer font-inherit color-inherit p-0 hover:text-(--ef-fg)" data-sort="movieYear">Year <span class="movies-sort-icon text-(--ef-fg-subtle)" data-sort="movieYear">⇅</span></button>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="movies-tbody"></tbody>
+      </table>
+      <p id="movies-empty" class="text-center py-8 text-(--ef-fg-dim)" hidden>No movies found.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const data = JSON.parse({{ site.Data.movies | jsonify }});
+    let sortKey = "date";
+    let sortDir = "desc";
+    let searchText = "";
+
+    const tbody = document.getElementById("movies-tbody");
+    const emptyMsg = document.getElementById("movies-empty");
+    const searchInput = document.getElementById("movies-search-input");
+    const clearBtn = document.getElementById("movies-search-clear");
+
+    function formatDate(dateStr) {
+      const [year, month, day] = dateStr.split("-").map(Number);
+      const d = new Date(year, month - 1, day);
+      return d.toLocaleDateString("en-CA", { year: "numeric", month: "short", day: "numeric" });
+    }
+
+    function sortRows(arr) {
+      return [...arr].sort((a, b) => {
+        const va = a[sortKey];
+        const vb = b[sortKey];
+        let cmp;
+        if (typeof va === "number" && typeof vb === "number") {
+          cmp = va - vb;
+        } else {
+          cmp = String(va).localeCompare(String(vb));
+        }
+        return sortDir === "asc" ? cmp : -cmp;
+      });
+    }
+
+    function filterRows(arr) {
+      if (!searchText) return arr;
+      return arr.filter(m =>
+        String(m.num).includes(searchText) ||
+        formatDate(m.date).toLowerCase().includes(searchText) ||
+        m.theme.toLowerCase().includes(searchText) ||
+        m.themePicker.toLowerCase().includes(searchText) ||
+        m.movieTitle.toLowerCase().includes(searchText) ||
+        String(m.movieYear).includes(searchText)
+      );
+    }
+
+    function render() {
+      const filtered = sortRows(filterRows(data));
+      if (!filtered.length) {
+        tbody.innerHTML = "";
+        emptyMsg.hidden = false;
+        return;
+      }
+      emptyMsg.hidden = true;
+
+      tbody.innerHTML = filtered.map(m => {
+        const theme = m.themePicker ? `${m.theme} (${m.themePicker})` : m.theme;
+        const date = formatDate(m.date);
+        return `<tr>
+          <td>${m.num}</td>
+          <td class="whitespace-nowrap tabular-nums">${date}</td>
+          <td>${theme}</td>
+          <td><a href="${m.tmdbUrl}" target="_blank" rel="noopener noreferrer" aria-label="TMDB page for ${m.movieTitle} (${m.movieYear})">${m.movieTitle}</a></td>
+          <td class="text-right whitespace-nowrap tabular-nums">${m.movieYear}</td>
+        </tr>`;
+      }).join("");
+    }
+
+    function updateSortIcons() {
+      document.querySelectorAll(".movies-sort-icon").forEach(el => {
+        const key = el.dataset.sort;
+        if (key === sortKey) {
+          el.textContent = sortDir === "asc" ? "↑" : "↓";
+          el.classList.add("movies-sort-icon--active");
+        } else {
+          el.textContent = "⇅";
+          el.classList.remove("movies-sort-icon--active");
+        }
+      });
+    }
+
+    document.querySelectorAll("[data-sort]").forEach(btn => {
+      if (!btn.closest("thead")) return;
+      btn.addEventListener("click", () => {
+        const key = btn.dataset.sort;
+        if (sortKey === key) {
+          sortDir = sortDir === "asc" ? "desc" : "asc";
+        } else {
+          sortKey = key;
+          sortDir = "asc";
+        }
+        updateSortIcons();
+        render();
+      });
+    });
+
+    searchInput.addEventListener("input", () => {
+      searchText = searchInput.value.toLowerCase();
+      clearBtn.classList.toggle("invisible", !searchText);
+      render();
+    });
+
+    clearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      searchText = "";
+      clearBtn.classList.add("invisible");
+      searchInput.focus();
+      render();
+    });
+
+    updateSortIcons();
+    render();
+  })();
+</script>
+{{ end }}

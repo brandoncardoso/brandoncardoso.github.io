@@ -1,0 +1,515 @@
+[
+  {
+    "num": 1,
+    "date": "2021-04-24",
+    "theme": "Spoopy",
+    "themePicker": "",
+    "movieTitle": "Sator",
+    "movieYear": 2019,
+    "tmdbUrl": "https://www.themoviedb.org/movie/611651-sator"
+  },
+  {
+    "num": 2,
+    "date": "2021-05-29",
+    "theme": "Kung fu/Karate",
+    "themePicker": "",
+    "movieTitle": "The Paper Tigers",
+    "movieYear": 2020,
+    "tmdbUrl": "https://www.themoviedb.org/movie/731738-the-paper-tigers"
+  },
+  {
+    "num": 3,
+    "date": "2021-06-26",
+    "theme": "Spooky/Sexy",
+    "themePicker": "",
+    "movieTitle": "Look Away",
+    "movieYear": 2018,
+    "tmdbUrl": "https://www.themoviedb.org/movie/526051-look-away"
+  },
+  {
+    "num": 4,
+    "date": "2021-07-31",
+    "theme": "Comedy",
+    "themePicker": "",
+    "movieTitle": "Bad Trip",
+    "movieYear": 2021,
+    "tmdbUrl": "https://www.themoviedb.org/movie/578908-bad-trip"
+  },
+  {
+    "num": 5,
+    "date": "2021-08-28",
+    "theme": "Fantasy",
+    "themePicker": "",
+    "movieTitle": "The Green Knight",
+    "movieYear": 2021,
+    "tmdbUrl": "https://www.themoviedb.org/movie/559907-the-green-knight"
+  },
+  {
+    "num": 6,
+    "date": "2021-09-18",
+    "theme": "Action",
+    "themePicker": "",
+    "movieTitle": "Riders of Justice",
+    "movieYear": 2021,
+    "tmdbUrl": "https://www.themoviedb.org/movie/663870-retfaerdighedens-ryttere"
+  },
+  {
+    "num": 7,
+    "date": "2021-10-31",
+    "theme": "Horror",
+    "themePicker": "",
+    "movieTitle": "The Night House",
+    "movieYear": 2021,
+    "tmdbUrl": "https://www.themoviedb.org/movie/547565-the-night-house"
+  },
+  {
+    "num": 8,
+    "date": "2021-11-27",
+    "theme": "Tech Noir",
+    "themePicker": "Matt",
+    "movieTitle": "Gattaca",
+    "movieYear": 1997,
+    "tmdbUrl": "https://www.themoviedb.org/movie/782-gattaca"
+  },
+  {
+    "num": 9,
+    "date": "2021-12-18",
+    "theme": "Whodunit",
+    "themePicker": "Daniel",
+    "movieTitle": "Memories of Murder",
+    "movieYear": 2003,
+    "tmdbUrl": "https://www.themoviedb.org/movie/11423"
+  },
+  {
+    "num": 9.5,
+    "date": "2022-01-03",
+    "theme": "New Matrix Movie",
+    "themePicker": "",
+    "movieTitle": "The Matrix Resurrections",
+    "movieYear": 2021,
+    "tmdbUrl": "https://www.themoviedb.org/movie/624860-the-matrix-resurrections"
+  },
+  {
+    "num": 10,
+    "date": "2022-01-29",
+    "theme": "Wes Anderson",
+    "themePicker": "Brandon",
+    "movieTitle": "The Life Aquatic with Steve Zissou",
+    "movieYear": 2004,
+    "tmdbUrl": "https://www.themoviedb.org/movie/421-the-life-aquatic-with-steve-zissou"
+  },
+  {
+    "num": 11,
+    "date": "2022-02-25",
+    "theme": "Nicolas Cage",
+    "themePicker": "",
+    "movieTitle": "Face/Off",
+    "movieYear": 1997,
+    "tmdbUrl": "https://www.themoviedb.org/movie/754-face-off"
+  },
+  {
+    "num": 12,
+    "date": "2022-03-26",
+    "theme": "Indian",
+    "themePicker": "",
+    "movieTitle": "Baahubali: The Beginning",
+    "movieYear": 2015,
+    "tmdbUrl": "https://www.themoviedb.org/movie/256040"
+  },
+  {
+    "num": 12.5,
+    "date": "2022-04-02",
+    "theme": "Indian",
+    "themePicker": "",
+    "movieTitle": "Baahubali 2: The Conclusion",
+    "movieYear": 2017,
+    "tmdbUrl": "https://www.themoviedb.org/movie/350312-2"
+  },
+  {
+    "num": 13,
+    "date": "2022-04-22",
+    "theme": "Psychological Horror",
+    "themePicker": "Matt",
+    "movieTitle": "It Comes At Night",
+    "movieYear": 2017,
+    "tmdbUrl": "https://www.themoviedb.org/movie/418078"
+  },
+  {
+    "num": 14,
+    "date": "2022-05-28",
+    "theme": "Japanese",
+    "themePicker": "",
+    "movieTitle": "Shoplifters",
+    "movieYear": 2018,
+    "tmdbUrl": "https://www.themoviedb.org/movie/505192"
+  },
+  {
+    "num": 15,
+    "date": "2022-07-30",
+    "theme": "2019",
+    "themePicker": "Robert",
+    "movieTitle": "The Silence",
+    "movieYear": 2019,
+    "tmdbUrl": "https://www.themoviedb.org/movie/527261"
+  },
+  {
+    "num": 16,
+    "date": "2022-08-27",
+    "theme": "Romance",
+    "themePicker": "Anastasia",
+    "movieTitle": "High Fidelity",
+    "movieYear": 2000,
+    "tmdbUrl": "https://www.themoviedb.org/movie/243-high-fidelity"
+  },
+  {
+    "num": 17,
+    "date": "2022-10-01",
+    "theme": "Psychedelic",
+    "themePicker": "Matt",
+    "movieTitle": "Enter the Void",
+    "movieYear": 2009,
+    "tmdbUrl": "https://www.themoviedb.org/movie/34647-enter-the-void"
+  },
+  {
+    "num": 18,
+    "date": "2022-10-29",
+    "theme": "Spooky",
+    "themePicker": "",
+    "movieTitle": "The Blair Witch Project",
+    "movieYear": 1999,
+    "tmdbUrl": "https://www.themoviedb.org/movie/2667-the-blair-witch-project"
+  },
+  {
+    "num": 19,
+    "date": "2022-11-19",
+    "theme": "Apocalypse",
+    "themePicker": "Brandon",
+    "movieTitle": "The Road",
+    "movieYear": 2009,
+    "tmdbUrl": "https://www.themoviedb.org/movie/20766-the-road"
+  },
+  {
+    "num": 20,
+    "date": "2022-12-16",
+    "theme": "Alt. Christmas",
+    "themePicker": "",
+    "movieTitle": "Kiss Kiss Bang Bang",
+    "movieYear": 2005,
+    "tmdbUrl": "https://www.themoviedb.org/movie/5236-kiss-kiss-bang-bang"
+  },
+  {
+    "num": 21,
+    "date": "2023-01-28",
+    "theme": "Pirate",
+    "themePicker": "",
+    "movieTitle": "The Count of Monte Cristo",
+    "movieYear": 2002,
+    "tmdbUrl": "https://www.themoviedb.org/movie/11362-the-count-of-monte-cristo"
+  },
+  {
+    "num": 22,
+    "date": "2023-02-24",
+    "theme": "Aliens",
+    "themePicker": "Daniel",
+    "movieTitle": "Dark Skies",
+    "movieYear": 2013,
+    "tmdbUrl": "https://www.themoviedb.org/movie/145135-dark-skies"
+  },
+  {
+    "num": 23,
+    "date": "2023-03-24",
+    "theme": "Bromance",
+    "themePicker": "Brandon",
+    "movieTitle": "The Banshees of Inisherin",
+    "movieYear": 2022,
+    "tmdbUrl": "https://www.themoviedb.org/movie/674324-the-banshees-of-inisherin"
+  },
+  {
+    "num": 24,
+    "date": "2023-04-28",
+    "theme": "Romantic Comedy",
+    "themePicker": "Mike",
+    "movieTitle": "Mr. Right",
+    "movieYear": 2015,
+    "tmdbUrl": "https://www.themoviedb.org/movie/333385-mr-right"
+  },
+  {
+    "num": 25,
+    "date": "2023-05-26",
+    "theme": "Steve",
+    "themePicker": "Matt",
+    "movieTitle": "My Friend Dahmer",
+    "movieYear": 2017,
+    "tmdbUrl": "https://www.themoviedb.org/movie/445040-my-friend-dahmer"
+  },
+  {
+    "num": 26,
+    "date": "2023-06-24",
+    "theme": "Fantasy",
+    "themePicker": "Daniel",
+    "movieTitle": "Solomon Kane",
+    "movieYear": 2009,
+    "tmdbUrl": "https://www.themoviedb.org/movie/32985-solomon-kane"
+  },
+  {
+    "num": 27,
+    "date": "2023-07-28",
+    "theme": "Mockumentary",
+    "themePicker": "Matt",
+    "movieTitle": "Tour de Pharmacy",
+    "movieYear": 2017,
+    "tmdbUrl": "https://www.themoviedb.org/movie/458506-tour-de-pharmacy"
+  },
+  {
+    "num": 28,
+    "date": "2023-09-30",
+    "theme": "Italian",
+    "themePicker": "Robert",
+    "movieTitle": "Gomorrah",
+    "movieYear": 2008,
+    "tmdbUrl": "https://www.themoviedb.org/movie/8882-gomorra"
+  },
+  {
+    "num": 29,
+    "date": "2023-10-27",
+    "theme": "Zombie",
+    "themePicker": "Brandon",
+    "movieTitle": "Train to Busan",
+    "movieYear": 2016,
+    "tmdbUrl": "https://www.themoviedb.org/movie/396535"
+  },
+  {
+    "num": 30,
+    "date": "2023-12-09",
+    "theme": "Hanukkah",
+    "themePicker": "Anna & Cezar",
+    "movieTitle": "The Hebrew Hammer",
+    "movieYear": 2003,
+    "tmdbUrl": "https://www.themoviedb.org/movie/19187-the-hebrew-hammer"
+  },
+  {
+    "num": 31,
+    "date": "2024-02-02",
+    "theme": "Meta",
+    "themePicker": "Daniel",
+    "movieTitle": "Stranger Than Fiction",
+    "movieYear": 2006,
+    "tmdbUrl": "https://www.themoviedb.org/movie/1262-stranger-than-fiction"
+  },
+  {
+    "num": 32,
+    "date": "2024-02-23",
+    "theme": "Fever Dream",
+    "themePicker": "Matt",
+    "movieTitle": "The Holy Mountain",
+    "movieYear": 1973,
+    "tmdbUrl": "https://www.themoviedb.org/movie/8327-la-montana-sagrada"
+  },
+  {
+    "num": 33,
+    "date": "2024-03-29",
+    "theme": "Business",
+    "themePicker": "Robert",
+    "movieTitle": "Dark Waters",
+    "movieYear": 2019,
+    "tmdbUrl": "https://www.themoviedb.org/movie/552178-dark-waters"
+  },
+  {
+    "num": 34,
+    "date": "2024-04-19",
+    "theme": "Giant Monster",
+    "themePicker": "Brandon",
+    "movieTitle": "The Host",
+    "movieYear": 2006,
+    "tmdbUrl": "https://www.themoviedb.org/movie/1255"
+  },
+  {
+    "num": 35,
+    "date": "2024-05-24",
+    "theme": "2005-2010 R Rated",
+    "themePicker": "Daniel",
+    "movieTitle": "Synecdoche, New York",
+    "movieYear": 2008,
+    "tmdbUrl": "https://www.themoviedb.org/movie/4960-synecdoche-new-york"
+  },
+  {
+    "num": 36,
+    "date": "2024-06-28",
+    "theme": "Crime Mystery",
+    "themePicker": "Matt",
+    "movieTitle": "True Story",
+    "movieYear": 2015,
+    "tmdbUrl": "https://www.themoviedb.org/movie/245706-true-story"
+  },
+  {
+    "num": 37,
+    "date": "2024-07-26",
+    "theme": "Korean",
+    "themePicker": "Sam",
+    "movieTitle": "Exhuma",
+    "movieYear": 2024,
+    "tmdbUrl": "https://www.themoviedb.org/movie/838209"
+  },
+  {
+    "num": 38,
+    "date": "2024-08-30",
+    "theme": "Water",
+    "themePicker": "Robert",
+    "movieTitle": "Greyhound",
+    "movieYear": 2020,
+    "tmdbUrl": "https://www.themoviedb.org/movie/516486-greyhound"
+  },
+  {
+    "num": 39,
+    "date": "2024-09-27",
+    "theme": "Oscar Bait",
+    "themePicker": "Mike",
+    "movieTitle": "The Last Duel",
+    "movieYear": 2021,
+    "tmdbUrl": "https://www.themoviedb.org/movie/617653-the-last-duel"
+  },
+  {
+    "num": 40,
+    "date": "2024-10-26",
+    "theme": "Vampire",
+    "themePicker": "Brandon",
+    "movieTitle": "30 Days of Night",
+    "movieYear": 2007,
+    "tmdbUrl": "https://www.themoviedb.org/movie/4513-30-days-of-night"
+  },
+  {
+    "num": 41,
+    "date": "2024-11-29",
+    "theme": "Nicolas Cage",
+    "themePicker": "Daniel",
+    "movieTitle": "Dream Scenario",
+    "movieYear": 2023,
+    "tmdbUrl": "https://www.themoviedb.org/movie/823482-dream-scenario"
+  },
+  {
+    "num": 42,
+    "date": "2024-12-20",
+    "theme": "Before 1997",
+    "themePicker": "Matt",
+    "movieTitle": "Psycho",
+    "movieYear": 1960,
+    "tmdbUrl": "https://www.themoviedb.org/movie/539-psycho"
+  },
+  {
+    "num": 43,
+    "date": "2025-01-24",
+    "theme": "Space",
+    "themePicker": "Robert",
+    "movieTitle": "Europa Report",
+    "movieYear": 2013,
+    "tmdbUrl": "https://www.themoviedb.org/movie/174772-europa-report"
+  },
+  {
+    "num": 44,
+    "date": "2025-02-28",
+    "theme": "Eastern Europe",
+    "themePicker": "Anastasia",
+    "movieTitle": "Sexmission",
+    "movieYear": 1984,
+    "tmdbUrl": "https://www.themoviedb.org/movie/19673-seksmisja"
+  },
+  {
+    "num": 45,
+    "date": "2025-03-28",
+    "theme": "Canadian",
+    "themePicker": "Daniel",
+    "movieTitle": "Bon Cop Bad Cop",
+    "movieYear": 2006,
+    "tmdbUrl": "https://www.themoviedb.org/movie/15049-bon-cop-bad-cop"
+  },
+  {
+    "num": 46,
+    "date": "2025-05-02",
+    "theme": "Long Timespan",
+    "themePicker": "Brandon",
+    "movieTitle": "Frequency",
+    "movieYear": 2000,
+    "tmdbUrl": "https://www.themoviedb.org/movie/10559-frequency"
+  },
+  {
+    "num": 47,
+    "date": "2025-06-06",
+    "theme": "Vehicles",
+    "themePicker": "Matt",
+    "movieTitle": "Airplane!",
+    "movieYear": 1980,
+    "tmdbUrl": "https://www.themoviedb.org/movie/813-airplane"
+  },
+  {
+    "num": 48,
+    "date": "2025-07-11",
+    "theme": "Lovecraftian",
+    "themePicker": "Robert",
+    "movieTitle": "Frailty",
+    "movieYear": 2001,
+    "tmdbUrl": "https://www.themoviedb.org/movie/12149-frailty"
+  },
+  {
+    "num": 49,
+    "date": "2025-07-25",
+    "theme": "Desert",
+    "themePicker": "Daniel",
+    "movieTitle": "Stargate",
+    "movieYear": 1994,
+    "tmdbUrl": "https://www.themoviedb.org/movie/2164-stargate"
+  },
+  {
+    "num": 50,
+    "date": "2025-08-29",
+    "theme": "Tournament",
+    "themePicker": "Brandon",
+    "movieTitle": "The Quick and the Dead",
+    "movieYear": 1995,
+    "tmdbUrl": "https://www.themoviedb.org/movie/12106-the-quick-and-the-dead"
+  },
+  {
+    "num": 51,
+    "date": "2025-09-27",
+    "theme": "Sports",
+    "themePicker": "Matt",
+    "movieTitle": "Kingpin",
+    "movieYear": 1996,
+    "tmdbUrl": "https://www.themoviedb.org/movie/11543-kingpin"
+  },
+    {
+    "num": 52,
+    "date": "2025-10-31",
+    "theme": "Found Footage",
+    "themePicker": "Robert",
+    "movieTitle": "V/H/S",
+    "movieYear": 2012,
+    "tmdbUrl": "https://www.themoviedb.org/movie/84348-v-h-s"
+  },
+  {
+    "num": 53,
+    "date": "2025-11-28",
+    "theme": "Video Game",
+    "themePicker": "Daniel",
+    "movieTitle": "Resident Evil",
+    "movieYear": 2002,
+    "tmdbUrl": "https://www.themoviedb.org/movie/1576-resident-evil"
+  },
+    {
+    "num": 54,
+    "date": "2025-12-19",
+    "theme": "Documentary",
+    "themePicker": "Brandon",
+    "movieTitle": "2000 Meters to Andriivka",
+    "movieYear": 2025,
+    "tmdbUrl": "https://www.themoviedb.org/movie/1400789-2000-meters-to-andriivka"
+  },
+  {
+    "num": 55,
+    "date": "2026-01-30",
+    "theme": "Fantasy",
+    "themePicker": "Matt",
+    "movieTitle": "The Fountain",
+    "movieYear": 2006,
+    "tmdbUrl": "https://www.themoviedb.org/movie/1381-the-fountain"
+  }
+]
