@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ partial "post-header.html" . }}
+
+<div class="w-2xl max-w-full flex flex-col lg:px-0 lg:w-fit lg:flex-row lg:items-start">
+  <div class="hidden lg:block lg:w-64 lg:pl-(--main-px)"></div>
+
+  <article class="w-2xl max-w-full shrink-0 px-(--main-px) sm:px-8" data-pagefind-body>
+    {{ $content := .Content | replaceRE `\[\[(.*?)\]\]` `{{< wikilink "$1" >}}` | markdownify }}
+    {{- $content | safeHTML -}}
+  </article>
+
+  <div class="hidden lg:block lg:w-64 lg:pr-(--main-px)"></div>
+</div>
+
+{{- if or .NextInSection .PrevInSection -}}
+<div class="w-2xl max-w-full px-(--main-px) sm:px-8">
+  <hr class="border-t border-(--ef-bg-4) mt-8 mb-8">
+</div>
+<nav class="w-2xl max-w-full px-(--main-px) sm:px-8 flex justify-between text-sm" aria-label="Now post navigation">
+  <div>
+    {{- with .PrevInSection -}}
+    <a href="{{ .RelPermalink }}" class="text-(--ef-fg-dim) hover:text-(--ef-accent) no-underline hover:no-underline">← {{ .Date.Format "Jan 2, 2006" }}</a>
+    {{- end -}}
+  </div>
+  <div>
+    {{- with .NextInSection -}}
+    <a href="{{ .RelPermalink }}" class="text-(--ef-fg-dim) hover:text-(--ef-accent) no-underline hover:no-underline">{{ .Date.Format "Jan 2, 2006" }} →</a>
+    {{- end -}}
+  </div>
+</nav>
+{{- end -}}
+
+{{/* Backlinks */}}
+<div class="w-2xl max-w-full px-(--main-px) sm:px-8">
+  {{ partialCached "backlinks.html" . .Permalink }}
+</div>
+
+{{ partialCached "relative-dates.html" . "global" }}
+{{ end }}

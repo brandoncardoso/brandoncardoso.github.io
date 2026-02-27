@@ -1,0 +1,39 @@
+{{- $statusEmoji := dict "seedling" "🌱" "budding" "🌿" "evergreen" "🌳" -}}
+{{- $emoji := index $statusEmoji (.Params.status | default "") -}}
+
+<div class="w-2xl max-w-full px-(--main-px) sm:px-8 mb-8">
+  <h1 class="font-headings font-bold leading-snug text-2xl sm:text-4xl mb-3" data-pagefind-body>{{ .Title }}</h1>
+
+  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-3 text-xs text-(--ef-fg-dim)">
+    {{- with .CurrentSection -}}
+    {{- if ne .Kind "home" -}}
+    <a href="{{ .RelPermalink }}" class="no-underline hover:no-underline font-medium text-(--ef-accent) hover:text-(--ef-fg)">{{ .LinkTitle }}</a>
+    <span aria-hidden="true">·</span>
+    {{- end -}}
+    {{- end -}}
+    {{- with .Params.status -}}
+    <span class="flex items-center gap-1">
+      {{- with $emoji -}}<span aria-hidden="true">{{ . }}</span>{{- end -}}
+      {{- . -}}
+    </span>
+    <span aria-hidden="true">·</span>
+    {{- end -}}
+    <span>created <time class="tabular-nums" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span>
+    {{- with .Params.lastmod -}}
+    {{- if ne . $.Params.Date -}}
+    <span aria-hidden="true">·</span>
+    <span>updated <time class="tabular-nums" datetime="{{ .Format "2006-01-02" }}">{{ .Format "Jan 2, 2006" }}</time></span>
+    {{- end -}}
+    {{- end -}}
+    <span aria-hidden="true">·</span>
+    <a class="no-underline hover:no-underline" href="{{ .Site.Params.repo }}/edit/main/content/{{ .File.Path }}">edit</a>
+  </div>
+
+  {{- with .GetTerms "tags" -}}
+  <div class="flex flex-wrap gap-2">
+    {{- range . -}}
+      <a href="{{ .RelPermalink }}" class="no-underline text-xs px-2 py-0.5 rounded-full bg-(--ef-bg-2) text-(--ef-fg) hover:bg-(--ef-bg-3)">{{ .LinkTitle }}</a>
+    {{- end -}}
+  </div>
+  {{- end -}}
+</div>
