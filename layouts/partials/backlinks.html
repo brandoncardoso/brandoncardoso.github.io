@@ -1,16 +1,17 @@
 {{ $current := . }}
 
-{{ $identifier := $current.Title | lower }}
+{{ $identifier := $current.Params.slug | default $current.File.ContentBaseName | lower }}
 
 {{/* grouped: map of permalink → slice of occurrence dicts */}}
 {{ $grouped := dict }}
 {{/* pageOrder: permalinks in first-seen order for stable rendering */}}
 {{ $pageOrder := slice }}
-{{/* pageByPermalink: built in same pass for rendering */}}
-{{ $pageByPermalink := dict }}
+{{/* seenPages: set for O(1) duplicate check */}}
+{{ $seenPages := dict }}
+{{/* statusEmoji: defined once, reused during render */}}
+{{ $statusEmoji := dict "seedling" "🌱" "budding" "🌿" "evergreen" "🌳" }}
 
 {{ range site.RegularPages }}
-  {{ $pageByPermalink = merge $pageByPermalink (dict .Permalink .) }}
   {{ if ne .Permalink $current.Permalink }}
     {{ $page := . }}
     {{ $ordinal := 0 }}
@@ -19,18 +20,18 @@
       {{ $wikilinksOnLine := findRE `\[\[[^\]]+\]\]` $line }}
 
       {{ range $wikilinksOnLine }}
-        {{ $wl := . }}
-        {{ $inner := $wl | replaceRE `^\[\[` "" | replaceRE `\]\]$` "" }}
-        {{ $wlName := lower (index (split $inner "|") 0) }}
+        {{ $inner := . | replaceRE `^\[\[` "" | replaceRE `\]\]$` "" }}
+        {{ $innerParts := split $inner "|" }}
+        {{ $wlName := lower (index $innerParts 0) }}
 
         {{ if eq $wlName $identifier }}
           {{ $anchor := printf "#wikilink-%d" $ordinal }}
 
-          {{ $ctx := $line }}
-          {{ $displayText := index (split $inner "|") 0 }}
-          {{ if gt (len (split $inner "|")) 1 }}
-            {{ $displayText = index (split $inner "|") 1 }}
+          {{ $displayText := index $innerParts 0 }}
+          {{ if gt (len $innerParts) 1 }}
+            {{ $displayText = index $innerParts 1 }}
           {{ end }}
+          {{ $ctx := $line }}
           {{ $ctx = replaceRE `\[\[([^\]|]+)\|([^\]]+)\]\]` "$2" $ctx }}
           {{ $ctx = replaceRE `\[\[([^\]]+)\]\]` "$1" $ctx }}
           {{ $ctx = replaceRE `\*\*([^*]+)\*\*` "$1" $ctx }}
@@ -57,12 +58,13 @@
           {{ end }}
           {{ $ctx = replace $ctx $displayText (printf "<strong>%s</strong>" $displayText) 1 }}
 
-          {{ $occurrence := dict "anchor" $anchor "context" $ctx }}
+          {{ $occurrence := dict "anchor" $anchor "context" $ctx "page" $page }}
           {{ $key := $page.Permalink }}
           {{ $existing := index $grouped $key | default slice }}
           {{ $grouped = merge $grouped (dict $key ($existing | append $occurrence)) }}
-          {{ if not (in $pageOrder $key) }}
+          {{ if not (index $seenPages $key) }}
             {{ $pageOrder = $pageOrder | append $key }}
+            {{ $seenPages = merge $seenPages (dict $key true) }}
           {{ end }}
         {{ end }}
 
@@ -82,10 +84,8 @@
   </p>
   <ul class="space-y-3 list-none p-0 m-0">
     {{- range $pageOrder -}}
-    {{- $permalink := . -}}
-    {{- $page := index $pageByPermalink $permalink -}}
-    {{- $occurrences := index $grouped $permalink -}}
-    {{- $statusEmoji := dict "seedling" "🌱" "budding" "🌿" "evergreen" "🌳" -}}
+    {{- $occurrences := index $grouped . -}}
+    {{- $page := (index $occurrences 0).page -}}
     {{- $emoji := index $statusEmoji ($page.Params.status | default "") -}}
     <li class="flex flex-col gap-1 px-4 py-3 rounded-md bg-(--ef-bg-1)">
       <a href="{{ $page.RelPermalink }}" class="no-underline font-medium text-sm hover:text-(--ef-accent)">

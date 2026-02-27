@@ -22,9 +22,15 @@ weight = 1
 [permalinks]
 [permalinks.page]
 notes = "/:slug"
+essays = "/:slug"
+til = "/:slug"
+now = "/:slug"
 
 [permalinks.section]
 notes = "/:slug"
+essays = "/:slug"
+til = "/:slug"
+now = "/:slug"
 
 
 [taxonomies]

@@ -1,27 +1,24 @@
 {{- $raw := .Get 0 | default "" -}}
 {{- $parts := split $raw "|" -}}
-{{- $targetName := lower (index $parts 0 | default "") -}}
-{{- $linkText := "" -}}
-{{- if gt (len $parts) 1 -}}
-	{{- $linkText = index $parts 1 | default "" -}}
-{{- else -}}
-	{{- $linkText = index $parts 0 | default "" -}}
-{{- end -}}
+{{- $targetSlug := lower (index $parts 0 | default "") -}}
+{{- $explicitLabel := gt (len $parts) 1 -}}
+{{- $linkText := cond $explicitLabel (index $parts 1 | default "") (index $parts 0 | default "") -}}
 
 {{- $index := site.Store.Get "wikilink-index" -}}
 {{- if not $index -}}
 	{{- $index = dict -}}
 	{{- range site.RegularPages -}}
-		{{- $title := .Title | default "" -}}
-		{{- if ne $title "" -}}
-			{{- $index = merge $index (dict (lower $title) .) -}}
+		{{- $slug := .Params.slug | default .File.ContentBaseName | lower -}}
+		{{- if ne $slug "" -}}
+			{{- $index = merge $index (dict $slug .) -}}
 		{{- end -}}
 	{{- end -}}
 	{{- site.Store.Set "wikilink-index" $index -}}
 {{- end -}}
-{{- $found := index $index $targetName | default "" -}}
+{{- $found := index $index $targetSlug | default "" -}}
 
 {{- if ne $found "" -}}
+	{{- if not $explicitLabel -}}{{- $linkText = $found.Title -}}{{- end -}}
 	<a href="{{ $found.RelPermalink }}" id="wikilink-{{ .Ordinal }}">{{ $linkText }}</a>
 {{- else -}}
 	<span>{{ $raw }}</span>
