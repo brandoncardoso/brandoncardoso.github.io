@@ -34,17 +34,19 @@
 			{{- block "main" . -}}{{- end -}}
 		</main>
 
-		<footer data-pagefind-ignore class="w-2xl max-w-full mx-auto my-4 px-(--main-px) sm:px-8 text-(--ef-fg-subtle) flex gap-4">
-			{{ with site.Params.authorGitHub }}
-			<a href="{{ . }}" rel="noopener noreferrer" class="hover:underline">GitHub</a>
-			{{ end }}
-			{{ with site.Params.authorLinkedIn }}
-			<a href="{{ . }}" rel="noopener noreferrer" class="hover:underline">LinkedIn</a>
-			{{ end }}
-			{{ with site.Params.authorEmail }}
-			<a href="{{ . }}" class="hover:underline">{{ . | strings.TrimPrefix "mailto:" }}</a>
-			{{ end }}
-			<span class="ml-auto">&copy; {{ now.Year }} Brandon Cardoso</span>
+		<footer data-pagefind-ignore class="w-2xl max-w-full mx-auto my-4 px-(--main-px) sm:px-8 text-(--ef-fg-subtle) flex flex-col gap-2">
+			<div class="flex flex-wrap gap-2">
+				{{ with site.Params.authorGitHub }}
+				<a href="{{ . }}" rel="noopener noreferrer" class="hover:underline">GitHub</a>
+				{{ end }}
+				{{ with site.Params.authorLinkedIn }}
+				<a href="{{ . }}" rel="noopener noreferrer" class="hover:underline">LinkedIn</a>
+				{{ end }}
+				{{ with site.Params.authorEmail }}
+				<a href="{{ . }}" class="hover:underline">{{ . | strings.TrimPrefix "mailto:" }}</a>
+				{{ end }}
+			</div>
+			<span>&copy; {{ now.Year }} Brandon Cardoso</span>
 		</footer>
 	<div id="lightbox" aria-modal="true" role="dialog" aria-label="Image viewer">
 		<button id="lightbox-close" aria-label="Close">&times;</button>
