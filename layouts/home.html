@@ -4,6 +4,10 @@
     {{- .Content -}}
   </article>
 
+  {{- with last 1 (site.GetPage "now").Pages.ByDate -}}
+  <p class="text-sm">Here's what I'm up to <a href="{{ (index . 0).RelPermalink }}" class="hover:underline">now</a>.</p>
+  {{- end -}}
+
   {{- $essays := where site.RegularPages "Section" "essays" -}}
   {{- $essays = (sort $essays ".Date" "desc") | first 5 -}}
   {{- with $essays -}}
