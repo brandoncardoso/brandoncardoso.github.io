@@ -13,7 +13,7 @@
       {{- with $emoji -}}<span aria-hidden="true" class="text-sm">{{- . -}}</span>{{- end -}}
     </span><span aria-hidden="true">·</span>
     {{- end -}}
-    <span><time class="tabular-nums" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></span>
+    <span><time class="tabular-nums" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "Jan 2, 2006" }}</time></span>
   </div>
   </li>
   {{- end -}}

@@ -4,16 +4,29 @@
     {{- .Content -}}
   </article>
 
+  {{- $essays := where site.RegularPages "Section" "essays" -}}
+  {{- $essays = (sort $essays ".Date" "desc") | first 5 -}}
+  {{- with $essays -}}
+  <section class="mt-12">
+    <h2 class="font-headings font-bold text-base sm:text-lg leading-tight mb-4">Recent Essays</h2>
+
+    {{ partial "notes-list.html" $essays }}
+
+    <a href="/essays/" class="inline-block">all essays</a>
+  </section>
+  {{- end -}}
+
   {{- $notes := where site.RegularPages "Section" "notes" -}}
-  {{- $notes = (sort $notes ".Date" "desc") | first 5 -}}
+  {{- $notes = (sort $notes ".Lastmod" "desc") | first 5 -}}
   {{- with $notes -}}
   <section class="mt-12">
-    <h2 class="font-headings font-bold text-base sm:text-lg leading-tight mb-4">Recent Notes</h2>
+    <h2 class="font-headings font-bold text-base sm:text-lg leading-tight mb-4">Recently Updated Notes</h2>
 
     {{ partial "notes-list.html" $notes }}
 
     <a href="/notes/" class="inline-block">all notes</a>
   </section>
   {{- end -}}
+
 </div>
 {{- end -}}
