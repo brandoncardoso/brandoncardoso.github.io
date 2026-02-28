@@ -24,11 +24,13 @@ weight = 1
 notes = "/:slug"
 essays = "/:slug"
 now = "/:slug"
+recipes = "/:slug"
 
 [permalinks.section]
 notes = "/:slug"
 essays = "/:slug"
 now = "/:slug"
+recipes = "/:slug"
 
 
 [taxonomies]
