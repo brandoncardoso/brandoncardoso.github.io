@@ -33,7 +33,7 @@ The content in a digital garden is always being updated and evolves over time. T
 
 Writing out perfect articles for self-promotion or some kind of professional advertisement of your knowledge is not the goal. Digital gardens should be more personal and intimate. You are sharing and exposing your learning process and growth publicly.
 
-Make it clear to readers how "done" or how much time has been invested into each note. A basic categorization system {{<sidenote>}}Again, taken from Maggie Appleton. 🙏{{</sidenote>}}:
+Make it clear to readers how "done" or how much time has been invested into each note. A basic categorization system: {{<sidenote>}}Again, taken from Maggie Appleton. 🙏{{</sidenote>}}
 * :seedling: *seedling* - for rough, early ideas
 * :herb: *budding* - for notes with moderate effort invested or improvement
 * :evergreen_tree: *evergreen* - for notes that are nearly complete

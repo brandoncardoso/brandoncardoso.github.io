@@ -79,7 +79,7 @@
 {{- range $pageOrder -}}{{- $totalOccurrences = add $totalOccurrences (len (index $grouped .)) -}}{{- end -}}
 <hr class="border-t border-(--ef-bg-4) mt-8 mb-8">
 <section id="backlinks-list" class="backlinks" aria-labelledby="backlinks-heading">
-  <p id="backlinks-heading" class="mb-4 text-sm text-(--ef-fg-dim)">
+  <p id="backlinks-heading" class="mb-4 text-(--ef-fg-dim)">
     {{- $totalOccurrences }} {{ cond (eq $totalOccurrences 1) "reference" "references" -}}
   </p>
   <ul class="space-y-3 list-none p-0 m-0">
@@ -88,7 +88,7 @@
     {{- $page := (index $occurrences 0).page -}}
     {{- $emoji := index $statusEmoji ($page.Params.status | default "") -}}
     <li class="flex flex-col gap-1 px-4 py-3 rounded-md bg-(--ef-bg-1)">
-      <a href="{{ $page.RelPermalink }}" class="no-underline font-medium text-sm hover:text-(--ef-accent)">
+      <a href="{{ $page.RelPermalink }}" class="no-underline font-medium hover:text-(--ef-accent)">
         {{- $page.Title -}}{{- with $emoji -}}&nbsp;<span aria-hidden="true">{{ . }}</span>{{- end -}}
       </a>
       {{- if gt (len $occurrences) 0 -}}
@@ -96,8 +96,8 @@
         {{- range $i, $occ := $occurrences -}}
         <li class="m-0">
           <a href="{{ $page.RelPermalink }}{{ $occ.anchor }}" class="group no-underline flex gap-3 py-1">
-            <span aria-hidden="true" class="shrink-0 text-xs leading-5 text-(--ef-fg-dim) tabular-nums">{{ add $i 1 }}.</span>
-            <span class="line-clamp-2 min-w-0 text-xs leading-relaxed text-(--ef-fg) group-hover:text-(--ef-accent)">{{ $occ.context | safeHTML }}</span>
+            <span aria-hidden="true" class="shrink-0 text-sm leading-5 text-(--ef-fg-dim) tabular-nums">{{ add $i 1 }}.</span>
+            <span class="line-clamp-2 min-w-0 text-sm leading-relaxed text-(--ef-fg) group-hover:text-(--ef-accent)">{{ $occ.context | safeHTML }}</span>
           </a>
         </li>
         {{- end -}}

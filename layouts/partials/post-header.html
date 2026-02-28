@@ -2,9 +2,9 @@
 {{- $emoji := index $statusEmoji (.Params.status | default "") -}}
 
 <div class="w-2xl max-w-full px-(--main-px) sm:px-8 mb-8">
-  <h1 class="font-headings font-bold leading-snug text-2xl sm:text-4xl mb-3" data-pagefind-body>{{ .Title }}</h1>
+  <h1 class="font-headings font-bold leading-snug text-3xl sm:text-4xl mb-3" data-pagefind-body>{{ .Title }}</h1>
 
-  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-3 text-xs text-(--ef-fg-dim)">
+  <div class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-3 text-sm text-(--ef-fg-dim)">
     {{- with .CurrentSection -}}
     {{- if ne .Kind "home" -}}
     <a href="{{ .RelPermalink }}" class="no-underline hover:no-underline font-medium text-(--ef-accent) hover:text-(--ef-fg)">{{ .LinkTitle }}</a>

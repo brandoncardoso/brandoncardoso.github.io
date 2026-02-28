@@ -5,14 +5,14 @@
   </article>
 
   {{- with last 1 (site.GetPage "now").Pages.ByDate -}}
-  <p class="text-sm">Here's what I'm up to <a href="{{ (index . 0).RelPermalink }}" class="hover:underline">now</a>.</p>
+  <p>Here's what I'm up to <a href="{{ (index . 0).RelPermalink }}" class="hover:underline">now</a>.</p>
   {{- end -}}
 
   {{- $essays := where site.RegularPages "Section" "essays" -}}
   {{- $essays = (sort $essays ".Date" "desc") | first 5 -}}
   {{- with $essays -}}
   <section class="mt-12">
-    <h2 class="font-headings font-bold text-base sm:text-lg leading-tight mb-4">Recent Essays</h2>
+    <h2 class="font-headings font-bold text-lg leading-tight mb-4">Recent Essays</h2>
 
     {{ partial "notes-list.html" $essays }}
 
@@ -24,7 +24,7 @@
   {{- $notes = (sort $notes ".Lastmod" "desc") | first 5 -}}
   {{- with $notes -}}
   <section class="mt-12">
-    <h2 class="font-headings font-bold text-base sm:text-lg leading-tight mb-4">Recently Updated Notes</h2>
+    <h2 class="font-headings font-bold text-lg leading-tight mb-4">Recently Updated Notes</h2>
 
     {{ partial "notes-list.html" $notes }}
 

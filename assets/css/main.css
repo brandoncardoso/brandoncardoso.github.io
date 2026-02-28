@@ -113,7 +113,7 @@
 	}
 
 	article h1 {
-		font-size: var(--text-2xl);
+		font-size: var(--text-3xl);
 		margin-top: 0;
 		line-height: var(--leading-snug);
 
@@ -122,9 +122,9 @@
 		}
 	}
 
-	article h2 { font-size: var(--text-xl); }
-	article h3 { font-size: var(--text-lg); }
-	article h4 { font-size: var(--text-base); }
+	article h2 { font-size: var(--text-2xl); }
+	article h3 { font-size: var(--text-xl); }
+	article h4 { font-size: var(--text-lg); }
 
 	@media (width >= theme(--breakpoint-sm)) {
 		article h2 { font-size: var(--text-2xl); }
@@ -161,7 +161,6 @@
 
 	main a:not(.no-underline) {
 		text-decoration: underline;
-		text-underline-offset: var(--spacing);
 		text-decoration-thickness: var(--border-width-2);
 		text-decoration-color: var(--ef-accent);
 
@@ -191,7 +190,6 @@
 	/* inline code */
 	:not(pre) > code {
 		font-family: var(--font-body);
-		font-size: var(--text-sm);
 		background-color: var(--ef-code-bg);
 		color: var(--ef-code-fg);
 		padding: 0.25em 0.35em;
@@ -201,7 +199,6 @@
 	/* code blocks */
 	pre {
 		font-family: var(--font-body);
-		font-size: var(--text-sm);
 		background-color: var(--ef-pre-bg);
 		border: var(--border-width) solid var(--ef-bg-3);
 		border-radius: var(--radius-md);
@@ -248,7 +245,7 @@
 
 		footer {
 			margin-top: calc(var(--spacing) * 3);
-			font-size: var(--text-sm);
+			font-size: var(--text-base);
 			font-style: normal;
 			color: var(--ef-fg-subtle);
 			text-align: right;
@@ -294,7 +291,6 @@
 			display: block;
 			text-decoration: none;
 			color: var(--ef-fg);
-			font-size: var(--text-sm);
 			line-height: var(--leading-normal);
 			padding: calc(var(--spacing) * 0.75) 0;
 			transition: color 0.1s;
@@ -302,7 +298,7 @@
 			&:hover { color: var(--ef-accent); background-color: transparent; }
 			&.toc-active { color: var(--ef-accent); font-weight: var(--font-weight-medium); }
 		}
-		ul ul a { font-size: var(--text-xs); padding-left: calc(var(--spacing) * 5); }
+		ul ul a { font-size: var(--text-sm); padding-left: calc(var(--spacing) * 5); }
 		ul ul ul a { padding-left: calc(var(--spacing) * 10); }
 	}
 
@@ -324,7 +320,6 @@
 	table {
 		width: 100%;
 		border-collapse: collapse;
-		font-size: var(--text-sm);
 	}
 
 	th {
@@ -378,7 +373,7 @@
 	/* keyboard shortcuts */
 	kbd {
 		font-family: var(--font-body);
-		font-size: var(--text-xs);
+		font-size: var(--text-sm);
 		background-color: var(--ef-kbd-bg);
 		color: var(--ef-kbd-fg);
 		border: var(--border-width) solid var(--ef-kbd-border);
@@ -406,7 +401,7 @@
 
 	article figcaption {
 		margin-top: calc(var(--spacing) * 2);
-		font-size: var(--text-xs);
+		font-size: var(--text-sm);
 		color: var(--ef-fg-dim);
 		font-style: italic;
 	}
@@ -456,7 +451,6 @@
 
 		.sidenote-toggle:checked ~ .sidenote-aside {
 			display: block;
-			font-size: var(--text-xs);
 			color: var(--ef-fg-dim);
 			padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3);
 			margin: calc(var(--spacing) * 1.5) 0;
@@ -518,7 +512,6 @@
 
 .codeblock-filename {
 	font-family: var(--font-body);
-	font-size: var(--text-xs);
 	color: var(--ef-fg);
 	background-color: var(--ef-bg-2);
 	border: var(--border-width) solid var(--ef-bg-3);
