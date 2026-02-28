@@ -5,16 +5,14 @@
   <li>
     <a href="{{ .RelPermalink }}" class="text-wrap sm:text-balance">
       {{- .Title -}}
-    </a>
-
-  <div class="post-meta inline-flex flex-nowrap items-baseline gap-x-1 text-(--ef-fg-dim) text-sm">
+    </a>&nbsp;<span class="post-meta inline-flex flex-nowrap items-baseline gap-x-1 text-(--ef-fg-dim) text-sm">
     {{- with .Params.status -}}
     <span class="inline-block flex items-center gap-1">
       {{- with $emoji -}}<span aria-hidden="true" class="text-sm">{{- . -}}</span>{{- end -}}
     </span><span aria-hidden="true">·</span>
     {{- end -}}
     <span><time class="tabular-nums" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "Jan 2, 2006" }}</time></span>
-  </div>
+  </span>
   </li>
   {{- end -}}
 </ul>
