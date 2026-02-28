@@ -1,4 +1,4 @@
-{{- $statusEmoji := dict "seedling" "🌱" "budding" "🌿" "evergreen" "🌳" -}}
+{{- $statusEmoji := dict "seedling" "🌱" "budding" "🌿" "evergreen" "🌲" -}}
 <ul class="space-y-3">
   {{- range . -}}
   {{- $emoji := index $statusEmoji (.Params.status | default "") -}}

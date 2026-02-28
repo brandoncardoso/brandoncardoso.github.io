@@ -9,7 +9,7 @@
 {{/* seenPages: set for O(1) duplicate check */}}
 {{ $seenPages := dict }}
 {{/* statusEmoji: defined once, reused during render */}}
-{{ $statusEmoji := dict "seedling" "🌱" "budding" "🌿" "evergreen" "🌳" }}
+{{ $statusEmoji := dict "seedling" "🌱" "budding" "🌿" "evergreen" "🌲" }}
 
 {{ range site.RegularPages }}
   {{ if ne .Permalink $current.Permalink }}
@@ -78,7 +78,7 @@
 {{- $totalOccurrences := 0 -}}
 {{- range $pageOrder -}}{{- $totalOccurrences = add $totalOccurrences (len (index $grouped .)) -}}{{- end -}}
 <hr class="border-t border-(--ef-bg-4) mt-8 mb-8">
-<section class="backlinks" aria-labelledby="backlinks-heading">
+<section id="backlinks-list" class="backlinks" aria-labelledby="backlinks-heading">
   <p id="backlinks-heading" class="mb-4 text-sm text-(--ef-fg-dim)">
     {{- $totalOccurrences }} {{ cond (eq $totalOccurrences 1) "reference" "references" -}}
   </p>
