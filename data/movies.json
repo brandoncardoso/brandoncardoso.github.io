@@ -511,5 +511,14 @@
     "movieTitle": "The Fountain",
     "movieYear": 2006,
     "tmdbUrl": "https://www.themoviedb.org/movie/1381-the-fountain"
+  },
+  {
+    "num": 56,
+    "date": "2026-02-27",
+    "theme": "Polish/German Fantasy",
+    "themePicker": "Anastasia",
+    "movieTitle": "AmbaSSada",
+    "movieYear": 2013,
+    "tmdbUrl": "https://www.themoviedb.org/movie/256608-ambassada"
   }
 ]
