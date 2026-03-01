@@ -19,7 +19,7 @@ In a digital garden, a concept or idea is "planted" and tended to, pruned and fe
 
 The structure of a digital garden is realized over time. Unlike a normal blog, the publication date of posts are not the primary method of navigation. Posts are grouped together by theme, hierarchy, or by referencing each other, eventually allowing a reader to naturally traverse between posts as they desire.
 
-A great way of traversing through digital gardens are bi-directional links (AKA wikilinks), very common in wikipedia style sites. Normal mono-directional links are 1-way connections to another page. The page being linked to is unaware of what other pages are pointing to it. A bi-directional link completes the cycle by making a page aware of what other pages are linking to it, so it can generate a list of "references" and allow the reader to easily return where they came from, or find other related pages referencing the same thing. {{<sidenote>}}See the [references list](/digital-garden/#backlinks-list) at the bottom of this post for example(s){{</sidenote>}}
+A great way of traversing through digital gardens are bi-directional links (AKA wikilinks), very common in wikipedia style sites. Normal mono-directional links are 1-way connections to another page. The page being linked to is unaware of what other pages are pointing to it. A bi-directional link completes the cycle by making a page aware of what other pages are linking to it, so it can generate a list of "references" and allow the reader to easily return where they came from, or find other related pages referencing the same thing.
 
 Other common exploration/discovery methods: thematic grouping, advanced search & filtering, and visual relation graphs.
 
