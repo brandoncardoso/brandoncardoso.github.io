@@ -12,7 +12,7 @@
 	--ef-bg-3:     #EDEADA;
 	--ef-bg-4:     #BEC5B2;
 	/* foregrounds */
-	--ef-fg:       #5C6A72;
+	--ef-fg:       #3A474F;
 	--ef-fg-dim:   #8B8B7E;
 	--ef-fg-subtle:#9B9B8E;
 	/* palette */
@@ -46,7 +46,7 @@
 	--ef-bg-3:     #414B50;
 	--ef-bg-4:     #495156;
 	/* foregrounds */
-	--ef-fg:       #D3C6AA;
+	--ef-fg:       #E8DCCA;
 	--ef-fg-dim:   #7A8478;
 	--ef-fg-subtle:#9DA9A0;
 	/* palette */
@@ -106,19 +106,19 @@
 		font-size: var(--text-base);
 
 		@media (width >= theme(--breakpoint-sm)) {
-			margin-top: calc(var(--spacing) * 10);
-			margin-bottom: calc(var(--spacing) * 3);
+			margin-top: calc(var(--spacing) * 12);
+			margin-bottom: calc(var(--spacing) * 4);
 		}
 
 	}
 
 	article h1 {
-		font-size: var(--text-3xl);
+		font-size: var(--text-4xl);
 		margin-top: 0;
 		line-height: var(--leading-snug);
 
 		@media (width >= theme(--breakpoint-sm)) {
-			font-size: var(--text-4xl);
+			font-size: var(--text-5xl);
 		}
 	}
 
@@ -127,9 +127,9 @@
 	article h4 { font-size: var(--text-lg); }
 
 	@media (width >= theme(--breakpoint-sm)) {
-		article h2 { font-size: var(--text-2xl); }
-		article h3 { font-size: var(--text-xl); }
-		article h4 { font-size: var(--text-lg); }
+		article h2 { font-size: var(--text-3xl); }
+		article h3 { font-size: var(--text-2xl); }
+		article h4 { font-size: var(--text-xl); }
 	}
 
 	article p {
@@ -137,8 +137,8 @@
 		margin-bottom: calc(var(--spacing) * 4);
 
 		@media (width >= theme(--breakpoint-sm)) {
-			margin-top: calc(var(--spacing) * 5);
-			margin-bottom: calc(var(--spacing) * 5);
+			margin-top: calc(var(--spacing) * 6);
+			margin-bottom: calc(var(--spacing) * 6);
 		}
 	}
 
