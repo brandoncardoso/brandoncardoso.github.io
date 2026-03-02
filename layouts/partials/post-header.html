@@ -32,7 +32,7 @@
   {{- with .GetTerms "tags" -}}
   <div class="flex flex-wrap gap-2">
     {{- range . -}}
-      <a href="{{ .RelPermalink }}" class="no-underline text-xs px-2 py-0.5 rounded-full bg-(--ef-bg-2) text-(--ef-fg) hover:bg-(--ef-bg-3)">{{ .LinkTitle }}</a>
+      <a href="{{ .RelPermalink }}" class="no-underline text-xs px-2 py-0.5 rounded-full bg-(--ef-bg-2) text-(--ef-fg) hover:bg-(--ef-bg-3)">{{ .Title | strings.ToLower }}</a>
     {{- end -}}
   </div>
   {{- end -}}
