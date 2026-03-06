@@ -2,6 +2,19 @@
 
 {{ $identifier := $current.Params.slug | default $current.File.ContentBaseName | lower }}
 
+{{/* Build slug → page index (shared with wikilink shortcode via site.Store) */}}
+{{ $wlIndex := site.Store.Get "wikilink-index" }}
+{{ if not $wlIndex }}
+  {{ $wlIndex = dict }}
+  {{ range site.RegularPages }}
+    {{ $slug := .Params.slug | default .File.ContentBaseName | lower }}
+    {{ if ne $slug "" }}
+      {{ $wlIndex = merge $wlIndex (dict $slug .) }}
+    {{ end }}
+  {{ end }}
+  {{ site.Store.Set "wikilink-index" $wlIndex }}
+{{ end }}
+
 {{/* grouped: map of permalink → slice of occurrence dicts */}}
 {{ $grouped := dict }}
 {{/* pageOrder: permalinks in first-seen order for stable rendering */}}
@@ -27,13 +40,38 @@
         {{ if eq $wlName $identifier }}
           {{ $anchor := printf "#wikilink-%d" $ordinal }}
 
-          {{ $displayText := index $innerParts 0 }}
+          {{/* Resolve display text: use alias if present, otherwise resolve slug to page title */}}
+          {{ $displayText := "" }}
           {{ if gt (len $innerParts) 1 }}
             {{ $displayText = index $innerParts 1 }}
+          {{ else }}
+            {{ $resolved := index $wlIndex $wlName }}
+            {{ if $resolved }}
+              {{ $displayText = $resolved.Title }}
+            {{ else }}
+              {{ $displayText = index $innerParts 0 }}
+            {{ end }}
           {{ end }}
+
+          {{/* Build context: replace all wikilinks on the line with their resolved titles */}}
           {{ $ctx := $line }}
-          {{ $ctx = replaceRE `\[\[([^\]|]+)\|([^\]]+)\]\]` "$2" $ctx }}
-          {{ $ctx = replaceRE `\[\[([^\]]+)\]\]` "$1" $ctx }}
+          {{ range $wikilinksOnLine }}
+            {{ $wlInner := . | replaceRE `^\[\[` "" | replaceRE `\]\]$` "" }}
+            {{ $wlParts := split $wlInner "|" }}
+            {{ $wlSlug := lower (index $wlParts 0) }}
+            {{ $wlLabel := "" }}
+            {{ if gt (len $wlParts) 1 }}
+              {{ $wlLabel = index $wlParts 1 }}
+            {{ else }}
+              {{ $wlResolved := index $wlIndex $wlSlug }}
+              {{ if $wlResolved }}
+                {{ $wlLabel = $wlResolved.Title }}
+              {{ else }}
+                {{ $wlLabel = index $wlParts 0 }}
+              {{ end }}
+            {{ end }}
+            {{ $ctx = replace $ctx . $wlLabel 1 }}
+          {{ end }}
           {{ $ctx = replaceRE `\*\*([^*]+)\*\*` "$1" $ctx }}
           {{ $ctx = replaceRE `\*([^*]+)\*` "$1" $ctx }}
           {{ $ctx = replaceRE "`([^`]+)`" "$1" $ctx }}
@@ -91,7 +129,6 @@
       <a href="{{ $page.RelPermalink }}" class="no-underline font-medium hover:text-(--ef-accent)">
         {{- $page.Title -}}{{- with $emoji -}}&nbsp;<span aria-hidden="true">{{ . }}</span>{{- end -}}
       </a>
-      {{- if gt (len $occurrences) 0 -}}
       <ol class="m-0 p-0 list-none flex flex-col">
         {{- range $i, $occ := $occurrences -}}
         <li class="m-0">
@@ -102,7 +139,6 @@
         </li>
         {{- end -}}
       </ol>
-      {{- end -}}
     </li>
     {{- end -}}
   </ul>

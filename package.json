@@ -2,7 +2,6 @@
   "name": "brandoncardoso.github.io",
   "version": "1.0.0",
   "description": "personal site for Brandon Cardoso",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "hugo --minify && pagefind --site public",
