@@ -1,18 +1,28 @@
 {{ $current := . }}
 
-{{ $identifier := $current.Params.slug | default $current.File.ContentBaseName | lower }}
+{{ $identifier := $current.File.ContentBaseName | lower }}
 
-{{/* Build slug → page index (shared with wikilink shortcode via site.Store) */}}
-{{ $wlIndex := site.Store.Get "wikilink-index" }}
+{{/* Build stem → page and title → page indexes (shared with wikilink shortcode via site.Store) */}}
+{{ $wlIndex := site.Store.Get "wikilink-stem-index" }}
+{{ $wlTitleIndex := site.Store.Get "wikilink-title-index" }}
 {{ if not $wlIndex }}
   {{ $wlIndex = dict }}
+  {{ $wlTitleIndex = dict }}
   {{ range site.RegularPages }}
-    {{ $slug := .Params.slug | default .File.ContentBaseName | lower }}
-    {{ if ne $slug "" }}
-      {{ $wlIndex = merge $wlIndex (dict $slug .) }}
+    {{ $stem := .File.ContentBaseName | lower }}
+    {{ if ne $stem "" }}
+      {{ if index $wlIndex $stem }}
+        {{ warnf "wikilink: duplicate stem %q — %s and %s" $stem (index $wlIndex $stem).File.Path .File.Path }}
+      {{ end }}
+      {{ $wlIndex = merge $wlIndex (dict $stem .) }}
+    {{ end }}
+    {{ $title := .Title | lower }}
+    {{ if ne $title "" }}
+      {{ $wlTitleIndex = merge $wlTitleIndex (dict $title .) }}
     {{ end }}
   {{ end }}
-  {{ site.Store.Set "wikilink-index" $wlIndex }}
+  {{ site.Store.Set "wikilink-stem-index" $wlIndex }}
+  {{ site.Store.Set "wikilink-title-index" $wlTitleIndex }}
 {{ end }}
 
 {{/* grouped: map of permalink → slice of occurrence dicts */}}
@@ -45,7 +55,7 @@
           {{ if gt (len $innerParts) 1 }}
             {{ $displayText = index $innerParts 1 }}
           {{ else }}
-            {{ $resolved := index $wlIndex $wlName }}
+            {{ $resolved := index $wlIndex $wlName | default (index $wlTitleIndex $wlName) }}
             {{ if $resolved }}
               {{ $displayText = $resolved.Title }}
             {{ else }}
@@ -63,7 +73,7 @@
             {{ if gt (len $wlParts) 1 }}
               {{ $wlLabel = index $wlParts 1 }}
             {{ else }}
-              {{ $wlResolved := index $wlIndex $wlSlug }}
+              {{ $wlResolved := index $wlIndex $wlSlug | default (index $wlTitleIndex $wlSlug) }}
               {{ if $wlResolved }}
                 {{ $wlLabel = $wlResolved.Title }}
               {{ else }}
