@@ -2,7 +2,6 @@
 date =  2026-03-08
 lastmod = 2026-03-08
 title = 'Git'
-slug = 'git'
 status = "seedling"
 tags = []
 +++

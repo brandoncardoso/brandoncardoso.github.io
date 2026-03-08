@@ -2,7 +2,6 @@
 date =  2026-03-01
 lastmod = 2026-03-01
 title = 'Claude Code'
-slug = 'claude-code'
 status = "seedling"
 tags = ["ai"]
 +++
