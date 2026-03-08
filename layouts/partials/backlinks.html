@@ -1,6 +1,7 @@
 {{ $current := . }}
 
 {{ $identifier := $current.File.ContentBaseName | lower }}
+{{ $titleIdentifier := $current.Title | lower }}
 
 {{/* Build stem → page and title → page indexes (shared with wikilink shortcode via site.Store) */}}
 {{ $wlIndex := site.Store.Get "wikilink-stem-index" }}
@@ -47,7 +48,7 @@
         {{ $innerParts := split $inner "|" }}
         {{ $wlName := lower (index $innerParts 0) }}
 
-        {{ if eq $wlName $identifier }}
+        {{ if or (eq $wlName $identifier) (eq $wlName $titleIdentifier) }}
           {{ $anchor := printf "#wikilink-%d" $ordinal }}
 
           {{/* Resolve display text: use alias if present, otherwise resolve slug to page title */}}
