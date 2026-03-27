@@ -48,6 +48,10 @@ noClasses = false
 [markup.goldmark.renderer]
 unsafe = true
 
+[markup.goldmark.extensions.extras]
+[markup.goldmark.extensions.extras.mark]
+enable = true
+
 [markup.goldmark.parser]
 [markup.goldmark.parser.attribute]
 title = true
