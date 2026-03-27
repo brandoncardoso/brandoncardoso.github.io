@@ -270,7 +270,7 @@
 	main ol { list-style-type: decimal; }
 
 	main li {
-		margin: calc(var(--spacing) * 1) 0;
+		margin: calc(var(--spacing) * 2) 0;
 
 		& > ul, & > ol {
 			margin: calc(var(--spacing) * 1) 0;
