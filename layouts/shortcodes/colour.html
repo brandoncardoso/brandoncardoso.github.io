@@ -1,0 +1,25 @@
+{{- $hex := .Get "hex" -}}
+{{- $large := eq (.Get "size") "large" -}}
+{{- $outerClass := "relative inline-block align-middle" -}}
+{{- $swatchClass := "size-[1lh] -my-[0.5lh]" -}}
+{{- if $large -}}
+  {{- $outerClass = "block mb-4" -}}
+  {{- $swatchClass = "w-full h-48" -}}
+{{- end -}}
+{{- $tooltipBase := "pointer-events-none px-1.5 py-0.5 text-xs rounded-(--radius-sm) bg-(--ef-bg-3) border border-(--ef-bg-4) opacity-0 group-hover:opacity-100 transition-opacity" -}}
+<span class="{{ $outerClass }} text-center cursor-pointer group"
+      onclick="navigator.clipboard.writeText('{{ $hex }}')">
+  {{- /* swatch */ -}}
+  <span class="block {{ $swatchClass }} rounded-(--radius-md) border border-(--ef-bg-3)"
+        style="background-color:{{ $hex }}"></span>
+  {{- if $large -}}
+  {{- /* hex label + copy tooltip */ -}}
+  <span class="relative inline-block mt-1">
+    <span class="text-sm text-(--ef-fg-dim)">{{ $hex }}</span>
+    <span class="{{ $tooltipBase }} absolute left-full top-1/2 -translate-y-1/2 ml-1 text-(--ef-accent)">copy</span>
+  </span>
+  {{- else -}}
+  {{- /* hover tooltip */ -}}
+  <span class="{{ $tooltipBase }} absolute bottom-full left-1/2 -translate-x-1/2 mb-[calc(0.5lh+0.5rem)] z-10 text-(--ef-fg) whitespace-nowrap">{{ $hex }} <span class="text-(--ef-accent)">copy</span></span>
+  {{- end -}}
+</span>
