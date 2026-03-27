@@ -667,3 +667,7 @@
 
 	&:hover { background: var(--ef-bg-3); }
 }
+
+kbd + kbd {
+	margin-left: var(--spacing);
+}
