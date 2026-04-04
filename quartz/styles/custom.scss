@@ -2,6 +2,33 @@
 
 // put your custom CSS here!
 
+kbd {
+  font-family: var(--codeFont);
+  font-size: 0.85em;
+  color: var(--dark);
+  background: var(--highlight);
+  border: 1px solid var(--lightgray);
+  border-radius: 5px;
+  padding: 0.1rem 0.35rem;
+  white-space: nowrap;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.5),
+    inset -1px -1px 0 rgba(0, 0, 0, 0.1),
+    0 2px 0 var(--lightgray);
+
+  :root[saved-theme="dark"] & {
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow:
+      inset 1px 1px 0 rgba(255, 255, 255, 0.2),
+      inset -1px -1px 0 rgba(0, 0, 0, 0.3),
+      0 2px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  & + kbd {
+    margin-left: 0.15em;
+  }
+}
+
 .table-container > table.sortable-table th,
 .table-container > table.sortable-table td {
   min-width: unset;
