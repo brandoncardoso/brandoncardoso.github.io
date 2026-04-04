@@ -1,10 +1,10 @@
-+++
-date =  2026-03-27
-lastmod = 2026-03-27
-title = 'Shell'
-status = "seedling"
-tags = []
-+++
+---
+date: 2026-03-27
+lastmod: 2026-03-27
+title: "Shell"
+status: "seedling"
+tags: []
+---
 
 ## Useful shortcuts
 * <kbd>Ctrl</kbd><kbd>U</kbd> - Cut text from cursor to beginning of line.

@@ -1,11 +1,11 @@
-+++
-date =  2026-03-09
-lastmod = 2026-03-09
-title = 'Judo (柔道)'
-slug = 'judo'
-status = "seedling"
-tags = []
-+++
+---
+date: 2026-03-09
+lastmod: 2026-03-09
+title: "Judo (柔道)"
+slug: "judo"
+status: "seedling"
+tags: []
+---
 
 ## Techniques
 

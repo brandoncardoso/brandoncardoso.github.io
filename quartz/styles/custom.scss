@@ -1,0 +1,8 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+
+.table-container > table.sortable-table th,
+.table-container > table.sortable-table td {
+  min-width: unset;
+}

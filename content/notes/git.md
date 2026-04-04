@@ -1,10 +1,10 @@
-+++
-date =  2026-03-08
-lastmod = 2026-03-08
-title = 'Git'
-status = "seedling"
-tags = []
-+++
+---
+date: 2026-03-08
+lastmod: 2026-03-08
+title: "Git"
+status: "seedling"
+tags: []
+---
 
 ## checkout vs. switch & restore
 

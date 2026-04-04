@@ -1,10 +1,10 @@
-+++
-date =  2026-03-01
-lastmod = 2026-03-01
-title = 'Claude Code'
-status = "seedling"
-tags = ["ai"]
-+++
+---
+date: 2026-03-01
+lastmod: 2026-03-01
+title: "Claude Code"
+status: "seedling"
+tags: ["ai"]
+---
 
 ## Key Concepts
 
@@ -80,7 +80,7 @@ Two approaches:
 
 `/fork` - forks a conversation to do non-overlapping tasks in parallel instead of queuing messages
 
-**git worktrees** - for overlapping parallel Claude instances without conflicts. Each worktree is an independent checkout
+**[[git]] worktrees** - for overlapping parallel Claude instances without conflicts. Each worktree is an independent checkout
 
 ### Useful commands
 * `/rewind` - go back to previous state

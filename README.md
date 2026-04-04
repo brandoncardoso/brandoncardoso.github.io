@@ -1,19 +1,30 @@
-# brandoncardoso.github.io
+# bcardoso.com
 
-My personal site.
+Personal digital garden built with [Quartz](https://quartz.jzhao.xyz/).
+
+## Requirements
+
+- [mise](https://mise.jdx.dev/)
 
 ## Setup
-1. Install dependencies with [mise](https://mise.jdx.dev) (defined in [`mise.toml`](./mise.toml))
-```shell
+
+```sh
 mise install
+pnpm install
 ```
 
-## Running locally
-```shell
-hugo server --buildDrafts
+## Development
+
+Start a local dev server with hot reload:
+
+```sh
+pnpm quartz build --serve
 ```
 
-## Building
-```shell
-hugo
+## Build
+
+Generate the static site to the `public/` directory:
+
+```sh
+pnpm quartz build
 ```

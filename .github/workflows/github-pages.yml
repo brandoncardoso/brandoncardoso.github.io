@@ -38,7 +38,7 @@ jobs:
         run: pnpm i
 
       - name: Build
-        run: pnpm run build
+        run: pnpm quartz build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
