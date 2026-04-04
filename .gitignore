@@ -25,7 +25,7 @@ dist-ssr
 
 # quartz
 /public/
-/.quartz-cache/
+.quartz-cache/
 
 # pnpm
 .pnpm-store/
