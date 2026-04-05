@@ -2,7 +2,7 @@
 title: "Brandon Cardoso"
 ---
 
-<img src="/images/me.jpg" alt="Brandon Cardoso" style="float: left; width: 220px; border-radius: 100%; margin-right: 2rem; margin-bottom: 1rem;" />
+<img src="/images/me.webp" alt="Brandon Cardoso" class="homepage-photo" />
 
 Hey :wave:
 

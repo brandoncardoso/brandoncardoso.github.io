@@ -2,13 +2,16 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import style from "./styles/footer.scss"
 import { version } from "../../package.json"
 import { i18n } from "../i18n"
+import DarkmodeConstructor from "./Darkmode"
+const Darkmode = DarkmodeConstructor()
 
 interface Options {
   links: Record<string, string>
 }
 
 export default ((opts?: Options) => {
-  const Footer: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
+  const Footer: QuartzComponent = (props: QuartzComponentProps) => {
+    const { displayClass } = props
     const year = new Date().getFullYear()
     const links = opts?.links ?? []
     return (
@@ -20,11 +23,15 @@ export default ((opts?: Options) => {
             </li>
           ))}
         </ul>
-        <p>© {year} Brandon Cardoso</p>
+        <div class="footer-bottom">
+          <p>© {year} Brandon Cardoso</p>
+          <Darkmode {...props} />
+        </div>
       </footer>
     )
   }
 
-  Footer.css = style
+  Footer.css = [style, Darkmode.css].flat().join("\n")
+  Footer.beforeDOMLoaded = Darkmode.beforeDOMLoaded
   return Footer
 }) satisfies QuartzComponentConstructor

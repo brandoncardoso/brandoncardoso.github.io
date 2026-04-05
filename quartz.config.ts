@@ -26,26 +26,26 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#fdf6e3",         // bg
-          lightgray: "#e6e2cc",     // borders
-          gray: "#708089",          // graph links, heavier borders
+          light: "#fffbef",         // bg
+          lightgray: "#e8e5d5",     // borders
+          gray: "#829181",          // graph links, heavier borders
           darkgray: "#5c6a72",      // body text
           dark: "#5c6a72",          // header text, icons
-          secondary: "#3a94c5",     // link colour, current graph node
-          tertiary: "#35a77c",      // hover states, visited graph nodes
-          highlight: "#e9f0e9",     // internal link bg, highlighted text, highlighted lines of code
-          textHighlight: "#f0f1d2", // markdown highlighted text bg
+          secondary: "#8da101",     // link colour, current graph node
+          tertiary: "#f57d26",      // hover states, visited graph nodes
+          highlight: "#f2efdf",     // internal link bg, highlighted text, highlighted lines of code
+          textHighlight: "#fceced", // markdown highlighted text bg
         },
         darkMode: {
           light: "#272e33",         // bg
           lightgray: "#414b50",     // borders
-          gray: "#9da9a0",          // graph links, heavier borders
+          gray: "#7a8478",          // graph links, heavier borders
           darkgray: "#e0dcc7",      // body text
           dark: "#e0dcc7",          // header text, icons
-          secondary: "#7fbbb3",     // link colour, current graph node
-          tertiary: "#83c092",      // hover states, visited graph nodes
-          highlight: "#384b55",     // internal link bg, highlighted text, highlighted lines of code
-          textHighlight: "#3c4841", // markdown highlighted text bg
+          secondary: "#a7c080",     // link colour, current graph node
+          tertiary: "#e69875",      // hover states, visited graph nodes
+          highlight: "#232a2e",     // internal link bg, highlighted text, highlighted lines of code
+          textHighlight: "#4c3743", // markdown highlighted text bg
         },
       },
     },

@@ -35,15 +35,7 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
+    Component.Search(),
     Component.Explorer(),
     Component.RecentNotes({
       title: "Recently Updated",
@@ -53,7 +45,10 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileExplorerRecentNotes(),
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({
+      localGraph: { showTags: false },
+      globalGraph: { showTags: false, enableRadial: false },
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -65,15 +60,7 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
+    Component.Search(),
     Component.Explorer(),
     Component.RecentNotes({
       title: "Recently Updated",

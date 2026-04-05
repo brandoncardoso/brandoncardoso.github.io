@@ -1,35 +1,111 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
 // put your custom CSS here!
 
 kbd {
-  font-family: var(--codeFont);
-  font-size: 0.85em;
+  background-color: var(--light);
   color: var(--dark);
-  background: var(--highlight);
-  border: 1px solid var(--lightgray);
-  border-radius: 5px;
-  padding: 0.1rem 0.35rem;
-  white-space: nowrap;
-  box-shadow:
-    inset 1px 1px 0 rgba(255, 255, 255, 0.5),
-    inset -1px -1px 0 rgba(0, 0, 0, 0.1),
-    0 2px 0 var(--lightgray);
+  border: 1px solid color-mix(in srgb, var(--lightgray), black 15%);
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 0 1px color-mix(in srgb, var(--lightgray), black 15%);
+  cursor: default;
+  font-family: var(--codeFont);
+  font-size: 0.75em;
+  line-height: 1;
+  min-width: 0.75rem;
+  display: inline-block;
+  text-align: center;
+  padding: 2px 5px;
+  position: relative;
+  top: -1px;
 
   :root[saved-theme="dark"] & {
-    border-color: rgba(0, 0, 0, 0.3);
-    box-shadow:
-      inset 1px 1px 0 rgba(255, 255, 255, 0.2),
-      inset -1px -1px 0 rgba(0, 0, 0, 0.3),
-      0 2px 0 rgba(0, 0, 0, 0.5);
+    background-color: color-mix(in srgb, var(--lightgray), black 15%);
+    border-color: color-mix(in srgb, var(--gray), black 70%);
+    color: var(--darkgray);
+    box-shadow: 0 2px 0 1px color-mix(in srgb, var(--gray), black 70%);
   }
 
-  & + kbd {
-    margin-left: 0.15em;
-  }
+
 }
 
 .table-container > table.sortable-table th,
 .table-container > table.sortable-table td {
   min-width: unset;
+}
+
+.popover-inner a,
+article a,
+article a.internal {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+tr {
+  border-bottom: none;
+
+  &:hover {
+    background-color: var(--highlight);
+  }
+}
+
+.explorer .explorer-ul li > a,
+.recent-notes .section > a,
+.recent-notes > ul.recent-ul > li .section > .meta {
+  opacity: 1;
+}
+
+footer {
+  margin-bottom: 1rem;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.darkmode {
+  display: flex;
+  align-items: center;
+
+  & svg {
+    position: static;
+    fill: var(--gray);
+  }
+}
+
+.homepage-photo {
+  float: left;
+  width: 220px;
+  border-radius: 100%;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+
+  @media all and ($mobile) {
+    float: none;
+    display: block;
+    margin: 2rem auto;
+  }
+}
+
+@media all and ($mobile) {
+  .sidebar.left {
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+
+    &.scrolled {
+      border-bottom-color: var(--lightgray);
+    }
+  }
+}
+
+.graph > .global-graph-outer {
+  background-color: rgba(0, 0, 0, 0.15);
+
+  :root[saved-theme="dark"] & {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }

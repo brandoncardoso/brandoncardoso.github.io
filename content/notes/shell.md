@@ -7,12 +7,12 @@ tags: []
 ---
 
 ## Useful shortcuts
-* <kbd>Ctrl</kbd><kbd>U</kbd> - Cut text from cursor to beginning of line.
-* <kbd>Ctrl</kbd><kbd>K</kbd> - Cut text from cursor to end of line.
-* <kbd>Ctrl</kbd><kbd>A</kbd> - Jump to beginning of line.
-* <kbd>Ctrl</kbd><kbd>E</kbd> - Jump to end of line.
-* <kbd>Ctrl</kbd><kbd>X</kbd> <span>then</span> <kbd>Ctrl</kbd><kbd>E</kbd> - Opens current command in ==$EDITOR==. Executes on save and exit. (related: [fc](#fc))
-* <kbd>Alt</kbd><kbd>.</kbd> <span>or</span> <kbd>Esc</kbd><kbd>.</kbd> - Insert the last argument from previous command. Repeated use goes further in history.
+* <kbd>Ctrl</kbd> + <kbd>U</kbd> - Cut text from cursor to beginning of line.
+* <kbd>Ctrl</kbd> + <kbd>K</kbd> - Cut text from cursor to end of line.
+* <kbd>Ctrl</kbd> + <kbd>A</kbd> - Jump to beginning of line.
+* <kbd>Ctrl</kbd> + <kbd>E</kbd> - Jump to end of line.
+* <kbd>Ctrl</kbd> + <kbd>X</kbd> then <kbd>Ctrl</kbd> + <kbd>E</kbd> - Opens current command in ==$EDITOR==. Executes on save and exit. (related: [fc](#fc))
+* <kbd>Alt</kbd> + <kbd>.</kbd> or <kbd>Esc</kbd> + <kbd>.</kbd> - Insert the last argument from previous command. Repeated use goes further in history.
 
 ## Useful commands
 * `cd -` - Change to the previous directory.
