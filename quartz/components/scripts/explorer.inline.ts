@@ -226,9 +226,11 @@ async function setupExplorer(currentSlug: FullSlug) {
       explorerUl.scrollTop = parseInt(scrollTop)
     } else {
       // try to scroll to the active element if it exists
-      const activeElement = explorerUl.querySelector(".active")
+      // use direct scrollTop to avoid scrolling the main page when the explorer doesn't overflow
+      const activeElement = explorerUl.querySelector(".active") as HTMLElement | null
       if (activeElement) {
-        activeElement.scrollIntoView({ behavior: "smooth" })
+        explorerUl.scrollTop =
+          activeElement.offsetTop - explorerUl.offsetTop - explorerUl.clientHeight / 2
       }
     }
 

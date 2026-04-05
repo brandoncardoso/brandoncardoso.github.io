@@ -11,7 +11,9 @@ export const SortableTable: QuartzTransformerPlugin = () => {
       return [
         () => {
           return (tree) => {
-            visit(tree, "element", (node: Element) => {
+            const tablesToFilter: { tableId: string; parent: Element; index: number }[] = []
+
+            visit(tree, "element", (node: Element, index, parent) => {
               if (node.tagName !== "table") return
 
               const classes = (node.properties?.className as string[]) ?? []
@@ -43,7 +45,39 @@ export const SortableTable: QuartzTransformerPlugin = () => {
                   }
                 }
               })
+
+              // Count rows to determine if filter input is needed
+              let rowCount = 0
+              visit(node, "element", (child: Element) => {
+                if (child.tagName === "tr") rowCount++
+              })
+              // Subtract 1 for the header row
+              rowCount = Math.max(0, rowCount - 1)
+
+              if (rowCount >= MIN_ROWS_FOR_FILTER && parent && index != null) {
+                const tableId = `sortable-${Math.random().toString(36).slice(2)}`
+                node.properties.id = tableId
+                tablesToFilter.push({ tableId, parent: parent as Element, index })
+              }
             })
+
+            // Insert filter inputs before their tables (reverse order to preserve indices)
+            for (let i = tablesToFilter.length - 1; i >= 0; i--) {
+              const { tableId, parent, index } = tablesToFilter[i]
+              const input: Element = {
+                type: "element",
+                tagName: "input",
+                properties: {
+                  type: "text",
+                  className: ["table-search"],
+                  placeholder: "Filter",
+                  ariaLabel: "Filter table rows",
+                  "data-table-id": tableId,
+                },
+                children: [],
+              }
+              parent.children.splice(index, 0, input)
+            }
           }
         },
       ]
@@ -55,27 +89,6 @@ export const SortableTable: QuartzTransformerPlugin = () => {
             loadTime: "afterDOMReady",
             contentType: "inline",
             script: `
-// Inject filter inputs for large tables
-function initTableFilters() {
-  document.querySelectorAll(".sortable-table").forEach(function(table) {
-    var rows = table.querySelectorAll("tbody tr");
-    if (rows.length < ${MIN_ROWS_FOR_FILTER}) return;
-
-    var container = table.closest(".table-container") || table.parentElement;
-    if (container.parentElement.querySelector(".table-search")) return;
-    var input = document.createElement("input");
-    input.type = "text";
-    input.className = "table-search";
-    input.placeholder = "Filter";
-    input.setAttribute("aria-label", "Filter table rows");
-    input.dataset.tableId = table.id || Math.random().toString(36).slice(2);
-    table.id = input.dataset.tableId;
-    container.parentElement.insertBefore(input, container);
-  });
-}
-initTableFilters();
-document.addEventListener("nav", initTableFilters);
-
 // Sort
 document.addEventListener("click", function(e) {
   var th = e.target.closest(".sortable-table th[data-col-index]");
@@ -135,7 +148,7 @@ document.addEventListener("input", function(e) {
   if (!e.target.matches(".table-search")) return;
 
   var input = e.target;
-  var table = document.getElementById(input.dataset.tableId);
+  var table = document.getElementById(input.getAttribute("data-table-id"));
   if (!table) return;
 
   var filter = input.value.toLowerCase();
@@ -172,7 +185,7 @@ document.addEventListener("input", function(e) {
   width: 10rem;
   margin-left: 0;
   padding: 0.4rem 0.7rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   font-family: inherit;
   font-size: 0.9rem;
   border: 1px solid var(--lightgray);
