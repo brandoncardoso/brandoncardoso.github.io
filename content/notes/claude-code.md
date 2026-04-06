@@ -1,9 +1,10 @@
 ---
-date: 2026-03-01
-lastmod: 2026-03-01
-title: "Claude Code"
-status: "seedling"
-tags: ["ai"]
+title: Claude Code
+status: seedling
+tags:
+  - ai
+aliases:
+  - claude code
 ---
 
 ## Key Concepts

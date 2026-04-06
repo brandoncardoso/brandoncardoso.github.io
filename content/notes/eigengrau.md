@@ -1,9 +1,9 @@
 ---
-date: 2026-03-27
-lastmod: 2026-03-27
-title: "Eigengrau"
-status: "seedling"
+title: Eigengrau
+status: seedling
 tags: []
+aliases:
+  - eigengrau
 ---
 
 <div class="colour-swatch" data-hex="#16161D" data-size="large"></div>

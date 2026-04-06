@@ -1,5 +1,9 @@
 ---
-title: "Brandon Cardoso"
+title: Brandon Cardoso
+aliases:
+  - brandon cardoso
+tags: []
+status: seedling
 ---
 
 <img src="/images/me.webp" alt="Brandon Cardoso" class="homepage-photo" />

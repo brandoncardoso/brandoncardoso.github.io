@@ -1,8 +1,8 @@
 ---
-date: 2026-02-27
-lastmod: 2026-02-27
-title: "Digital Garden"
-status: "budding"
+title: Digital Garden
+status: budding
+aliases:
+  - digital garden
 tags: []
 ---
 

@@ -1,10 +1,9 @@
 ---
-date: 2026-03-09
-lastmod: 2026-03-09
-title: "Judo (柔道)"
-slug: "judo"
-status: "seedling"
+title: Judo (柔道)
+status: seedling
 tags: []
+aliases:
+  - judo (柔道)
 ---
 
 ## Techniques

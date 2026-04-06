@@ -1,9 +1,9 @@
 ---
-date: 2026-03-27
-lastmod: 2026-03-27
-title: "Shell"
-status: "seedling"
+title: Shell
+status: seedling
 tags: []
+aliases:
+  - shell
 ---
 
 ## Useful shortcuts
