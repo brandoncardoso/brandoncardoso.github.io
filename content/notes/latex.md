@@ -1,10 +1,8 @@
 ---
-aliases:
-  - latex
+title: LaTeX
 tags: []
 status: seedling
-title: LaTeX
-modified: 2026-04-06T10:53:37Z
+modified: 2026-04-06T12:58:26Z
 ---
 
 *LAH-tehk*

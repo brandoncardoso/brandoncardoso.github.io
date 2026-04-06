@@ -2,8 +2,7 @@
 title: Git
 status: seedling
 tags: []
-aliases:
-  - git
+modified: 2026-04-06T12:56:14Z
 ---
 
 ## checkout vs. switch & restore

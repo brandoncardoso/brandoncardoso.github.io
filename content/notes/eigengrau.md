@@ -2,8 +2,7 @@
 title: Eigengrau
 status: seedling
 tags: []
-aliases:
-  - eigengrau
+modified: 2026-04-06T12:56:13Z
 ---
 
 <div class="colour-swatch" data-hex="#16161D" data-size="large"></div>

@@ -1,9 +1,8 @@
 ---
 title: Digital Garden
 status: budding
-aliases:
-  - digital garden
 tags: []
+modified: 2026-04-06T12:56:11Z
 ---
 
 ## What is a digital garden?

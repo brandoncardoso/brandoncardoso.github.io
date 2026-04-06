@@ -3,8 +3,7 @@ title: Claude Code
 status: seedling
 tags:
   - ai
-aliases:
-  - claude code
+modified: 2026-04-06T12:56:08Z
 ---
 
 ## Key Concepts

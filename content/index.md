@@ -1,9 +1,7 @@
 ---
 title: Brandon Cardoso
-aliases:
-  - brandon cardoso
 tags: []
-status: seedling
+modified: 2026-04-06T12:56:01Z
 ---
 
 <img src="/images/me.webp" alt="Brandon Cardoso" class="homepage-photo" />

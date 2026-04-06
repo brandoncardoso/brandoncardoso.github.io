@@ -2,8 +2,7 @@
 title: Numeric .xyz Domains
 status: seedling
 tags: []
-aliases:
-  - numeric .xyz domains
+modified: 2026-04-06T12:56:18Z
 ---
 
 6-9 digit number domains offered at very low prices (~$1/year) through the XYZ registry's **1.111B Class** program.
