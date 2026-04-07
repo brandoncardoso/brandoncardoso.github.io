@@ -45,6 +45,10 @@ kbd {
   min-width: unset;
 }
 
+.table-container th {
+  white-space: nowrap;
+}
+
 .popover-inner a,
 article a,
 article a.internal {
