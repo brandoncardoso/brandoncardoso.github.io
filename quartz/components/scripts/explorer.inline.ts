@@ -95,6 +95,11 @@ function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElemen
   return li
 }
 
+function countLeafNodes(node: FileTrieNode): number {
+  if (!node.isFolder) return 1
+  return node.children.reduce((sum, child) => sum + countLeafNodes(child), 0)
+}
+
 function createFolderNode(
   currentSlug: FullSlug,
   node: FileTrieNode,
@@ -115,6 +120,11 @@ function createFolderNode(
     folderContainer.classList.add("active")
   }
 
+  const count = countLeafNodes(node)
+  const countSpan = document.createElement("span")
+  countSpan.className = "folder-count"
+  countSpan.textContent = `(${count})`
+
   if (opts.folderClickBehavior === "link") {
     // Replace button with link for link behavior
     const button = titleContainer.querySelector(".folder-button") as HTMLElement
@@ -128,6 +138,8 @@ function createFolderNode(
     const span = titleContainer.querySelector(".folder-title") as HTMLElement
     span.textContent = node.displayName
   }
+
+  titleContainer.appendChild(countSpan)
 
   // if the saved state is collapsed or the default state is collapsed
   const isCollapsed =
