@@ -129,6 +129,7 @@ function addGlobalPageResources(ctx: BuildCtx, componentResources: ComponentReso
       umamiScript.src = "${cfg.analytics.host ?? "https://analytics.umami.is"}/script.js";
       umamiScript.setAttribute("data-website-id", "${cfg.analytics.websiteId}");
       umamiScript.setAttribute("data-auto-track", "true");
+      umamiScript.setAttribute("data-domains", "bcardoso.com");
       umamiScript.defer = true;
 
       document.head.appendChild(umamiScript);
