@@ -1,7 +1,6 @@
 ---
 title: LaTeX
 tags: []
-status: seedling
 modified: 2026-04-07T15:15:28Z
 ---
 

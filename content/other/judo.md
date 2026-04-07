@@ -1,6 +1,5 @@
 ---
 title: Judo (柔道)
-status: seedling
 tags: []
 modified: 2026-04-06T12:56:16Z
 ---

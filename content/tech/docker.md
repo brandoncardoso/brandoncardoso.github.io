@@ -1,8 +1,7 @@
 ---
 tags: []
-modified: 2026-04-07T05:27:35Z
 title: Docker
-status: seedling
+modified: 2026-04-07T05:27:35Z
 ---
 
 ## Concepts

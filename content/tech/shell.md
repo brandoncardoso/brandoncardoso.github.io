@@ -1,6 +1,5 @@
 ---
 title: Shell
-status: seedling
 tags: []
 modified: 2026-04-06T12:56:20Z
 ---

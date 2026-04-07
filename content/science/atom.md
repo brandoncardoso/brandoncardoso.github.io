@@ -5,7 +5,6 @@ aliases:
 tags:
   - chemistry
 modified: 2026-04-07T11:10:12Z
-status: seedling
 ---
 
 ## Atomic Structure

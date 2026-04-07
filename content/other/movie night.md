@@ -2,7 +2,6 @@
 title: Movie Night
 permalink: movie-night
 tags: []
-status: evergreen
 ---
 
 Monthly (:crossed_fingers:) movie night with my doggies. Started during COVID-19 lockdowns.

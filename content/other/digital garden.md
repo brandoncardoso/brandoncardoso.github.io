@@ -1,6 +1,5 @@
 ---
 title: Digital Garden
-status: budding
 tags: []
 modified: 2026-04-06T12:56:11Z
 ---
