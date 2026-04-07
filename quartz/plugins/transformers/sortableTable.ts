@@ -2,7 +2,7 @@ import { QuartzTransformerPlugin } from "../types"
 import { visit } from "unist-util-visit"
 import { Element } from "hast"
 
-const MIN_ROWS_FOR_FILTER = 10
+const MIN_ROWS_FOR_FILTER = 30
 
 export const SortableTable: QuartzTransformerPlugin = () => {
   return {
