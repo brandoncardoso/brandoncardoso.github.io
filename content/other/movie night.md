@@ -1,11 +1,18 @@
 ---
 title: Movie Night
+permalink: movie-night
 tags: []
-modified: 2026-04-06T12:58:09Z
+status: evergreen
 ---
 
+Monthly (:crossed_fingers:) movie night with my doggies. Started during COVID-19 lockdowns.
+
+[Movie list on Letterboxd](https://letterboxd.com/brancardoso/list/doggie-movie-night)
+
+## History
+
 | # | Date | Theme | Movie | Year |
-|---|------|-------|-------|------|
+|--:|------|-------|-------|-----:|
 | 58 | Feb 27, 2026 | Polish/German Fantasy (Anastasia) | [AmbaSSada](https://www.themoviedb.org/movie/256608-ambassada) | 2013 |
 | 57 | Jan 30, 2026 | Fantasy (Matt) | [The Fountain](https://www.themoviedb.org/movie/1381-the-fountain) | 2006 |
 | 56 | Dec 19, 2025 | Documentary (Brandon) | [2000 Meters to Andriivka](https://www.themoviedb.org/movie/1400789-2000-meters-to-andriivka) | 2025 |
@@ -55,13 +62,13 @@ modified: 2026-04-06T12:58:09Z
 | 12 | Feb 25, 2022 | Nicolas Cage | [Face/Off](https://www.themoviedb.org/movie/754-face-off) | 1997 |
 | 11 | Jan 29, 2022 | Wes Anderson (Brandon) | [The Life Aquatic with Steve Zissou](https://www.themoviedb.org/movie/421-the-life-aquatic-with-steve-zissou) | 2004 |
 | 10 | Jan 03, 2022 | New Matrix Movie | [The Matrix Resurrections](https://www.themoviedb.org/movie/624860-the-matrix-resurrections) | 2021 |
-| 9 | Dec 18, 2021 | Whodunit (Daniel) | [Memories of Murder](https://www.themoviedb.org/movie/11423) | 2003 |
-| 8 | Nov 27, 2021 | Tech Noir (Matt) | [Gattaca](https://www.themoviedb.org/movie/782-gattaca) | 1997 |
-| 7 | Oct 31, 2021 | Horror | [The Night House](https://www.themoviedb.org/movie/547565-the-night-house) | 2021 |
-| 6 | Sep 18, 2021 | Action | [Riders of Justice](https://www.themoviedb.org/movie/663870-retfaerdighedens-ryttere) | 2021 |
-| 5 | Aug 28, 2021 | Fantasy | [The Green Knight](https://www.themoviedb.org/movie/559907-the-green-knight) | 2021 |
-| 4 | Jul 31, 2021 | Comedy | [Bad Trip](https://www.themoviedb.org/movie/578908-bad-trip) | 2021 |
-| 3 | Jun 26, 2021 | Spooky/Sexy | [Look Away](https://www.themoviedb.org/movie/526051-look-away) | 2018 |
-| 2 | May 29, 2021 | Kung fu/Karate | [The Paper Tigers](https://www.themoviedb.org/movie/731738-the-paper-tigers) | 2020 |
-| 1 | Apr 24, 2021 | Spoopy | [Sator](https://www.themoviedb.org/movie/611651-sator) | 2019 |
+| 9  | Dec 18, 2021 | Whodunit (Daniel) | [Memories of Murder](https://www.themoviedb.org/movie/11423) | 2003 |
+| 8  | Nov 27, 2021 | Tech Noir (Matt) | [Gattaca](https://www.themoviedb.org/movie/782-gattaca) | 1997 |
+| 7  | Oct 31, 2021 | Horror | [The Night House](https://www.themoviedb.org/movie/547565-the-night-house) | 2021 |
+| 6  | Sep 18, 2021 | Action | [Riders of Justice](https://www.themoviedb.org/movie/663870-retfaerdighedens-ryttere) | 2021 |
+| 5  | Aug 28, 2021 | Fantasy | [The Green Knight](https://www.themoviedb.org/movie/559907-the-green-knight) | 2021 |
+| 4  | Jul 31, 2021 | Comedy | [Bad Trip](https://www.themoviedb.org/movie/578908-bad-trip) | 2021 |
+| 3  | Jun 26, 2021 | Spooky/Sexy | [Look Away](https://www.themoviedb.org/movie/526051-look-away) | 2018 |
+| 2  | May 29, 2021 | Kung fu/Karate | [The Paper Tigers](https://www.themoviedb.org/movie/731738-the-paper-tigers) | 2020 |
+| 1  | Apr 24, 2021 | Spoopy | [Sator](https://www.themoviedb.org/movie/611651-sator) | 2019 |
 
