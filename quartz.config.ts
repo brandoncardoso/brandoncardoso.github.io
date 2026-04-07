@@ -12,7 +12,7 @@ const config: QuartzConfig = {
       websiteId: "a1e3186c-dd7e-46b9-acd7-8bb1457f1971",
       host: "https://cloud.umami.is",
     },
-    locale: "en-US",
+    locale: "en-GB",
     baseUrl: "bcardoso.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",

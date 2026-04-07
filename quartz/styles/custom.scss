@@ -52,9 +52,27 @@ tr {
 }
 
 .explorer .explorer-ul li > a,
-.recent-notes .section > a,
+.recent-notes > ul.recent-ul > li .section > .desc > h3 > a,
 .recent-notes > ul.recent-ul > li .section > .meta {
   opacity: 1;
+}
+
+.recent-notes > ul.recent-ul > li .section {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.recent-notes > ul.recent-ul > li .section > .desc > h3 {
+  font-size: 1rem;
+  font-weight: unset;
+  font-family: var(--bodyFont);
+}
+
+
+.recent-notes > ul.recent-ul > li .section > .meta {
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
 
 footer {
@@ -100,6 +118,14 @@ footer {
       border-bottom-color: var(--lightgray);
     }
   }
+
+  .recent-notes {
+    display: none;
+  }
+}
+
+.page-listing .section-li .desc h3 a.internal[href$="/"]::after {
+  content: "/";
 }
 
 .graph > .global-graph-outer {
