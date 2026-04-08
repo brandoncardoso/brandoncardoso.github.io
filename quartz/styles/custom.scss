@@ -142,6 +142,37 @@ footer {
   content: "/";
 }
 
+.img-bg-light {
+  background: #f2efdf;
+  padding: 1rem;
+}
+
+.img-bg-dark {
+  background: #2b3339;
+  padding: 1rem;
+}
+
+img {
+  display: block;
+  margin: 1rem auto;
+}
+
+figure {
+  margin: 1rem auto;
+  text-align: center;
+
+  > img {
+    margin: 0 auto;
+  }
+
+  > figcaption {
+    font-size: 0.9rem;
+    color: var(--darkgray);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+}
+
 .graph > .global-graph-outer {
   background-color: rgba(0, 0, 0, 0.15);
 

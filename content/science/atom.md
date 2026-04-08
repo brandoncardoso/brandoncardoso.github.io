@@ -2,21 +2,18 @@
 title: Atom
 aliases:
   - atoms
-tags:
-  - chemistry
-modified: 2026-04-07T11:10:12Z
+tags: []
 ---
 
-## Atomic Structure
+## Atomic structure
 
-<img src="/images/atom-models.svg" alt="atom models" style="background: antiquewhite; padding: 1rem; max-width: 600px;"/>
-
+* visualized by various [[atomic models]]
 * composed of subatomic particles: protons, neutrons, electrons
 * nucleus
   * dense center of the atom
   * contains protons and neutrons
   * holds most of the atom's mass
-* electron cloud
+* electron cloud (see [[atomic models#the-electron-cloud-model|electron cloud model]])
   * where electrons are likely to be found
   * makes up most of the atom's volume
 
@@ -26,7 +23,8 @@ modified: 2026-04-07T11:10:12Z
 | Electron |  $1-$  |    $\approx 0.0005u$    |
 | Neutron  |   $0$  | $\approx 1u$ $(1.008u)$ |
 
-## Atomic Mass
+
+## Atomic mass
 
 * historically used Atomic Mass Unit ($amu$)
 * modern version is [Unified Atomic Mass Unit ($u$)](https://en.wikipedia.org/wiki/Dalton_(unit)) [^1]
@@ -92,7 +90,7 @@ modified: 2026-04-07T11:10:12Z
   * name ends in _-ide_
     * ex. $\ce{Cl-}$ is a chloride ion, $\ce{N^3-}$ is a nitride ion
 
-### Polyatomic Ions
+### Polyatomic ions
 
 * groups of atoms that stay bonded together while carrying a net electric charge
 * made of multiple atoms, but act as a single unit in chemical reactions
