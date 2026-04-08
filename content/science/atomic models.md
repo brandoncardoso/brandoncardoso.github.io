@@ -6,13 +6,19 @@ title: Atomic Models
 * representations of [[atom|atoms]] to help visualize atomic structure, and explain/predict the behaviour of atoms
 * every model sacrifices some accuracy for simplicity, visibility, or usability
 
-<img src="/images/atom-models.svg" alt="atom models" class="img-bg-light" style="max-width: 600px;"/>
+<figure>
+  <img src="/images/atom-models.svg" alt="Atom models" class="img-bg-light" style="max-width: 600px;"/>
+  <figcaption><cite>Khan Academy, CC BY-NC-SA 3.0</cite></figcaption>
+</figure>
 
 
 ## The electron cloud model
 
 
-<img src="/images/helium-atom-electron-cloud.png" alt="electron cloud model of helium atom" class="img-bg-light" style="max-width: 200px;"/>
+<figure>
+  <img src="/images/helium-atom-electron-cloud.png" alt="Electron cloud model of a helium atom" class="img-bg-light" style="max-width: 200px;"/>
+  <figcaption><cite>"Helium atom QM" by Yzmo, CC BY-SA 3.0</cite></figcaption>
+</figure>
 
 
 * also called the _quantum mechanical model_, and sometimes the _Schrödinger model_
@@ -40,7 +46,13 @@ title: Atomic Models
 
 ## The Bohr model
 
-<img src="/images/bohr-model.svg" alt="bohr model of various atoms" class="img-bg-light" style="max-width: 500px;"/>
+<figure>
+  <img src="/images/bohr-model.svg" alt="Bohr model of various atoms" class="img-bg-light" style="max-width: 500px;"/>
+  <figcaption>
+    Bohr model of various atoms.
+    <cite>Khan Academy, CC BY-NC-SA 3.0</cite>
+  </figcaption>
+</figure>
 
 * represents electrons as particles that occupy specific, quantized energy levels
 * electrons are represented as black dots that sit on a ring around the nucleus
@@ -102,8 +114,11 @@ title: Atomic Models
 * any electrons which are not in the valence shell are called **core electrons**
 
 <figure>
-  <img src="chlorine-bohr-model-valence-electrons.svg" alt="bohr model of chlorine atom with valence electrons in red" class="img-bg-light" style="max-width: 200px;"/>
-  <figcaption>Bohr model of a chlorine atom. Valence electrons are in shown in red and core electrons are shown in black.</figcaption>
+  <img src="chlorine-bohr-model-valence-electrons.svg" alt="Bohr model of a chlorine atom with valence electrons in red" class="img-bg-light" style="max-width: 200px;"/>
+  <figcaption>
+    Bohr model of a chlorine atom. Valence electrons are shown in red and core electrons are shown in black.
+    <cite>Khan Academy, CC BY-NC-SA 3.0</cite>
+  </figcaption>
 </figure>
 
 

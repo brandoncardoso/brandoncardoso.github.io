@@ -170,6 +170,12 @@ figure {
     color: var(--darkgray);
     font-style: italic;
     margin-top: 0.5rem;
+
+    > cite {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
   }
 }
 
