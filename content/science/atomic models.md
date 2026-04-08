@@ -82,7 +82,7 @@ title: Atomic Models
 * any unpaired electron is always in the outermost energy level
   * for main group elements [^mainGroupElements], lower energy levels fill completely before electrons are placed into the next level
 
-[^mainGroupElements]: TODO: what are main group elements?
+[^mainGroupElements]: ==TODO== -- what are main group elements?
 
 
 ### Energy levels

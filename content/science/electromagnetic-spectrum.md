@@ -127,4 +127,4 @@ title: Electromagnetic Spectrum
 * the most dangerous radiation to living tissue
 * produced by high energy interactions in space, and radioactive decay (_gamma decay_) [^gammaRaySources]
 
-[^gammaRaySources]: TODO: what interactions in space? what is gamma decay?
+[^gammaRaySources]: ==TODO== -- what interactions in space? what is gamma decay?
