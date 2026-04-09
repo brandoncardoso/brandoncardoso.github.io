@@ -66,6 +66,7 @@ title: Atomic Models
   * represents how the difference between energy levels decreases with greater $n$
   * exact spacing of the rings is not important
 * maximum number of electrons per shell is determined by the formula: $\text{max \# of electrons} = 2 \cdot n^2$
+* electrons in the outermost shell are called [[valence electron|valence electrons]]
 
 | Shell | Max electrons |
 |-------|---------------|
@@ -74,21 +75,6 @@ title: Atomic Models
 | $n=3$ | 18            |
 | $n=4$ | 32            |
 | ...   | ...           |
-
-### Valence electrons
-
-* electrons in the outermost shell of an atom are most easily transferred or shared with other atoms
-* the outermost shell of an atom is called the **valence shell**
-* any electrons in the valence shell are called **valence electrons**
-* any electrons which are not in the valence shell are called **core electrons**
-
-<figure>
-  <img src="chlorine-bohr-model-valence-electrons.svg" alt="Bohr model of a chlorine atom with valence electrons in red" class="img-bg-light" style="max-width: 200px;"/>
-  <figcaption>
-    Bohr model of a chlorine atom. Valence electrons are shown in red and core electrons are shown in black.
-    <cite>Khan Academy, CC BY-NC-SA 3.0</cite>
-  </figcaption>
-</figure>
 
 
 ## The de Broglie model
