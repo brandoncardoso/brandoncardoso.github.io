@@ -3,54 +3,61 @@ tags: []
 title: Atomic Spectra
 ---
 
-* electrons in an atom exist at discrete energy levels
-* when an electron absorbs energy, it can escape it's atom (ionization) or move to a higher energy level
-  * a photon collides with the electron and gets absorbed
-  * heat
-  * electricity
-* each elements has specific amounts of energy required for an electron to move between levels
-  * photons must have the exact amount of energy between two energy levels to be absorbed by the electron
-* when an electron moves to a higher shell, it is unstable, and wants to return to a stable, lower-energy state
+* [[atom|atoms]] can receive external energy via heat, electricity, and/or EM radiation (light/photons)
+* when an electron absorbs a photon with energy equal to the difference between its current energy level and another, it enters an **excited state** and transitions to the higher energy level [^comboEnergy]
+  * if the energy is too high, the electron can escape the atom and the atom becomes ionized
+* **excited** electrons are unstable want to return to the most stable, e.g. the lowest possible, energy level, called the **ground state**
   * ground state -- lower energy, stable
   * excited state -- higher energy, unstable
-* when an electron moves down an energy level, it releases energy as a photon
-* because of the specific amount of energy required for an electron to be in a certain shell, the photon emitted will have a specific frequency (amount of energy) depending on the element and which energy levels it is transitioning between
-* this emission and absorption of photons creates a unique signature (atomic spectra) for each element
-* by analyzing the atomic spectra of light that travels from/through some entity, like a planet's atmosphere or the light emitted by a start, we can determine the elemental composition
-  * this is called spectral analysis
-* two types of spectra
-  * emission spectrum -- the frequencies of photons emitted from electrons transitioning to lower energy levels
-    * light emitted from glowly hot gas
-  * absorption spectrum -- the frequencies of photons missing/absorbed by electrons transitioning to higher energy levels
-    * light that passes through cool atmospheric gas and is absorbed and emitted (scattered)
-      * the sun's hot core emits white light because of the intense heat
-      * as the light moves from the core towards earth, it passes through the cooler outer layers of the sun
-      * the cooler/lower energy atoms absorb certain frequencies of the white light
-      * when the electrons transition down and emit photons, they are scattered, so a lower amount of light with those frequencies reaches earth
-      * the absorption spectrum shows the unique energy signatures of hydrogen and helium as dark/black lines
-      * so we can determine that the sun contains high amounts of hydrogen and helium
-* atoms have an infinite amount of energy levels, but a finite amount of energy is required for an electron to escape
-  * potential well
-
-* spectroscope
-  * device that uses a diffraction grating to analyze the spectrum of a light source
-
-* energy level diagram
-  * shows the relative amount of energy requires for each energy level in an atom
-
+* when an electron transitions from a higher energy level to a lower one, it emits a photon
+* the energy/frequency of the emitted photon is determined by the difference in energy between the two levels the electron transitioned between
+* each element has unique discrete energy levels where its electrons can exist
+  * due to having different numbers of protons and electrons
+* because of each elements' unique energy levels, the light emitted by atoms of each element will have a distinct combination of frequencies
+* this unique signature of frequencies is the **atomic spectra** of an element
+* by analyzing the atomic spectra of some body [%, like a planet or star, we can determine its elemental composition
+  * this is called **spectral analysis**
 * molecules also have unique sets of energy levels, and therefor unique spectra
 
-* bohr model
-  * because it treats electrons as having fixed orbits, it can not accurately predict the spectra for more complex atoms with more than one electron
+[^comboEnergy]: ==TODO== -- what happens if an atom receives multiple types of energy at the same time? eg. if an electron normally requires energy from an 100nm frequency photon to move from $n=1$ to $n=2$, if the atom is heated up and receives some smaller frequency photon (<100nm), can the heat energy combine with the photon energy and transition the photon from $n=1$ to $n=2$ as well, or does the energy have to the same type?
 
-* de Broglie model
-  * electrons as physical standing wave around the nucleus
-  * higher energy levels show wave patterns with more segments, like a vibrating string
-  * does not handle the particle behaviour of electrons
 
-* Schrödinger model
-  * used de Broglie's wave model to mathematically describe electron behaviour (wave function)
-  * instead of electrons being at a fixed location, it predicts the probability distribution for where an electron is likely to be found
-  * these regions, orbitals, appear around the nucleus, and show lower/higher probability
-  * electron transitions are represented as transitions from one harmonic to another in the wave function
+## Energy levels
+
+<figure style="max-width:500px">
+  <img src="/images/hydrogen-energy-level-diagram.svg" class="img-bg-light" alt="Hydrogen energy level diagram"/>
+  <figcaption>
+    A transition from ‍n=6 to ‍n=2 emits a high-energy violet photon, matching the larger energy gap between those levels. A transition from n=3 to ‍n=2 emits a lower-energy red photon, matching the smaller gap.
+    <cite>Khan Academy, CC BY-NC-SA 3.0</cite>
+  </figcaption>
+</figure>
+
+* atoms have an infinite number of energy levels, but a finite amount of energy is required for an electron to escape its atom
+* an energy level diagram helps predict the photon energies by an atom
+
+
+## Two types of spectra
+
+<figure>
+  <img src="/images/hydrogen-spectra.jpg" alt="Hydrogen absorption and emission spectra" style="max-width: 600px;"/>
+  <figcaption><cite>Khan Academy, CC BY-NC-SA 3.0</cite></figcaption>
+</figure>
+
+### Absorption spectra
+
+  * light from another source (a star) passing through cooler gas (like a planet's atmosphere) [^liquidSolidAbsorption]
+  * the cooler atoms absorb the light, but when the electrons transition down and emit their photons, the emitted photons are scattered in random directions
+  * the light that was travelling from the source to us/Earth, will have fewer of the specific frequencies absorbed/emitted
+
+### Emission spectra
+
+  * light directly emitted from excited atoms
+  * only the specific photon frequencies from electrons transitioning from higher to lower energy levels
+
+[^liquidSolidAbsorption]: ==TODO== -- can liquids/solids produce atomic spectra?
+
+
+## Tools
+
+* spectroscope -- uses a diffraction grating to analyze the spectrum of a light source
 

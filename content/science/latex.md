@@ -242,7 +242,7 @@ Requires the [mhchem LaTex extension](https://mhchem.github.io/MathJax-mhchem/).
 |----------------------|----------------------------------------------|--------------------------------------------|
 | Chemical Formula     | `$\ce{H2SO4}$`                               | $\ce{H2SO4}$                               |
 | Isotope              | `$\ce{^{14}_{6}C}$`                          | $\ce{^{14}_{6}C}$                          |
-| Ions                 | `$\ce{Ca^2+}$`                               | $\ce{Ca^2+}$                               |
+| [[ion|Ions]]         | `$\ce{Ca^2+}$`                               | $\ce{Ca^2+}$                               |
 |                      | `$\ce{Cl-}$`                                 | $\ce{Cl-}$                                 |
 | Reaction             | `$\ce{2H2 + O2 -> 2H2O}$`                    | $\ce{2H2 + O2 -> 2H2O}$                    |
 | Reaction Conditions  | `$\ce{N2 + 3H2 ->[\Delta] 2NH3}$`            | $\ce{N2 + 3H2 ->[\Delta] 2NH3}$            |

@@ -113,11 +113,11 @@ title: Electromagnetic Spectrum
 ### X-rays
 
 * higher frequency than UV light
-* x-ray radiation has enough energy to ionize
+* x-ray radiation has enough energy to [[ion|ionize]]
   * when an x-ray photon hits an atom, it can lose an electron, causing the atom to become an ion
 * too much ionization from x-rays can cause cell damage and mutations
   * normal medical x-rays are safe
-    * x-ray phtons enter tissue, denser tissue (bones) block enough photons to cause a shadow image in sensors
+    * x-ray photons enter tissue, denser tissue (bones) block enough photons to cause a shadow image in sensors
 
 
 ### Gamma rays
