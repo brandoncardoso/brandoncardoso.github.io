@@ -42,40 +42,6 @@ title: Atomic Models
 * nucleus is shown as single circle, no distinct protons/neutrons
 * because it treats electrons as having fixed orbits, it can not accurately predict the [[atomic spectra]] for more complex atoms with more than one electron
 
-### How are electrons arranged?
-
-* the first energy level (closest to the nucleus) holds a maximum of two electrons
-* the second energy level holds a maximum of eight electrons
-* electrons are paired in twos, this represents the filling of _orbitals_
-  * each energy level has different orbitals, and each orbital can hold two electrons
-* any unpaired electron is always in the outermost energy level
-  * for main group elements [^mainGroupElements], lower energy levels fill completely before electrons are placed into the next level
-
-[^mainGroupElements]: ==TODO== -- what are main group elements?
-
-
-### Energy levels
-
-* the rings in a Bohr model represent discrete energy levels that electrons can occupy
-* electrons can not exist at energies between levels
-* also called **shells**, and are labeled $n=1, n=2, n=3$ starting from the nucleus
-  * the higher the shell number, the greater the energy of electrons in that shell
-* the shells represent electrons' energy levels, **NOT** their position or path
-  * electrons do not move in circular paths around the nucleus
-* sometimes, Bohr models may show rings that get closer together as the shell number increases
-  * represents how the difference between energy levels decreases with greater $n$
-  * exact spacing of the rings is not important
-* maximum number of electrons per shell is determined by the formula: $\text{max \# of electrons} = 2 \cdot n^2$
-* electrons in the outermost shell are called [[valence electron|valence electrons]]
-
-| Shell | Max electrons |
-|-------|---------------|
-| $n=1$ | 2             |
-| $n=2$ | 8             |
-| $n=3$ | 18            |
-| $n=4$ | 32            |
-| ...   | ...           |
-
 
 ## The de Broglie model
 
