@@ -1,7 +1,7 @@
 ---
 title: LLMs TXT File
 tags:
-  - AI
+  - ai
 ---
 
 * adding an `llms.txt` file to your website to give LLMs context about site, content, important pages, etc.
