@@ -255,3 +255,8 @@ Requires the [mhchem LaTex extension](https://mhchem.github.io/MathJax-mhchem/).
 | Arrow with Text      | `$\ce{A ->[{text above}][{text below}] B}$`  | $\ce{A ->[{text above}][{text below}] B}$  |
 | Escaped Braces       | `$\ce{[\{(X2)3\}2]^3+}$`                     | $\ce{[\{(X2)3\}2]^3+}$                     |
 
+
+## Links
+
+* [A guide to supercharged mathematical typesetting](https://ejmastnak.com/tutorials/vim-latex/intro/) -- guide for setting up [[neovim]] LaTeX autocomplete
+
