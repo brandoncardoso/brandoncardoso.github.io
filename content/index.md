@@ -12,6 +12,7 @@ I'm Brandon, a software engineer and entrepreneur from Toronto :canada:, current
 
 I'm building [Sentinowl](https://sentinowl.com), a modern tool for monitoring and visualizing hardware health across your machines.
 
-This is my [[digital garden]], a collection of ideas and thoughts that (hopefully) grow over time. Most things here are rough and evolving.
+This is my [[digital garden]], a collection of ideas and thoughts that (hopefully) grow over time. Most things here are rough and evolving. It's also an attempt to preserve content from [web rot](https://en.wikipedia.org/wiki/Link_rot).
 
-Right now I'm getting into [[judo]], learning Portuguese & Japanese, and exploring open source software, sustainability, and renewable energy.
+Right now I'm getting into networking & physical infrastructure, learning Portuguese & Japanese, exploring open source software, sustainability, and renewable energy.
+
