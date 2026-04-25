@@ -6,6 +6,14 @@ modified: 2026-04-07T05:27:35Z
 
 ## Concepts
 
+### Daemon
+
+* background daemon process (dockerd) to manage container lifecycle operations
+	* vs. [[podman]] which is daemonless
+* containers are ran as root user
+* single point of failure, if the daemon stops/crashes, all managed containers may terminate
+* can manage container state automatically (auto restart)
+
 ### Dockerfile
 
 script of instructions to build an image
