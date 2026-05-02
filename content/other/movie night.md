@@ -12,6 +12,7 @@ Monthly (:crossed_fingers:) movie night with my doggies. Started during COVID-19
 
 |  # | Date         | Theme                             | Movie                                                                                                           | Year |
 |---:|--------------|-----------------------------------|--------------------------------------------------------------------------------------------------------------------|-----:|
+| 60 | May 01, 2026 | Musical (Daniel)                  | [Sweeney Todd: The Demon Barber of Fleet Street](https://www.themoviedb.org/movie/13885-sweeney-todd-the-demon-barber-of-fleet-street) | 2007 |
 | 59 | Apr 10, 2026 | Wilderness (Robert)               | [Touching the Void](https://www.themoviedb.org/movie/11194-touching-the-void)                                 | 2003 |
 | 58 | Feb 27, 2026 | Polish/German Fantasy (Anastasia) | [AmbaSSada](https://www.themoviedb.org/movie/256608-ambassada)                                                  | 2013 |
 | 57 | Jan 30, 2026 | Fantasy (Matt)                    | [The Fountain](https://www.themoviedb.org/movie/1381-the-fountain)                                              | 2006 |
