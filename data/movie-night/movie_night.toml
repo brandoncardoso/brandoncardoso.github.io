@@ -1,0 +1,425 @@
+# Movie Nights
+# Primary key: id
+# Foreign keys:
+#   theme_picker -> person.id  (optional; omit when no specific picker)
+#   movie        -> movie.id
+
+[[movie_night]]
+id = 60
+date = "2026-05-01"
+theme = "Musical"
+theme_picker = "daniel"
+movie = "sweeney-todd-2007"
+
+[[movie_night]]
+id = 59
+date = "2026-04-10"
+theme = "Wilderness"
+theme_picker = "robert"
+movie = "touching-the-void-2003"
+
+[[movie_night]]
+id = 58
+date = "2026-02-27"
+theme = "Polish/German Fantasy"
+theme_picker = "anastasia"
+movie = "ambassada-2013"
+
+[[movie_night]]
+id = 57
+date = "2026-01-30"
+theme = "Fantasy"
+theme_picker = "matt"
+movie = "the-fountain-2006"
+
+[[movie_night]]
+id = 56
+date = "2025-12-19"
+theme = "Documentary"
+theme_picker = "brandon"
+movie = "2000-meters-to-andriivka-2025"
+
+[[movie_night]]
+id = 55
+date = "2025-11-28"
+theme = "Video Game"
+theme_picker = "daniel"
+movie = "resident-evil-2002"
+
+[[movie_night]]
+id = 54
+date = "2025-10-31"
+theme = "Found Footage"
+theme_picker = "robert"
+movie = "vhs-2012"
+
+[[movie_night]]
+id = 53
+date = "2025-09-27"
+theme = "Sports"
+theme_picker = "matt"
+movie = "kingpin-1996"
+
+[[movie_night]]
+id = 52
+date = "2025-08-29"
+theme = "Tournament"
+theme_picker = "brandon"
+movie = "the-quick-and-the-dead-1995"
+
+[[movie_night]]
+id = 51
+date = "2025-07-25"
+theme = "Desert"
+theme_picker = "daniel"
+movie = "stargate-1994"
+
+[[movie_night]]
+id = 50
+date = "2025-07-11"
+theme = "Lovecraftian"
+theme_picker = "robert"
+movie = "frailty-2001"
+
+[[movie_night]]
+id = 49
+date = "2025-06-06"
+theme = "Vehicles"
+theme_picker = "matt"
+movie = "airplane-1980"
+
+[[movie_night]]
+id = 48
+date = "2025-05-02"
+theme = "Long Timespan"
+theme_picker = "brandon"
+movie = "frequency-2000"
+
+[[movie_night]]
+id = 47
+date = "2025-03-28"
+theme = "Canadian"
+theme_picker = "daniel"
+movie = "bon-cop-bad-cop-2006"
+
+[[movie_night]]
+id = 46
+date = "2025-02-28"
+theme = "Eastern Europe"
+theme_picker = "anastasia"
+movie = "sexmission-1984"
+
+[[movie_night]]
+id = 45
+date = "2025-01-24"
+theme = "Space"
+theme_picker = "robert"
+movie = "europa-report-2013"
+
+[[movie_night]]
+id = 44
+date = "2024-12-20"
+theme = "Before 1997"
+theme_picker = "matt"
+movie = "psycho-1960"
+
+[[movie_night]]
+id = 43
+date = "2024-11-29"
+theme = "Nicolas Cage"
+theme_picker = "daniel"
+movie = "dream-scenario-2023"
+
+[[movie_night]]
+id = 42
+date = "2024-10-26"
+theme = "Vampire"
+theme_picker = "brandon"
+movie = "30-days-of-night-2007"
+
+[[movie_night]]
+id = 41
+date = "2024-09-27"
+theme = "Oscar Bait"
+theme_picker = "mike"
+movie = "the-last-duel-2021"
+
+[[movie_night]]
+id = 40
+date = "2024-08-30"
+theme = "Water"
+theme_picker = "robert"
+movie = "greyhound-2020"
+
+[[movie_night]]
+id = 39
+date = "2024-07-26"
+theme = "Korean"
+theme_picker = "sam"
+movie = "exhuma-2024"
+
+[[movie_night]]
+id = 38
+date = "2024-06-28"
+theme = "Crime Mystery"
+theme_picker = "matt"
+movie = "true-story-2015"
+
+[[movie_night]]
+id = 37
+date = "2024-05-24"
+theme = "2005-2010 R Rated"
+theme_picker = "daniel"
+movie = "synecdoche-new-york-2008"
+
+[[movie_night]]
+id = 36
+date = "2024-04-19"
+theme = "Giant Monster"
+theme_picker = "brandon"
+movie = "the-host-2006"
+
+[[movie_night]]
+id = 35
+date = "2024-03-29"
+theme = "Business"
+theme_picker = "robert"
+movie = "dark-waters-2019"
+
+[[movie_night]]
+id = 34
+date = "2024-02-23"
+theme = "Fever Dream"
+theme_picker = "matt"
+movie = "the-holy-mountain-1973"
+
+[[movie_night]]
+id = 33
+date = "2024-02-02"
+theme = "Meta"
+theme_picker = "daniel"
+movie = "stranger-than-fiction-2006"
+
+[[movie_night]]
+id = 32
+date = "2023-12-09"
+theme = "Hanukkah"
+theme_picker = "anna-cezar"
+movie = "the-hebrew-hammer-2003"
+
+[[movie_night]]
+id = 31
+date = "2023-10-27"
+theme = "Zombie"
+theme_picker = "brandon"
+movie = "train-to-busan-2016"
+
+[[movie_night]]
+id = 30
+date = "2023-09-30"
+theme = "Italian"
+theme_picker = "robert"
+movie = "gomorrah-2008"
+
+[[movie_night]]
+id = 29
+date = "2023-07-28"
+theme = "Mockumentary"
+theme_picker = "matt"
+movie = "tour-de-pharmacy-2017"
+
+[[movie_night]]
+id = 28
+date = "2023-06-24"
+theme = "Fantasy"
+theme_picker = "daniel"
+movie = "solomon-kane-2009"
+
+[[movie_night]]
+id = 27
+date = "2023-05-26"
+theme = "Steve"
+theme_picker = "matt"
+movie = "my-friend-dahmer-2017"
+
+[[movie_night]]
+id = 26
+date = "2023-04-28"
+theme = "Romantic Comedy"
+theme_picker = "mike"
+movie = "mr-right-2015"
+
+[[movie_night]]
+id = 25
+date = "2023-03-24"
+theme = "Bromance"
+theme_picker = "brandon"
+movie = "the-banshees-of-inisherin-2022"
+
+[[movie_night]]
+id = 24
+date = "2023-02-24"
+theme = "Aliens"
+theme_picker = "daniel"
+movie = "dark-skies-2013"
+
+[[movie_night]]
+id = 23
+date = "2023-01-28"
+theme = "Pirate"
+# theme_picker omitted (no picker recorded)
+movie = "the-count-of-monte-cristo-2002"
+
+[[movie_night]]
+id = 22
+date = "2022-12-16"
+theme = "Alt. Christmas"
+# theme_picker omitted
+movie = "kiss-kiss-bang-bang-2005"
+
+[[movie_night]]
+id = 21
+date = "2022-11-19"
+theme = "Apocalypse"
+theme_picker = "brandon"
+movie = "the-road-2009"
+
+[[movie_night]]
+id = 20
+date = "2022-10-29"
+theme = "Spooky"
+# theme_picker omitted
+movie = "the-blair-witch-project-1999"
+
+[[movie_night]]
+id = 19
+date = "2022-10-01"
+theme = "Psychedelic"
+theme_picker = "matt"
+movie = "enter-the-void-2009"
+
+[[movie_night]]
+id = 18
+date = "2022-08-27"
+theme = "Romance"
+theme_picker = "anastasia"
+movie = "high-fidelity-2000"
+
+[[movie_night]]
+id = 17
+date = "2022-07-30"
+theme = "2019"
+theme_picker = "robert"
+movie = "the-silence-2019"
+
+[[movie_night]]
+id = 16
+date = "2022-05-28"
+theme = "Japanese"
+# theme_picker omitted
+movie = "shoplifters-2018"
+
+[[movie_night]]
+id = 15
+date = "2022-04-22"
+theme = "Psychological Horror"
+theme_picker = "matt"
+movie = "it-comes-at-night-2017"
+
+[[movie_night]]
+id = 14
+date = "2022-04-02"
+theme = "Indian"
+# theme_picker omitted
+movie = "baahubali-2-2017"
+
+[[movie_night]]
+id = 13
+date = "2022-03-26"
+theme = "Indian"
+# theme_picker omitted
+movie = "baahubali-2015"
+
+[[movie_night]]
+id = 12
+date = "2022-02-25"
+theme = "Nicolas Cage"
+# theme_picker omitted
+movie = "face-off-1998"
+
+[[movie_night]]
+id = 11
+date = "2022-01-29"
+theme = "Wes Anderson"
+theme_picker = "brandon"
+movie = "the-life-aquatic-2004"
+
+[[movie_night]]
+id = 10
+date = "2022-01-03"
+theme = "New Matrix Movie"
+# theme_picker omitted
+movie = "the-matrix-resurrections-2021"
+
+[[movie_night]]
+id = 9
+date = "2021-12-18"
+theme = "Whodunit"
+theme_picker = "daniel"
+movie = "memories-of-murder-2003"
+
+[[movie_night]]
+id = 8
+date = "2021-11-27"
+theme = "Tech Noir"
+theme_picker = "matt"
+movie = "gattaca-1997"
+
+[[movie_night]]
+id = 7
+date = "2021-10-31"
+theme = "Horror"
+# theme_picker omitted
+movie = "the-night-house-2021"
+
+[[movie_night]]
+id = 6
+date = "2021-09-18"
+theme = "Action"
+# theme_picker omitted
+movie = "riders-of-justice-2021"
+
+[[movie_night]]
+id = 5
+date = "2021-08-28"
+theme = "Fantasy"
+# theme_picker omitted
+movie = "the-green-knight-2021"
+
+[[movie_night]]
+id = 4
+date = "2021-07-31"
+theme = "Comedy"
+# theme_picker omitted
+movie = "bad-trip-2021"
+
+[[movie_night]]
+id = 3
+date = "2021-06-26"
+theme = "Spooky/Sexy"
+# theme_picker omitted
+movie = "look-away-2018"
+
+[[movie_night]]
+id = 2
+date = "2021-05-29"
+theme = "Kung fu/Karate"
+# theme_picker omitted
+movie = "the-paper-tigers-2020"
+
+[[movie_night]]
+id = 1
+date = "2021-04-24"
+theme = "Spoopy"
+# theme_picker omitted
+movie = "sator-2019"

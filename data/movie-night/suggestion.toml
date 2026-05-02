@@ -1,0 +1,387 @@
+# Movie Suggestions
+# Primary key: composite (movie_night.id, movie.id)
+# Foreign keys:
+#   movie_night -> movie_night.id
+#	suggester   -> person.id
+#   movie       -> movie.id
+
+# dmn 1
+
+[[suggestion]]
+movie_night = 1
+suggester = "brandon"
+movie = "sator-2019"
+
+
+# dmn 2
+
+[[suggestion]]
+movie_night = 2
+suggester = "brandon"
+movie = "the-paper-tigers-2020"
+votes = 4
+
+[[suggestion]]
+movie_night = 2
+suggester = "robert"
+movie = "riki-oh-the-story-of-ricky-1991"
+votes = 3
+
+[[suggestion]]
+movie_night = 2
+suggester = "robert"
+movie = "ip-man-2008"
+votes = 0
+
+[[suggestion]]
+movie_night = 2
+suggester = "matt"
+movie = "drunken-master-1978"
+votes = 1
+
+
+# dmn 3
+
+[[suggestion]]
+movie_night = 3
+suggester = "brandon"
+movie = "look-away-2018"
+votes = 3
+
+[[suggestion]]
+movie_night = 3
+suggester = "brandon"
+movie = "hell-baby-2013"
+votes = 2
+
+[[suggestion]]
+movie_night = 3
+suggester = "matt"
+movie = "climax-2018"
+votes = 2
+
+[[suggestion]]
+movie_night = 3
+suggester = "brandon"
+movie = "girl-house-2015"
+votes = 1
+
+
+# dmn 4
+
+[[suggestion]]
+movie_night = 4
+suggester = "brandon"
+movie = "get-duked-2019"
+votes = 1
+
+[[suggestion]]
+movie_night = 4
+suggester = "brandon"
+movie = "black-dynamite-2012"
+votes = 1
+
+[[suggestion]]
+movie_night = 4
+suggester = "brandon"
+movie = "the-mask-1994"
+votes = 2
+
+[[suggestion]]
+movie_night = 4
+suggester = "daniel"
+movie = "hitmans-wifes-bodyguard-2021"
+votes = 1
+
+[[suggestion]]
+movie_night = 4
+suggester = "matt"
+movie = "bad-trip-2021"
+votes = 3
+
+
+# dmn 5
+
+[[suggestion]]
+movie_night = 5
+suggester = "brandon"
+movie = "pans-labryinth-2006"
+votes = 1
+
+[[suggestion]]
+movie_night = 5
+suggester = "brandon"
+movie = "a-monster-calls-2016"
+votes = 0
+
+[[suggestion]]
+movie_night = 5
+suggester = "brandon"
+movie = "the-green-knight-2021"
+votes = 4
+
+
+# dmn 6
+
+[[suggestion]]
+movie_night = 6
+suggester = "matt"
+movie = "riders-of-justice-2021"
+votes = 3
+
+[[suggestion]]
+movie_night = 6
+suggester = "brandon"
+movie = "oldboy-2003"
+votes = 1
+
+[[suggestion]]
+movie_night = 6
+suggester = "brandon"
+movie = "the-raid-2012"
+votes = 0
+
+
+# dmn 7
+
+[[suggestion]]
+movie_night = 7
+suggester = "matt"
+movie = "it-comes-at-night-2017"
+
+[[suggestion]]
+movie_night = 7
+suggester = "matt"
+movie = "the-night-house-2021"
+
+[[suggestion]]
+movie_night = 7
+suggester = "matt"
+movie = "old-2021"
+
+[[suggestion]]
+movie_night = 7
+suggester = "matt"
+movie = "in-the-earth-2021"
+
+[[suggestion]]
+movie_night = 7
+suggester = "brandon"
+movie = "malignant-2021"
+
+
+# dmn 8
+
+[[suggestion]]
+movie_night = 8
+suggester = "brandon"
+movie = "minority-report-2002"
+votes = 0
+
+[[suggestion]]
+movie_night = 8
+suggester = "brandon"
+movie = "gattaca-1997"
+votes = 1
+
+[[suggestion]]
+movie_night = 8
+suggester = "matt"
+movie = "dark-city-1998"
+votes = 0
+
+[[suggestion]]
+movie_night = 8
+suggester = "brandon"
+movie = "johnny-mnemonic-1995"
+votes = 0
+
+
+# dmn 9
+
+[[suggestion]]
+movie_night = 9
+suggester = "brandon"
+movie = "clue-1985"
+votes = 0
+
+[[suggestion]]
+movie_night = 9
+suggester = "brandon"
+movie = "the-invisible-guest-2017"
+votes = 1
+
+[[suggestion]]
+movie_night = 9
+suggester = "brandon"
+movie = "memories-of-murder-2003"
+votes = 4
+
+[[suggestion]]
+movie_night = 9
+suggester = "brandon"
+movie = "primal-fear-1996"
+votes = 2
+
+# dmn 10 - matrix resurrections
+
+# dmn 11
+[[suggestion]]
+movie_night = 11
+suggester = "brandon"
+movie = "moonrise-kingdom-2012"
+votes = 1
+
+[[suggestion]]
+movie_night = 11
+suggester = "brandon"
+movie = "the-life-aquatic-2004"
+votes = 4
+
+[[suggestion]]
+movie_night = 11
+suggester = "brandon"
+movie = "the-french-dispatch-2021"
+votes = 2
+
+[[suggestion]]
+movie_night = 11
+suggester = "brandon"
+movie = "the-royal-tenenbaums-2001"
+votes = 3
+
+[[suggestion]]
+movie_night = 11
+suggester = "brandon"
+movie = "the-darjeeling-limited-2007"
+votes = 3
+
+
+# dmn 12
+
+[[suggestion]]
+movie_night = 12
+suggester = "brandon"
+movie = "con-air-1997"
+votes = 1
+
+[[suggestion]]
+movie_night = 12
+suggester = "brandon"
+movie = "face-off-1998"
+votes = 2
+
+[[suggestion]]
+movie_night = 12
+suggester = "brandon"
+movie = "raising-arizona-1987"
+votes = 1
+
+[[suggestion]]
+movie_night = 12
+suggester = "brandon"
+movie = "vampires-kiss-1988"
+votes = 1
+
+
+# dmn 13
+
+[[suggestion]]
+movie_night = 13
+suggester = "brandon"
+movie = "bajirao-mastani-2015"
+votes = 0
+
+[[suggestion]]
+movie_night = 13
+suggester = "matt"
+movie = "baahubali-2015"
+votes = 1
+
+[[suggestion]]
+movie_night = 13
+suggester = "daniel"
+movie = "dhoom-2004"
+votes = 1
+
+[[suggestion]]
+movie_night = 13
+suggester = "brandon"
+movie = "singham-2011"
+votes = 1
+
+# dmn 14 - indian 2
+
+# dmn 15
+
+[[suggestion]]
+movie_night = 15
+suggester = "brandon"
+movie = "the-orphanage-2007"
+votes = 0
+
+[[suggestion]]
+movie_night = 15
+suggester = "brandon"
+movie = "session-9-2001"
+votes = 0
+
+[[suggestion]]
+movie_night = 15
+suggester = "brandon"
+movie = "we-need-to-talk-about-kevin-2011"
+votes = 1
+
+[[suggestion]]
+movie_night = 15
+suggester = "daniel"
+movie = "it-comes-at-night-2017"
+votes = 2
+
+
+# dmn 16
+
+[[suggestion]]
+movie_night = 16
+suggester = "brandon"
+movie = "godzilla-1954"
+votes = 1
+
+[[suggestion]]
+movie_night = 16
+suggester = "brandon"
+movie = "shoplifters-2018"
+votes = 2
+
+[[suggestion]]
+movie_night = 16
+suggester = "daniel"
+movie = "a-whisker-away-2020"
+votes = 2
+
+
+# dmn 17
+
+[[suggestion]]
+movie_night = 17
+suggester = "matt"
+movie = "the-silence-2019"
+votes = 1
+
+[[suggestion]]
+movie_night = 17
+suggester = "brandon"
+movie = "honey-boy-2019"
+votes = 1
+
+[[suggestion]]
+movie_night = 17
+suggester = "brandon"
+movie = "booksmart-2019"
+votes = 0
+
+[[suggestion]]
+movie_night = 17
+suggester = "daniel"
+movie = "daniel-isnt-real-2019"
+votes = 1

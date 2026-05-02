@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Matt",
+    "suggested": 11,
+    "won": 5,
+    "win_rate": 45,
+    "total_votes": 11
+  },
+  {
+    "name": "Brandon",
+    "suggested": 39,
+    "won": 9,
+    "win_rate": 23,
+    "total_votes": 52
+  },
+  {
+    "name": "Daniel",
+    "suggested": 5,
+    "won": 1,
+    "win_rate": 20,
+    "total_votes": 7
+  },
+  {
+    "name": "Robert",
+    "suggested": 2,
+    "won": 0,
+    "win_rate": 0,
+    "total_votes": 3
+  }
+]

@@ -28,19 +28,19 @@ export const SortableTable: QuartzTransformerPlugin = () => {
                 let colIndex = 0
                 for (const th of child.children) {
                   if ((th as Element).tagName === "th") {
-                    ;(th as Element).properties = {
+                    ; (th as Element).properties = {
                       ...(th as Element).properties,
                       "data-col-index": colIndex,
                       role: "columnheader",
                       ariaSort: "none",
                       tabIndex: 0,
                     }
-                    ;(th as Element).children.push({
-                      type: "element",
-                      tagName: "span",
-                      properties: { className: ["sort-indicator"] },
-                      children: [{ type: "text", value: " ⇅" }],
-                    })
+                      ; (th as Element).children.push({
+                        type: "element",
+                        tagName: "span",
+                        properties: { className: ["sort-indicator"] },
+                        children: [{ type: "text", value: " ⇅" }],
+                      })
                     colIndex++
                   }
                 }
@@ -168,10 +168,12 @@ document.addEventListener("input", function(e) {
 .sortable-table th[data-col-index] {
   cursor: pointer;
   user-select: none;
+  white-space: nowrap;
 }
 .sortable-table .sort-indicator {
   opacity: 0.3;
   font-size: 0.8em;
+  white-space: nowrap;
 }
 .sortable-table th[data-col-index]:hover .sort-indicator {
   opacity: 0.6;

@@ -1,0 +1,41 @@
+<script type="module">
+const formatters = {
+  won:      (v) => v ? "★" : "",
+  win_rate: (v) => v == null ? "" : `${v}%`,
+  votes:    (v) => v == null ? "" : String(v),
+}
+
+const linkify = (value, row, linkColumn, urlColumn) =>
+  value != null && row[urlColumn]
+    ? `<a href="${row[urlColumn]}">${value}</a>`
+    : value ?? ""
+
+const renderTable = async (el) => {
+  const src = el.dataset.source
+  const linkColumn = el.dataset.linkColumn
+  const urlColumn = el.dataset.urlColumn ?? "url"
+  const hideColumns = (el.dataset.hide ?? "").split(",").filter(Boolean)
+
+  const rows = await (await fetch(src)).json()
+  if (!rows?.length) { el.innerHTML = "<em>no data</em>"; return }
+
+  const headers = Object.keys(rows[0]).filter(k => !hideColumns.includes(k))
+
+  const cell = (row, key) => {
+    const v = row[key]
+    if (key === linkColumn) return linkify(v, row, linkColumn, urlColumn)
+    if (formatters[key]) return formatters[key](v)
+    return v == null ? "" : String(v)
+  }
+
+  el.innerHTML = `
+    <table>
+      <thead><tr>${headers.map(h => `<th>${h.replace(/_/g, " ")}</th>`).join("")}</tr></thead>
+      <tbody>${rows.map(r =>
+        `<tr>${headers.map(h => `<td>${cell(r, h)}</td>`).join("")}</tr>`
+      ).join("")}</tbody>
+    </table>`
+}
+
+document.querySelectorAll(".stats-table").forEach(renderTable)
+</script>

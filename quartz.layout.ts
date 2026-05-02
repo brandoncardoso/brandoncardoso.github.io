@@ -32,6 +32,7 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.TagList(),
       condition: (page) => page.fileData.slug !== "index",
     }),
+    Component.StatsTable(),
   ],
   left: [
     Component.PageTitle(),

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Brandon",
+    "picks": 5,
+    "picks_won": 1,
+    "picks_win_rate": 20,
+    "others": 34,
+    "others_won": 8,
+    "others_win_rate": 24,
+    "advantage": -4
+  },
+  {
+    "name": "Matt",
+    "picks": 1,
+    "picks_won": 0,
+    "picks_win_rate": 0,
+    "others": 10,
+    "others_won": 5,
+    "others_win_rate": 50,
+    "advantage": -50
+  }
+]

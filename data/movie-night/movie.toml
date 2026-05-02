@@ -1,0 +1,569 @@
+# Movies
+# Primary key: id
+
+[[movie]]
+id = "sweeney-todd-2007"
+title = "Sweeney Todd: The Demon Barber of Fleet Street"
+year = 2007
+url = "https://www.themoviedb.org/movie/13885"
+
+[[movie]]
+id = "touching-the-void-2003"
+title = "Touching the Void"
+year = 2003
+url = "https://www.themoviedb.org/movie/11194"
+
+[[movie]]
+id = "ambassada-2013"
+title = "AmbaSSada"
+year = 2013
+url = "https://www.themoviedb.org/movie/256608"
+
+[[movie]]
+id = "the-fountain-2006"
+title = "The Fountain"
+year = 2006
+url = "https://www.themoviedb.org/movie/1381"
+
+[[movie]]
+id = "2000-meters-to-andriivka-2025"
+title = "2000 Meters to Andriivka"
+year = 2025
+url = "https://www.themoviedb.org/movie/1400789"
+
+[[movie]]
+id = "resident-evil-2002"
+title = "Resident Evil"
+year = 2002
+url = "https://www.themoviedb.org/movie/1576"
+
+[[movie]]
+id = "vhs-2012"
+title = "V/H/S"
+year = 2012
+url = "https://www.themoviedb.org/movie/84348"
+
+[[movie]]
+id = "kingpin-1996"
+title = "Kingpin"
+year = 1996
+url = "https://www.themoviedb.org/movie/11543"
+
+[[movie]]
+id = "the-quick-and-the-dead-1995"
+title = "The Quick and the Dead"
+year = 1995
+url = "https://www.themoviedb.org/movie/12106"
+
+[[movie]]
+id = "stargate-1994"
+title = "Stargate"
+year = 1994
+url = "https://www.themoviedb.org/movie/2164"
+
+[[movie]]
+id = "frailty-2001"
+title = "Frailty"
+year = 2001
+url = "https://www.themoviedb.org/movie/12149"
+
+[[movie]]
+id = "airplane-1980"
+title = "Airplane!"
+year = 1980
+url = "https://www.themoviedb.org/movie/813"
+
+[[movie]]
+id = "frequency-2000"
+title = "Frequency"
+year = 2000
+url = "https://www.themoviedb.org/movie/10559"
+
+[[movie]]
+id = "bon-cop-bad-cop-2006"
+title = "Bon Cop Bad Cop"
+year = 2006
+url = "https://www.themoviedb.org/movie/15049"
+
+[[movie]]
+id = "sexmission-1984"
+title = "Sexmission"
+year = 1984
+url = "https://www.themoviedb.org/movie/19673"
+
+[[movie]]
+id = "europa-report-2013"
+title = "Europa Report"
+year = 2013
+url = "https://www.themoviedb.org/movie/174772"
+
+[[movie]]
+id = "psycho-1960"
+title = "Psycho"
+year = 1960
+url = "https://www.themoviedb.org/movie/539"
+
+[[movie]]
+id = "dream-scenario-2023"
+title = "Dream Scenario"
+year = 2023
+url = "https://www.themoviedb.org/movie/823482"
+
+[[movie]]
+id = "30-days-of-night-2007"
+title = "30 Days of Night"
+year = 2007
+url = "https://www.themoviedb.org/movie/4513"
+
+[[movie]]
+id = "the-last-duel-2021"
+title = "The Last Duel"
+year = 2021
+url = "https://www.themoviedb.org/movie/617653"
+
+[[movie]]
+id = "greyhound-2020"
+title = "Greyhound"
+year = 2020
+url = "https://www.themoviedb.org/movie/516486"
+
+[[movie]]
+id = "exhuma-2024"
+title = "Exhuma"
+year = 2024
+url = "https://www.themoviedb.org/movie/838209"
+
+[[movie]]
+id = "true-story-2015"
+title = "True Story"
+year = 2015
+url = "https://www.themoviedb.org/movie/245706"
+
+[[movie]]
+id = "synecdoche-new-york-2008"
+title = "Synecdoche, New York"
+year = 2008
+url = "https://www.themoviedb.org/movie/4960"
+
+[[movie]]
+id = "the-host-2006"
+title = "The Host"
+year = 2006
+url = "https://www.themoviedb.org/movie/1255"
+
+[[movie]]
+id = "dark-waters-2019"
+title = "Dark Waters"
+year = 2019
+url = "https://www.themoviedb.org/movie/552178"
+
+[[movie]]
+id = "the-holy-mountain-1973"
+title = "The Holy Mountain"
+year = 1973
+url = "https://www.themoviedb.org/movie/8327"
+
+[[movie]]
+id = "stranger-than-fiction-2006"
+title = "Stranger Than Fiction"
+year = 2006
+url = "https://www.themoviedb.org/movie/1262"
+
+[[movie]]
+id = "the-hebrew-hammer-2003"
+title = "The Hebrew Hammer"
+year = 2003
+url = "https://www.themoviedb.org/movie/19187"
+
+[[movie]]
+id = "train-to-busan-2016"
+title = "Train to Busan"
+year = 2016
+url = "https://www.themoviedb.org/movie/396535"
+
+[[movie]]
+id = "gomorrah-2008"
+title = "Gomorrah"
+year = 2008
+url = "https://www.themoviedb.org/movie/8882"
+
+[[movie]]
+id = "tour-de-pharmacy-2017"
+title = "Tour de Pharmacy"
+year = 2017
+url = "https://www.themoviedb.org/movie/458506"
+
+[[movie]]
+id = "solomon-kane-2009"
+title = "Solomon Kane"
+year = 2009
+url = "https://www.themoviedb.org/movie/32985"
+
+[[movie]]
+id = "my-friend-dahmer-2017"
+title = "My Friend Dahmer"
+year = 2017
+url = "https://www.themoviedb.org/movie/445040"
+
+[[movie]]
+id = "mr-right-2015"
+title = "Mr. Right"
+year = 2015
+url = "https://www.themoviedb.org/movie/333385"
+
+[[movie]]
+id = "the-banshees-of-inisherin-2022"
+title = "The Banshees of Inisherin"
+year = 2022
+url = "https://www.themoviedb.org/movie/674324"
+
+[[movie]]
+id = "dark-skies-2013"
+title = "Dark Skies"
+year = 2013
+url = "https://www.themoviedb.org/movie/145135"
+
+[[movie]]
+id = "the-count-of-monte-cristo-2002"
+title = "The Count of Monte Cristo"
+year = 2002
+url = "https://www.themoviedb.org/movie/11362"
+
+[[movie]]
+id = "kiss-kiss-bang-bang-2005"
+title = "Kiss Kiss Bang Bang"
+year = 2005
+url = "https://www.themoviedb.org/movie/5236"
+
+[[movie]]
+id = "the-road-2009"
+title = "The Road"
+year = 2009
+url = "https://www.themoviedb.org/movie/20766"
+
+[[movie]]
+id = "the-blair-witch-project-1999"
+title = "The Blair Witch Project"
+year = 1999
+url = "https://www.themoviedb.org/movie/2667"
+
+[[movie]]
+id = "enter-the-void-2009"
+title = "Enter the Void"
+year = 2009
+url = "https://www.themoviedb.org/movie/34647"
+
+[[movie]]
+id = "high-fidelity-2000"
+title = "High Fidelity"
+year = 2000
+url = "https://www.themoviedb.org/movie/243"
+
+[[movie]]
+id = "the-silence-2019"
+title = "The Silence"
+year = 2019
+url = "https://www.themoviedb.org/movie/527261"
+
+[[movie]]
+id = "honey-boy-2019"
+title = "Honey Boy"
+year = 2019
+
+[[movie]]
+id = "booksmart-2019"
+title = "Booksmart"
+year = 2019
+
+[[movie]]
+id = "daniel-isnt-real-2019"
+title = "Daniel Isn't Real"
+year = 2019
+
+[[movie]]
+id = "shoplifters-2018"
+title = "Shoplifters"
+year = 2018
+url = "https://www.themoviedb.org/movie/505192"
+
+[[movie]]
+id = "godzilla-1954"
+title = "Godzilla"
+year = 1954
+
+[[movie]]
+id = "a-whisker-away-2020"
+title = "A Whisker Away"
+year = 2020
+
+[[movie]]
+id = "it-comes-at-night-2017"
+title = "It Comes At Night"
+year = 2017
+url = "https://www.themoviedb.org/movie/418078"
+
+[[movie]]
+id = "the-orphanage-2007"
+title = "The Orphanage"
+year = 2007
+
+[[movie]]
+id = "session-9-2001"
+title = "Session 9"
+year = 2001
+
+[[movie]]
+id = "we-need-to-talk-about-kevin-2011"
+title = "We Need to Talk About Kevin"
+year = 2011
+
+[[movie]]
+id = "old-2021"
+title = "Old"
+year = 2021
+
+[[movie]]
+id = "in-the-earth-2021"
+title = "In the Earth"
+year = 2021
+
+[[movie]]
+id = "malignant-2021"
+title = "Malignant"
+year = 2021
+
+[[movie]]
+id = "baahubali-2-2017"
+title = "Baahubali 2: The Conclusion"
+year = 2017
+url = "https://www.themoviedb.org/movie/350312"
+
+[[movie]]
+id = "baahubali-2015"
+title = "Baahubali: The Beginning"
+year = 2015
+url = "https://www.themoviedb.org/movie/256040"
+
+[[movie]]
+id = "bajirao-mastani-2015"
+title = "Bajirao Mastani"
+year = 2015
+
+[[movie]]
+id = "dhoom-2004"
+title = "Dhoom"
+year = 2004
+
+[[movie]]
+id = "singham-2011"
+title = "Singham"
+year = 2011
+
+[[movie]]
+id = "face-off-1998"
+title = "Face/Off"
+year = 1998
+url = "https://www.themoviedb.org/movie/754-face-off"
+
+[[movie]]
+id = "con-air-1997"
+title = "Con Air"
+year = 1997
+
+[[movie]]
+id = "raising-arizona-1987"
+title = "Raising Arizona"
+year = 1987
+
+[[movie]]
+id = "vampires-kiss-1988"
+title = "Vampire's Kiss"
+year = 1988
+
+[[movie]]
+id = "the-life-aquatic-2004"
+title = "The Life Aquatic with Steve Zissou"
+year = 2004
+url = "https://www.themoviedb.org/movie/421"
+
+[[movie]]
+id = "moonrise-kingdom-2012"
+title = "Moonrise Kingdom"
+year = 2012
+
+[[movie]]
+id = "the-french-dispatch-2021"
+title = "The French Dispatch"
+year = 2021
+
+[[movie]]
+id = "the-royal-tenenbaums-2001"
+title = "The Royal Tenenbaums"
+year = 2001
+
+[[movie]]
+id = "the-darjeeling-limited-2007"
+title = "The Darjeeling Limited"
+year = 2007
+
+[[movie]]
+id = "the-matrix-resurrections-2021"
+title = "The Matrix Resurrections"
+year = 2021
+url = "https://www.themoviedb.org/movie/624860"
+
+[[movie]]
+id = "memories-of-murder-2003"
+title = "Memories of Murder"
+year = 2003
+url = "https://www.themoviedb.org/movie/11423"
+
+[[movie]]
+id = "clue-1985"
+title = "Clue"
+year = 1985
+
+[[movie]]
+id = "the-invisible-guest-2017"
+title = "The Invisible Guest"
+year = 2017
+
+[[movie]]
+id = "primal-fear-1996"
+title = "Primal Fear"
+year = 1996
+
+[[movie]]
+id = "gattaca-1997"
+title = "Gattaca"
+year = 1997
+url = "https://www.themoviedb.org/movie/782"
+
+[[movie]]
+id = "minority-report-2002"
+title = "Minority Report"
+year = 2002
+
+[[movie]]
+id = "dark-city-1998"
+title = "Dark City"
+year = 1998
+
+[[movie]]
+id = "johnny-mnemonic-1995"
+title = "Johnny Mnemonic"
+year = 1995
+
+[[movie]]
+id = "the-night-house-2021"
+title = "The Night House"
+year = 2021
+url = "https://www.themoviedb.org/movie/547565"
+
+[[movie]]
+id = "riders-of-justice-2021"
+title = "Riders of Justice"
+year = 2021
+url = "https://www.themoviedb.org/movie/663870"
+
+[[movie]]
+id = "oldboy-2003"
+title = "Oldboy"
+year = 2003
+
+[[movie]]
+id = "the-raid-2012"
+title = "The Raid"
+year = 2012
+
+[[movie]]
+id = "the-green-knight-2021"
+title = "The Green Knight"
+year = 2021
+url = "https://www.themoviedb.org/movie/559907"
+
+[[movie]]
+id = "bad-trip-2021"
+title = "Bad Trip"
+year = 2021
+url = "https://www.themoviedb.org/movie/578908"
+
+[[movie]]
+id = "look-away-2018"
+title = "Look Away"
+year = 2018
+url = "https://www.themoviedb.org/movie/526051"
+
+[[movie]]
+id = "the-paper-tigers-2020"
+title = "The Paper Tigers"
+year = 2020
+url = "https://www.themoviedb.org/movie/731738"
+
+[[movie]]
+id = "sator-2019"
+title = "Sator"
+year = 2019
+url = "https://www.themoviedb.org/movie/611651"
+
+[[movie]]
+id = "riki-oh-the-story-of-ricky-1991"
+title = "Riki-Oh: The Story of Ricky"
+year = 1991
+
+[[movie]]
+id = "ip-man-2008"
+title = "Ip Man"
+year = 2008
+url = "https://www.themoviedb.org/movie/14756"
+
+[[movie]]
+id = "drunken-master-1978"
+title = "Drunken Master"
+year = 1978
+url = "https://www.themoviedb.org/movie/11230"
+
+[[movie]]
+id = "hell-baby-2013"
+title = "Hell Baby"
+year = 2013
+
+[[movie]]
+id = "climax-2018"
+title = "Climax"
+year = 2018
+
+[[movie]]
+id = "girl-house-2015"
+title = "Girl House"
+year = 2015
+
+[[movie]]
+id = "get-duked-2019"
+title = "Get Duked!"
+year = 2019
+
+[[movie]]
+id = "black-dynamite-2012"
+title = "Black Dynamite"
+year = 2012
+
+[[movie]]
+id = "the-mask-1994"
+title = "The Mask"
+year = 1994
+
+[[movie]]
+id = "hitmans-wifes-bodyguard-2021"
+title = "Hitman's Wife's Bodyguard"
+year = 2021
+
+[[movie]]
+id = "pans-labryinth-2006"
+title = "Pan's Labryinth"
+year = 2006
+
+[[movie]]
+id = "a-monster-calls-2016"
+title = "A Monster Calls"
+year = 2016

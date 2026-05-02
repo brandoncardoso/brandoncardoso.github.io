@@ -30,3 +30,4 @@ dist-ssr
 # pnpm
 .pnpm-store/
 
+content/data/generated/
