@@ -1,9 +1,9 @@
 ---
 tags: []
-title: Genres
+title: Movie Genres
 ---
 
-Descriptions of different genres and subgenres.
+Descriptions of different movie genres and subgenres.
 
 ## Horror
 
