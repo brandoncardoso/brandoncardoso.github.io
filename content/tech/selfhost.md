@@ -110,14 +110,13 @@ subgraph AZ net
 `"]
     AZ --> AnZ
     AZ --> PHD
-
+	AZ --> CZ
 end
-
 
 style Int stroke:#b0b,stroke-width:4px;
 
 classDef acq stroke:#0b0,stroke-width:4px;
-class MaM,AZ acq;
+class MaM,AZ,AnZ,CZ acq;
 
 classDef open stroke:#0bb,stroke-width:4px;
 class SP,HUNO open;
