@@ -1,5 +1,5 @@
-import { QuartzConfig } from "./quartz/cfg"
-import * as Plugin from "./quartz/plugins"
+import { QuartzConfig } from "./quartz/cfg";
+import * as Plugin from "./quartz/plugins";
 
 const config: QuartzConfig = {
   configuration: {
@@ -26,25 +26,25 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#fffbef",         // bg
-          lightgray: "#e8e5d5",     // borders
-          gray: "#829181",          // graph links, heavier borders
-          darkgray: "#5c6a72",      // body text
-          dark: "#5c6a72",          // header text, icons
-          secondary: "#8da101",     // link colour, current graph node
-          tertiary: "#f57d26",      // hover states, visited graph nodes
-          highlight: "#f2efdf",     // internal link bg, highlighted text, highlighted lines of code
+          light: "#fffbef", // bg
+          lightgray: "#e8e5d5", // borders
+          gray: "#829181", // graph links, heavier borders
+          darkgray: "#5c6a72", // body text
+          dark: "#5c6a72", // header text, icons
+          secondary: "#8da101", // link colour, current graph node
+          tertiary: "#f57d26", // hover states, visited graph nodes
+          highlight: "#f2efdf", // internal link bg, highlighted text, highlighted lines of code
           textHighlight: "#fceced", // markdown highlighted text bg
         },
         darkMode: {
-          light: "#272e33",         // bg
-          lightgray: "#414b50",     // borders
-          gray: "#7a8478",          // graph links, heavier borders
-          darkgray: "#e0dcc7",      // body text
-          dark: "#e0dcc7",          // header text, icons
-          secondary: "#a7c080",     // link colour, current graph node
-          tertiary: "#e69875",      // hover states, visited graph nodes
-          highlight: "#232a2e",     // internal link bg, highlighted text, highlighted lines of code
+          light: "#272e33", // bg
+          lightgray: "#414b50", // borders
+          gray: "#7a8478", // graph links, heavier borders
+          darkgray: "#e0dcc7", // body text
+          dark: "#e0dcc7", // header text, icons
+          secondary: "#a7c080", // link colour, current graph node
+          tertiary: "#e69875", // hover states, visited graph nodes
+          highlight: "#232a2e", // internal link bg, highlighted text, highlighted lines of code
           textHighlight: "#4c3743", // markdown highlighted text bg
         },
       },
@@ -92,6 +92,6 @@ const config: QuartzConfig = {
       Plugin.CustomOgImages(),
     ],
   },
-}
+};
 
-export default config
+export default config;
