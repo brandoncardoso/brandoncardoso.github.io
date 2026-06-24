@@ -1,7 +1,7 @@
 ---
-title: Movie Night
-permalink: movie-night
 tags: []
+permalink: movie-night
+title: Movie Night
 ---
 
 Monthly (:crossed_fingers:) movie night with my doggies. Started during COVID-19 lockdowns.
@@ -9,6 +9,8 @@ Monthly (:crossed_fingers:) movie night with my doggies. Started during COVID-19
 [Movie list on Letterboxd](https://letterboxd.com/brancardoso/list/doggie-movie-night)
 
 ## History
+
+<div class="movie-night">
 
 |  # | Date         | Theme                             | Movie                                                                                                           | Year |
 |---:|--------------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------|-----:|
@@ -73,3 +75,5 @@ Monthly (:crossed_fingers:) movie night with my doggies. Started during COVID-19
 |  3 | Jun 26, 2021 | Spooky/Sexy                       | [Look Away](https://www.themoviedb.org/movie/526051-look-away)                                                  | 2018 |
 |  2 | May 29, 2021 | Kung fu/Karate                    | [The Paper Tigers](https://www.themoviedb.org/movie/731738-the-paper-tigers)                                    | 2020 |
 |  1 | Apr 24, 2021 | Spoopy                            | [Sator](https://www.themoviedb.org/movie/611651-sator)                                                          | 2019 |
+
+</div>

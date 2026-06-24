@@ -186,3 +186,13 @@ figure {
     background-color: rgba(0, 0, 0, 0.3);
   }
 }
+
+.movie-night table {
+  font-size: .8rem;
+  width: 100%;
+  margin-block: 1rem;
+
+  td {
+    vertical-align: top;
+  }
+}
