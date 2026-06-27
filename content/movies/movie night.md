@@ -14,6 +14,7 @@ Monthly (:crossed_fingers:) movie night with my doggies. Started during COVID-19
 
 |  # | Date         | Theme                             | Movie                                                                                                           | Year |
 |---:|--------------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------|-----:|
+| 62 | Jun 26, 2026 | 3D Animation (Matt)               | [Fantastic Mr. Fox](https://www.themoviedb.org/movie/10315-fantastic-mr-fox)                                    | 2009 |
 | 61 | Jun 06, 2026 | Africa (Brandon)                  | [My Father's Shadow](https://www.themoviedb.org/movie/1432605-my-father-s-shadow)                               | 2025 |
 | 60 | May 01, 2026 | Musical (Daniel)                  | [Sweeney Todd: The Demon Barber of Fleet Street](https://www.themoviedb.org/movie/13885)                        | 2007 |
 | 59 | Apr 10, 2026 | Wilderness (Robert)               | [Touching the Void](https://www.themoviedb.org/movie/11194-touching-the-void)                                   | 2003 |
