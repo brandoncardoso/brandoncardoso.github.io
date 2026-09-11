@@ -171,8 +171,8 @@ importers:
         specifier: ^8.0.0
         version: 8.0.0
       toml:
-        specifier: ^4.1.1
-        version: 4.1.1
+        specifier: ^4.2.0
+        version: 4.2.0
       unified:
         specifier: ^11.0.5
         version: 11.0.5
@@ -2534,8 +2534,8 @@ packages:
   to-vfile@8.0.0:
     resolution: {integrity: sha512-IcmH1xB5576MJc9qcfEC/m/nQCFt3fzMHz45sSlgJyTWjRbKW1HAkJpuf3DgE57YzIlZcwcBZA5ENQbBo4aLkg==}
 
-  toml@4.1.1:
-    resolution: {integrity: sha512-EBJnVBr3dTXdA89WVFoAIPUqkBjxPMwRqsfuo1r240tKFHXv3zgca4+NJib/h6TyvGF7vOawz0jGuryJCdNHrw==}
+  toml@4.2.0:
+    resolution: {integrity: sha512-TvAJjbHZlYmI323+srtqHQFyJsoWy6mI09ppkuj9+iRsqsVKG9fvTcOP7FHF2UCb0QSYtjEavffrKzdd0XgClg==}
     engines: {node: '>=20'}
 
   tr46@0.0.3:
@@ -5147,7 +5147,7 @@ snapshots:
     dependencies:
       vfile: 6.0.3
 
-  toml@4.1.1: {}
+  toml@4.2.0: {}
 
   tr46@0.0.3: {}
 
