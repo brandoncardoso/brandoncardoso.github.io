@@ -14,6 +14,7 @@ Monthly (:crossed_fingers:) movie night with my doggies. Started during COVID-19
 
 |  # | Date         | Theme                             | Movie                                                                                                           | Year |
 |---:|--------------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------|-----:|
+| 65 | Sep 25, 2026 | Revenge (Brandon)                 | [Cape Fear](https://www.themoviedb.org/movie/1598-cape-fear)                                                    | 1991 |
 | 64 | Aug 28, 2026 | Good Vibes (Daniel)               | [Bill & Ted's Excellent Adventure](https://www.themoviedb.org/movie/1648)                                       | 1989 |
 | 63 | Jul 31, 2026 | Nuclear (Robert)                  | [Grave of the Fireflies](https://www.themoviedb.org/movie/12477)                                                | 1988 |
 | 62 | Jun 26, 2026 | 3D Animation (Matt)               | [Fantastic Mr. Fox](https://www.themoviedb.org/movie/10315-fantastic-mr-fox)                                    | 2009 |
