@@ -14,6 +14,7 @@ Monthly (:crossed_fingers:) movie night with my doggies. Started during COVID-19
 
 |  # | Date         | Theme                             | Movie                                                                                                           | Year |
 |---:|--------------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------|-----:|
+| 66 | Oct 30, 2026 | Heist (Matt)                      | [Reservoir Dogs](https://www.themoviedb.org/movie/500-reservoir-dogs)                                           | 1992 |
 | 65 | Sep 25, 2026 | Revenge (Brandon)                 | [Cape Fear](https://www.themoviedb.org/movie/1598-cape-fear)                                                    | 1991 |
 | 64 | Aug 28, 2026 | Good Vibes (Daniel)               | [Bill & Ted's Excellent Adventure](https://www.themoviedb.org/movie/1648)                                       | 1989 |
 | 63 | Jul 31, 2026 | Nuclear (Robert)                  | [Grave of the Fireflies](https://www.themoviedb.org/movie/12477)                                                | 1988 |
