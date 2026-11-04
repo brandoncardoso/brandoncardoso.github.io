@@ -109,7 +109,7 @@
     "@types/yargs": "^17.0.35",
     "esbuild": "^0.28.1",
     "js-yaml": "^4.3.2",
-    "katex": "^0.17.0",
+    "katex": "^0.18.2",
     "prettier": "^3.8.4",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3"
