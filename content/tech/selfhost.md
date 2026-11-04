@@ -116,7 +116,7 @@ classDef acq stroke:#0b0,stroke-width:4px;
 class MaM,AZ,AnZ,CZ,OE,BLU,LST,SP acq;
 
 classDef open stroke:#0bb,stroke-width:4px;
-class SP,HUNO open;
+class HUNO open;
 
 classDef eg stroke:#c00,stroke-width:4px;
 class PTP,AB,BTN eg;
